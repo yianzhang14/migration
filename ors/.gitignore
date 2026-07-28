@@ -1,0 +1,4 @@
+ors-docker/files/*
+ors-docker/graphs/*
+ors-docker/logs/*
+ors-docker/elevation_cache/*
