@@ -1,0 +1,12 @@
+# pixi environments
+.pixi
+*.egg-info
+
+**/*/__pycache__/
+.claude
+.vscode
+lit_review/
+initial_explorations/
+resources/
+
+data/census/ACS/raw/
