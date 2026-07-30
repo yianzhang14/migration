@@ -25,6 +25,12 @@ geopandas = ">=1.0.1,<2"
 proj = ">=9.5.1,<10"
 pandas-stubs = ">=2.2.3.241126,<3"
 haversine = ">=2.9.0,<3"
+arviz = ">=0.13.0,<1"
+ipywidgets = ">=8.1.8,<9"
+jupyter = ">=1.1.1,<2"
+
+[tool.pixi.target.linux-64.pypi-dependencies]
+jax = { version = ">=0.11.0", extras = ["cuda12"] }
 
 [tool.pixi.pypi-dependencies]
 # xlogit = ">=0.2.7, <0.3"
