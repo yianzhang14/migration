@@ -30,7 +30,7 @@ haversine = ">=2.9.0,<3"
 # xlogit = ">=0.2.7, <0.3"
 # cupy-cuda12x = ">=13.3.0, <14"
 biogeme = ">=3.3.2, <4"
-openrouteservice = "2.3.3,<3"
+openrouteservice = ">=2.3.3,<3"
 
 [tool.ruff]
 target-version = "py312"

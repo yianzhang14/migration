@@ -1,4 +1,4 @@
-,GISMATCH,GISJOIN,GEOID,STATEFIP,State,PUMA,Name,center,type,CBSA_name
+,GISMATCH,GISJOIN,GEOID,STATEFIP,State,PUMA,Name,center,TYPE,CBSA_NAME
 0,600105,G06000105,0600105,06,California,00105,"Alameda County (West)--San Leandro, Alameda & Oakland (Southwest) Cities PUMA",POINT (-2258808.7933323015 339396.4722123478),T34,"San Francisco-Oakland-Hayward, CA Metro Area"
 1,600102,G06000102,0600102,06,California,00102,Alameda County (Northwest)--Oakland (Northwest) & Emeryville Cities PUMA,POINT (-2262119.20387295 349529.95440244046),T34,"San Francisco-Oakland-Hayward, CA Metro Area"
 2,608502,G06008502,0608502,06,California,08502,Santa Clara County (Northwest)--Sunnyvale & San Jose (North) Cities PUMA,POINT (-2251625.2805585177 299700.2119385958),Metro,"San Jose-Sunnyvale-Santa Clara, CA Metro Area"
@@ -22,7 +22,7 @@
 20,603300,G06003300,0603300,06,California,03300,Lake & Mendocino Counties PUMA,POINT (-2292380.7884199833 537392.151973115),Micro,"Ukiah, CA Micro Area"
 21,601500,G06001500,0601500,06,California,01500,"Del Norte, Lassen, Modoc, Plumas & Siskiyou Counties PUMA",POINT (-2096371.819538956 692307.6508446108),Metro,"Redding, CA Metro Area"
 22,601100,G06001100,0601100,06,California,01100,"Colusa, Glenn, Tehama & Trinity Counties PUMA",POINT (-2216786.261006446 604917.4494366697),Micro,"Red Bluff, CA Micro Area"
-23,608303,G06008303,0608303,06,California,08303,Santa Barbara County--South Coast Region PUMA,POINT (-2156172.5710496358 -98441.5951376371),,
+23,608303,G06008303,0608303,06,California,08303,Santa Barbara County--South Coast Region PUMA,POINT (-2156172.5710496358 -98441.5951376371),NOT_CBSA,
 24,608302,G06008302,0608302,06,California,08302,"Santa Barbara County (North)--Lompoc, Guadalupe, Solvang & Buellton Cities PUMA",POINT (-2160066.997608747 -34424.10642775056),Metro,"Santa Maria-Santa Barbara, CA Metro Area"
 25,608301,G06008301,0608301,06,California,08301,Santa Barbara County (Northwest)--Santa Maria City & Orcutt PUMA,POINT (-2190393.387739828 -6238.8924110980615),Metro,"Santa Maria-Santa Barbara, CA Metro Area"
 26,610100,G06010100,0610100,06,California,10100,Sutter & Yuba Counties--Yuba City PUMA,POINT (-2158717.420866185 477078.57805121137),Metro,"Yuba City, CA Metro Area"
@@ -268,7 +268,7 @@
 266,3200103,G32000103,3200103,32,Nevada,00103,Washoe County (North)--Sparks City PUMA,POINT (-1959499.3596687391 610539.1488344636),Metro,"Reno, NV Metro Area"
 267,3200102,G32000102,3200102,32,Nevada,00102,Washoe County (South) PUMA,POINT (-2015537.7854311757 468126.03663183335),Metro,"Reno, NV Metro Area"
 268,3200200,G32000200,3200200,32,Nevada,00200,"Carson City, Lyon, Douglas & Storey Counties PUMA",POINT (-1981847.9506819178 416841.6046776571),Micro,"Gardnerville Ranchos, NV Micro Area"
-269,4100500,G41000500,4100500,41,Oregon,00500,"Columbia, Lincoln, Clatsop & Tillamook Counties PUMA",POINT (-2130304.3205009033 1200852.7911159797),,
+269,4100500,G41000500,4100500,41,Oregon,00500,"Columbia, Lincoln, Clatsop & Tillamook Counties PUMA",POINT (-2130304.3205009033 1200852.7911159797),NOT_CBSA,
 270,4101000,G41001000,4101000,41,Oregon,01000,Douglas County PUMA,POINT (-2164049.314766446 958436.4866273353),Micro,"Roseburg, OR Micro Area"
 271,4101321,G41001321,4101321,41,Oregon,01321,"Washington County (West)--Forest Grove, Cornelius Cities, Bethany & Oak Hills PUMA",POINT (-2091640.4224500468 1206195.487684372),T34,"Portland-Vancouver-Hillsboro, OR-WA Metro Area"
 272,4101322,G41001322,4101322,41,Oregon,01322,Washington County (Central)--Hillsboro City PUMA,POINT (-2078273.7656903346 1185430.1218782307),T34,"Portland-Vancouver-Hillsboro, OR-WA Metro Area"
@@ -333,7 +333,7 @@
 331,5311802,G53011802,5311802,53,Washington,11802,Kitsap County (South)--Bremerton & Port Orchard Cities PUMA,POINT (-1999042.8969329332 1400807.7072575113),Metro,"Bremerton-Silverdale, WA Metro Area"
 332,5311801,G53011801,5311801,53,Washington,11801,Kitsap County (North)--Bainbridge Island City & Silverdale PUMA,POINT (-1985682.1251356497 1420910.5749916702),Metro,"Bremerton-Silverdale, WA Metro Area"
 333,101500,G01001500,0101500,01,Alabama,01500,Tuscaloosa (Outer) & Pickens Counties--Northport City (North & West) PUMA,POINT (761776.4175983507 -438145.8675177897),Metro,"Tuscaloosa, AL Metro Area"
-334,101400,G01001400,0101400,01,Alabama,01400,"Walker, Marion (South & West), Fayette & Lamar Counties PUMA",POINT (759393.8140702094 -376403.5972952714),,
+334,101400,G01001400,0101400,01,Alabama,01400,"Walker, Marion (South & West), Fayette & Lamar Counties PUMA",POINT (759393.8140702094 -376403.5972952714),NOT_CBSA,
 335,100100,G01000100,0100100,01,Alabama,00100,"Lauderdale, Colbert, Franklin & Marion (Northeast) Counties PUMA",POINT (747889.8208150738 -286808.3885845471),Metro,"Florence-Muscle Shoals, AL Metro Area"
 336,102703,G01002703,0102703,01,Alabama,02703,"Mobile County (Outer)--Prichard City, Tillmans Corner & Saraland City PUMA",POINT (742100.4559859363 -718095.0543283349),Metro,"Mobile, AL Metro Area"
 337,102701,G01002701,0102701,01,Alabama,02701,Mobile City (East) PUMA,POINT (756101.1112123413 -729946.3534451666),Metro,"Mobile, AL Metro Area"
@@ -392,7 +392,7 @@
 390,400125,G04000125,0400125,04,Arizona,00125,Phoenix City (West) PUMA,POINT (-1480731.2946290374 -313855.65423480066),T34,"Phoenix-Mesa-Scottsdale, AZ Metro Area"
 391,501900,G05001900,0501900,05,Arkansas,01900,South Central Arkansas PUMA,POINT (298010.4922322264 -446798.3180524104),Micro,"Camden, AR Micro Area"
 392,502000,G05002000,0502000,05,Arkansas,02000,Southwest Arkansas PUMA,POINT (209873.1340676903 -429046.40033563616),Micro,"Hope, AR Micro Area"
-393,501800,G05001800,0501800,05,Arkansas,01800,Southeast Arkansas PUMA,POINT (399668.16624725563 -421374.86824027554),,
+393,501800,G05001800,0501800,05,Arkansas,01800,Southeast Arkansas PUMA,POINT (399668.16624725563 -421374.86824027554),NOT_CBSA,
 394,501700,G05001700,0501700,05,Arkansas,01700,"Jefferson, Grant & Arkansas (Northwest) Counties PUMA",POINT (362597.0586164056 -350734.35176151263),Metro,"Pine Bluff, AR Metro Area"
 395,501600,G05001600,0501600,05,Arkansas,01600,"Garland, Hot Spring, Clark & Montgomery Counties PUMA",POINT (250974.79712722427 -347791.12371047924),Micro,"Malvern, AR Micro Area"
 396,501100,G05001100,0501100,05,Arkansas,01100,Faulkner & Lonoke Counties PUMA,POINT (354244.4463526818 -280291.62841864524),Metro,"Little Rock-North Little Rock-Conway, AR Metro Area"
@@ -400,8 +400,8 @@
 398,501000,G05001000,0501000,05,Arkansas,01000,Pulaski County (Central)--Little Rock City PUMA,POINT (330963.57922325784 -304706.0376402279),Metro,"Little Rock-North Little Rock-Conway, AR Metro Area"
 399,501200,G05001200,0501200,05,Arkansas,01200,Saline County PUMA,POINT (302179.00150418567 -314230.89207930444),Metro,"Little Rock-North Little Rock-Conway, AR Metro Area"
 400,602500,G06002500,0602500,06,California,02500,Imperial County--El Centro City PUMA,POINT (-1785119.9150785855 -316532.6812591636),Metro,"El Centro, CA Metro Area"
-401,2200500,G22000500,2200500,22,Louisiana,00500,North Delta Regional Planning & Development District 2--Northeast Louisiana PUMA,POINT (392605.62587890925 -555170.8880840921),,
-402,2200300,G22000300,2200300,22,Louisiana,00300,Coordinating & Development Corporation 4--Northwest Louisiana PUMA,POINT (259056.15160035336 -601599.3686298878),,
+401,2200500,G22000500,2200500,22,Louisiana,00500,North Delta Regional Planning & Development District 2--Northeast Louisiana PUMA,POINT (392605.62587890925 -555170.8880840921),NOT_CBSA,
+402,2200300,G22000300,2200300,22,Louisiana,00300,Coordinating & Development Corporation 4--Northwest Louisiana PUMA,POINT (259056.15160035336 -601599.3686298878),NOT_CBSA,
 403,2200100,G22000100,2200100,22,Louisiana,00100,Coordinating & Development Corporation 1--Shreveport City (North) PUMA,POINT (194864.570555302 -533250.2016560205),Metro,"Shreveport-Bossier City, LA Metro Area"
 404,2200200,G22000200,2200200,22,Louisiana,00200,Coordinating & Development Corporation 3--Bossier & Webster Parishes PUMA,POINT (233713.57176504907 -534660.9112108789),Metro,"Shreveport-Bossier City, LA Metro Area"
 405,2200101,G22000101,2200101,22,Louisiana,00101,Coordinating & Development Corporation 2--Shreveport City (South) PUMA,POINT (202757.51443517255 -574660.1562525326),Metro,"Shreveport-Bossier City, LA Metro Area"
@@ -410,7 +410,7 @@
 408,2202000,G22002000,2202000,22,Louisiana,02000,South Central Planning & Development Commission 2--Lafourche & Assumption Parishes PUMA,POINT (523651.5661416481 -861152.8949190568),Metro,"Houma-Thibodaux, LA Metro Area"
 409,2201400,G22001400,2201400,22,Louisiana,01400,Capital Region Planning Commission 1--Baton Rouge Metropolitan Area (West) PUMA,POINT (443362.96186664817 -757811.7502898704),Metro,"Baton Rouge, LA Metro Area"
 410,2201900,G22001900,2201900,22,Louisiana,01900,South Central Planning & Development Commission 1--River Parishes PUMA,POINT (525749.2040787556 -823207.6978311491),Metro,"New Orleans-Metairie, LA Metro Area"
-411,2200600,G22000600,2200600,22,Louisiana,00600,Kisatchie Delta Regional Planning & Development District 1 PUMA,POINT (363738.3953617158 -655484.1898779417),,
+411,2200600,G22000600,2200600,22,Louisiana,00600,Kisatchie Delta Regional Planning & Development District 1 PUMA,POINT (363738.3953617158 -655484.1898779417),NOT_CBSA,
 412,2202500,G22002500,2202500,22,Louisiana,02500,"Regional Planning Commission 9--St. Bernard, Jefferson (South) & Plaquemines Parishes PUMA",POINT (611369.305113458 -861934.2966655281),Metro,"New Orleans-Metairie, LA Metro Area"
 413,2202200,G22002200,2202200,22,Louisiana,02200,Regional Planning Commission 1--St. Tammany Parish (Northwest) PUMA,POINT (572617.351037103 -760361.099705689),Metro,"New Orleans-Metairie, LA Metro Area"
 414,2202201,G22002201,2202201,22,Louisiana,02201,Regional Planning Commission 2--St. Tammany Parish (Southeast) PUMA,POINT (593212.0759887731 -783273.4946085962),Metro,"New Orleans-Metairie, LA Metro Area"
@@ -434,19 +434,19 @@
 432,2201201,G22001201,2201201,22,Louisiana,01201,Acadiana Regional Development District 4--Lafayette Parish (South) PUMA,POINT (384035.6090004238 -814290.4842597854),Metro,"Lafayette, LA Metro Area"
 433,2201200,G22001200,2201200,22,Louisiana,01200,Acadiana Regional Development District 3--Lafayette Parish (North) PUMA,POINT (375241.17470206995 -802508.7839878208),Metro,"Lafayette, LA Metro Area"
 434,2202100,G22002100,2202100,22,Louisiana,02100,South Central Planning & Development Commission 3--Terrebonne Parish PUMA,POINT (498426.8229828245 -888272.4805177181),Metro,"Houma-Thibodaux, LA Metro Area"
-435,2801900,G28001900,2801900,28,Mississippi,01900,"South Region--Pearl River, Hancock, George & Stone Counties PUMA",POINT (642575.8065239431 -734936.7605836202),,
+435,2801900,G28001900,2801900,28,Mississippi,01900,"South Region--Pearl River, Hancock, George & Stone Counties PUMA",POINT (642575.8065239431 -734936.7605836202),NOT_CBSA,
 436,2800700,G28000700,2800700,28,Mississippi,00700,North Central Region PUMA,POINT (564851.7946412092 -435285.3555755511),Micro,"Greenwood, MS Micro Area"
-437,2801600,G28001600,2801600,28,Mississippi,01600,Southwest Region PUMA,POINT (493797.62450423505 -664678.6318033227),,
+437,2801600,G28001600,2801600,28,Mississippi,01600,Southwest Region PUMA,POINT (493797.62450423505 -664678.6318033227),NOT_CBSA,
 438,2800800,G28000800,2800800,28,Mississippi,00800,South Delta Region PUMA,POINT (480408.50462269876 -452408.16602472734),Micro,"Greenville, MS Micro Area"
 439,2800400,G28000400,2800400,28,Mississippi,00400,"Three Rivers Region--Lafayette, Monroe, Itawamba, Chickasaw & Calhoun Counties PUMA",POINT (647944.3429794186 -359119.78878976475),Micro,"Tupelo, MS Micro Area"
 440,2800500,G28000500,2800500,28,Mississippi,00500,"Three Rivers Region--Lee, Pontotoc & Union Counties--Tupelo City PUMA",POINT (646852.4702786274 -331068.3905690478),Micro,"Tupelo, MS Micro Area"
-441,2800200,G28000200,2800200,28,Mississippi,00200,"Northeast Region--Marshall, Alcorn, Prentiss, Tippah, Tishomingo & Benton Counties PUMA",POINT (645039.866375644 -282233.6079317627),,
+441,2800200,G28000200,2800200,28,Mississippi,00200,"Northeast Region--Marshall, Alcorn, Prentiss, Tippah, Tishomingo & Benton Counties PUMA",POINT (645039.866375644 -282233.6079317627),NOT_CBSA,
 442,2801700,G28001700,2801700,28,Mississippi,01700,"South Region--Jones, Wayne, Covington, Greene & Jefferson Davis Counties PUMA",POINT (656148.4731126402 -643754.042672333),Micro,"Laurel, MS Micro Area"
 443,2801500,G28001500,2801500,28,Mississippi,01500,"East Central Region--Lauderdale, Newton & Clarke Counties--Meridian City PUMA",POINT (673679.2092619477 -558652.24313596),Micro,"Meridian, MS Micro Area"
-444,2801400,G28001400,2801400,28,Mississippi,01400,"East Central Region--Neshoba, Scott, Leake, Jasper, Smith & Kemper Counties PUMA",POINT (633858.3465569322 -542420.7978655528),,
+444,2801400,G28001400,2801400,28,Mississippi,01400,"East Central Region--Neshoba, Scott, Leake, Jasper, Smith & Kemper Counties PUMA",POINT (633858.3465569322 -542420.7978655528),NOT_CBSA,
 445,2800600,G28000600,2800600,28,Mississippi,00600,"Golden Triangle Region--Starkville, Columbus & West Point Cities PUMA",POINT (659325.4963410153 -439352.78760042705),Micro,"Starkville, MS Micro Area"
 446,2801800,G28001800,2801800,28,Mississippi,01800,"South Region--Forrest, Lamar, Marion & Perry Counties--Hattiesburg City PUMA",POINT (628382.4781581934 -682322.5970343399),Metro,"Hattiesburg, MS Metro Area"
-447,2800300,G28000300,2800300,28,Mississippi,00300,"North Delta Region--Panola, Tate, Coahoma, Tallahatchie, Tunica & Quitman Counties PUMA",POINT (527676.9088235655 -339803.1760225017),,
+447,2800300,G28000300,2800300,28,Mississippi,00300,"North Delta Region--Panola, Tate, Coahoma, Tallahatchie, Tunica & Quitman Counties PUMA",POINT (527676.9088235655 -339803.1760225017),NOT_CBSA,
 448,2802100,G28002100,2802100,28,Mississippi,02100,South Region--Jackson County PUMA,POINT (704335.0625863433 -749730.9064014225),Metro,"Gulfport-Biloxi-Pascagoula, MS Metro Area"
 449,2801100,G28001100,2801100,28,Mississippi,01100,Central Region--Jackson City (East & Central) PUMA,POINT (544627.366694874 -561313.8979739184),Metro,"Jackson, MS Metro Area"
 450,2801000,G28001000,2801000,28,Mississippi,01000,Central Region--Jackson (West & South) & Clinton (South & East) Cities PUMA,POINT (536039.7894187872 -571987.003935287),Metro,"Jackson, MS Metro Area"
@@ -457,7 +457,7 @@
 455,2801300,G28001300,2801300,28,Mississippi,01300,Central Region--Rankin & Simpson Counties PUMA,POINT (569185.5371932148 -583940.5538360589),Metro,"Jackson, MS Metro Area"
 456,3501100,G35001100,3501100,35,New Mexico,01100,Central Southeast New Mexico PUMA,POINT (-853284.5527370663 -441312.6161279823),Micro,"Ruidoso, NM Micro Area"
 457,3501200,G35001200,3501200,35,New Mexico,01200,Far Southeast New Mexico PUMA,POINT (-731457.6803377834 -513959.8573551419),Micro,"Carlsbad-Artesia, NM Micro Area"
-458,3500900,G35000900,3500900,35,New Mexico,00900,Southwest New Mexico PUMA,POINT (-1072705.5902194893 -395298.8445148088),,
+458,3500900,G35000900,3500900,35,New Mexico,00900,Southwest New Mexico PUMA,POINT (-1072705.5902194893 -395298.8445148088),NOT_CBSA,
 459,3501001,G35001001,3501001,35,New Mexico,01001,Doña Ana County (Outer) PUMA,POINT (-1012531.3349592304 -517985.9454614634),Metro,"Las Cruces, NM Metro Area"
 460,3501002,G35001002,3501002,35,New Mexico,01002,"Doña Ana County (Central)--Las Cruces, Mesilla Cities & University Park PUMA",POINT (-998475.2532476572 -519167.53235119936),Metro,"Las Cruces, NM Metro Area"
 461,3500802,G35000802,3500802,35,New Mexico,00802,Albuquerque City (Near Northeast Heights) PUMA,POINT (-951209.5083992959 -215061.11837926274),Metro,"Albuquerque, NM Metro Area"
@@ -467,10 +467,10 @@
 465,3500806,G35000806,3500806,35,New Mexico,00806,Albuquerque City (Southwest Mesa) & Bernalillo County (Southwest Mesa & South Valley) PUMA,POINT (-968955.8318242292 -222884.01454652328),Metro,"Albuquerque, NM Metro Area"
 466,3500805,G35000805,3500805,35,New Mexico,00805,"Albuquerque City (Northwest Mesa), Paradise Hills & Navajo Nation-Tohajiilee Chapter PUMA",POINT (-985971.9770447037 -211911.95207970715),Metro,"Albuquerque, NM Metro Area"
 467,3500700,G35000700,3500700,35,New Mexico,00700,"Valencia, Bernalillo (East Mountains) Counties & Isleta Pueblo PUMA",POINT (-969640.6567589737 -247308.00901156262),Metro,"Albuquerque, NM Metro Area"
-468,4000701,G40000701,4000701,40,Oklahoma,00701,"Carter, Garvin, Murray, Love & Pontotoc (West) Counties PUMA",POINT (-108620.19593765178 -345066.8683558001),,
+468,4000701,G40000701,4000701,40,Oklahoma,00701,"Carter, Garvin, Murray, Love & Pontotoc (West) Counties PUMA",POINT (-108620.19593765178 -345066.8683558001),NOT_CBSA,
 469,4000602,G40000602,4000602,40,Oklahoma,00602,"Stephens, Caddo, Comanche (North), Tillman, Jefferson & Cotton Counties PUMA",POINT (-210172.4836256437 -323499.62490324595),Metro,"Lawton, OK Metro Area"
-470,4000702,G40000702,4000702,40,Oklahoma,00702,"Bryan, Pontotoc (East), Marshall, Atoka, Johnston & Coal Counties--Ada City PUMA",POINT (-32831.66014660476 -359524.85958963487),,
-471,4000300,G40000300,4000300,40,Oklahoma,00300,Southeast Oklahoma PUMA,POINT (76497.75843186035 -325927.70976419083),,
+470,4000702,G40000702,4000702,40,Oklahoma,00702,"Bryan, Pontotoc (East), Marshall, Atoka, Johnston & Coal Counties--Ada City PUMA",POINT (-32831.66014660476 -359524.85958963487),NOT_CBSA,
+471,4000300,G40000300,4000300,40,Oklahoma,00300,Southeast Oklahoma PUMA,POINT (76497.75843186035 -325927.70976419083),NOT_CBSA,
 472,4001002,G40001002,4001002,40,Oklahoma,01002,Oklahoma County (Northwest)--Oklahoma City (Northwest Central) & Bethany Cities PUMA,POINT (-145481.6420741999 -210474.12945398022),Metro,"Oklahoma City, OK Metro Area"
 473,4001003,G40001003,4001003,40,Oklahoma,01003,Oklahoma County (Northeast)--Edmond & Oklahoma City (North Central) Cities PUMA,POINT (-123252.82593631258 -204028.727613947),Metro,"Oklahoma City, OK Metro Area"
 474,4001006,G40001006,4001006,40,Oklahoma,01006,Oklahoma County (Central)--Oklahoma City (Central) PUMA,POINT (-135249.64158942344 -217916.1294884138),Metro,"Oklahoma City, OK Metro Area"
@@ -517,21 +517,21 @@
 515,4803802,G48003802,4803802,48,Texas,03802,"Heart of Texas COG--McLennan County--Waco (Outer), Hewitt & Robinson Cities PUMA",POINT (-113870.19881510333 -664124.5378115636),Metro,"Waco, TX Metro Area"
 516,4803801,G48003801,4803801,48,Texas,03801,Heart of Texas COG--McLennan County--Waco City (Central) PUMA,POINT (-109014.86189348547 -664501.7303551586),Metro,"Waco, TX Metro Area"
 517,4805700,G48005700,4805700,48,Texas,05700,Alamo Area COG (Northeast)--Guadalupe County PUMA,POINT (-188750.6308972201 -881724.8034341838),T34,"San Antonio-New Braunfels, TX Metro Area"
-518,4801000,G48001000,4801000,48,Texas,01000,Ark-Tex COG (West) PUMA,POINT (64932.91652810859 -456847.74987441156),,
+518,4801000,G48001000,4801000,48,Texas,01000,Ark-Tex COG (West) PUMA,POINT (64932.91652810859 -456847.74987441156),NOT_CBSA,
 519,4801501,G48001501,4801501,48,Texas,01501,East Texas COG (Central)--Smith County (Outside Tyler City) PUMA,POINT (69198.3989894876 -571918.6138795337),Metro,"Tyler, TX Metro Area"
 520,4801502,G48001502,4801502,48,Texas,01502,East Texas COG (Central)--Smith County (West)--Tyler City PUMA,POINT (62593.137156206416 -580684.5606871111),Metro,"Tyler, TX Metro Area"
 521,4801200,G48001200,4801200,48,Texas,01200,"East Texas COG (Northeast)--Harrison, Upshur & Marion Counties PUMA",POINT (135854.066665338 -540302.0368533242),Micro,"Marshall, TX Micro Area"
 522,4803900,G48003900,4803900,48,Texas,03900,Deep East Texas COG (West) & Walker County PUMA,POINT (74197.31163737956 -732094.9375188025),Micro,"Huntsville, TX Micro Area"
-523,4806500,G48006500,4806500,48,Texas,06500,Coastal Bend COG (Northeast) PUMA,POINT (-141423.12083532682 -1029727.0489327396),,
+523,4806500,G48006500,4806500,48,Texas,06500,Coastal Bend COG (Northeast) PUMA,POINT (-141423.12083532682 -1029727.0489327396),NOT_CBSA,
 524,4803200,G48003200,4803200,48,Texas,03200,Rio Grande COG & Permian Basin Regional Planning Commission (West) PUMA,POINT (-726217.4018269104 -707164.7356815414),Micro,"Pecos, TX Micro Area"
 525,4802600,G48002600,4802600,48,Texas,02600,West Central Texas COG (Outside Taylor County) PUMA,POINT (-349570.6659788862 -545763.9631593298),Metro,"Abilene, TX Metro Area"
 526,4802800,G48002800,4802800,48,Texas,02800,Concho Valley COG & Permian Basin Regional Planning Commission (East) PUMA,POINT (-460478.47501778346 -676280.3610836642),Metro,"San Angelo, TX Metro Area"
-527,4806400,G48006400,4806400,48,Texas,06400,South Texas Development Council (South) & Coastal Bend COG (West) PUMA,POINT (-260515.18247926264 -1109850.131987008),,
-528,4803700,G48003700,4803700,48,Texas,03700,Heart of Texas COG (Outside McLennan County) & Navarro County PUMA,POINT (-77552.68386286397 -640531.2462650808),,
+527,4806400,G48006400,4806400,48,Texas,06400,South Texas Development Council (South) & Coastal Bend COG (West) PUMA,POINT (-260515.18247926264 -1109850.131987008),NOT_CBSA,
+528,4803700,G48003700,4803700,48,Texas,03700,Heart of Texas COG (Outside McLennan County) & Navarro County PUMA,POINT (-77552.68386286397 -640531.2462650808),NOT_CBSA,
 529,4802700,G48002700,4802700,48,Texas,02700,West Central Texas COG--Taylor County--Abilene City PUMA,POINT (-364359.90967674716 -573954.731130106),Metro,"Abilene, TX Metro Area"
 530,4801700,G48001700,4801700,48,Texas,01700,"East Texas COG (Southeast)--Rusk, Cherokee & Panola Counties PUMA",POINT (114564.87202632545 -611806.9453115802),Metro,"Longview, TX Metro Area"
 531,4800900,G48000900,4800900,48,Texas,00900,"Hunt & Rockwall Counties--Rockwall, Greenville & Dallas (Far Northeast) Cities PUMA",POINT (-12257.873702387687 -493336.640509439),T34,"Dallas-Fort Worth-Arlington, TX Metro Area"
-532,4806200,G48006200,4806200,48,Texas,06200,Middle Rio Grande Development Council PUMA,POINT (-407678.4363434339 -905694.8712515148),,
+532,4806200,G48006200,4806200,48,Texas,06200,Middle Rio Grande Development Council PUMA,POINT (-407678.4363434339 -905694.8712515148),NOT_CBSA,
 533,4803000,G48003000,4803000,48,Texas,03000,Permian Basin Regional Planning Commission (Central)--Midland County--Midland City PUMA,POINT (-567772.7817685289 -611562.378194289),Metro,"Midland, TX Metro Area"
 534,4802900,G48002900,4802900,48,Texas,02900,Concho Valley COG--Tom Green County--San Angelo City PUMA,POINT (-422558.8362061556 -671417.3921578889),Metro,"San Angelo, TX Metro Area"
 535,4800300,G48000300,4800300,48,Texas,00300,Panhandle Regional Planning Commission--Randall County--Amarillo City (South) PUMA,POINT (-533670.1109046161 -267251.61703183636),Metro,"Amarillo, TX Metro Area"
@@ -549,8 +549,8 @@
 547,4802002,G48002002,4802002,48,Texas,02002,Denton County (Southeast)--Lewisville City PUMA,POINT (-91268.42728851795 -498434.87169647013),T34,"Dallas-Fort Worth-Arlington, TX Metro Area"
 548,4802001,G48002001,4802001,48,Texas,02001,Denton County (Far Southeast)--Carrollton (North) & Dallas (North) Cities PUMA,POINT (-82190.48698301554 -500073.9579785987),T34,"Dallas-Fort Worth-Arlington, TX Metro Area"
 549,4806000,G48006000,4806000,48,Texas,06000,Alamo Area COG (Northwest) & Blanco County PUMA,POINT (-280730.8977112307 -815528.1233704822),Micro,"Fredericksburg, TX Micro Area"
-550,4804100,G48004100,4804100,48,Texas,04100,Deep East Texas COG (East) PUMA,POINT (184887.77063035587 -714562.2122373717),,
-551,4805500,G48005500,4805500,48,Texas,05500,Golden Crescent Regional Planning Commission (North) & Wilson & Karnes Counties PUMA,POINT (-133708.17880101933 -935189.167465295),,
+550,4804100,G48004100,4804100,48,Texas,04100,Deep East Texas COG (East) PUMA,POINT (184887.77063035587 -714562.2122373717),NOT_CBSA,
+551,4805500,G48005500,4805500,48,Texas,05500,Golden Crescent Regional Planning Commission (North) & Wilson & Karnes Counties PUMA,POINT (-133708.17880101933 -935189.167465295),NOT_CBSA,
 552,4806603,G48006603,4806603,48,Texas,06603,Coastal Bend COG--Nueces County (Central)--Corpus Christi City (South Central) PUMA,POINT (-135963.85221893122 -1091381.6125660576),Metro,"Corpus Christi, TX Metro Area"
 553,4806602,G48006602,4806602,48,Texas,06602,Coastal Bend COG--Nueces County (Central)--Corpus Christi City (North Central) PUMA,POINT (-140865.27062577888 -1084745.5085144367),Metro,"Corpus Christi, TX Metro Area"
 554,4806601,G48006601,4806601,48,Texas,06601,Coastal Bend COG--Nueces County--Corpus Christi City (Outer) PUMA,POINT (-162430.54665310253 -1087866.5499431593),Metro,"Corpus Christi, TX Metro Area"
@@ -564,7 +564,7 @@
 562,4805000,G48005000,4805000,48,Texas,05000,Houston-Galveston Area Council (West) PUMA,POINT (-20221.755852894104 -901161.8159721895),Micro,"El Campo, TX Micro Area"
 563,4803400,G48003400,4803400,48,Texas,03400,"Central Texas COG (West), Burnet & Llano Counties PUMA",POINT (-223391.97308143633 -703064.9213960113),Metro,"Killeen-Temple, TX Metro Area"
 564,4805400,G48005400,4805400,48,Texas,05400,Capital Area COG (Southwest)--Hays County PUMA,POINT (-195595.54768296395 -828873.4985053467),T34,"Austin-Round Rock, TX Metro Area"
-565,4801300,G48001300,4801300,48,Texas,01300,"East Texas COG (Northwest)--Van Zandt, Wood, Camp & Rains Counties PUMA",POINT (38382.93934196573 -534488.8537388777),,
+565,4801300,G48001300,4801300,48,Texas,01300,"East Texas COG (Northwest)--Van Zandt, Wood, Camp & Rains Counties PUMA",POINT (38382.93934196573 -534488.8537388777),NOT_CBSA,
 566,4801800,G48001800,4801800,48,Texas,01800,East Texas COG (Southwest)--Henderson & Anderson Counties PUMA,POINT (23865.29382536441 -614975.817751872),Micro,"Palestine, TX Micro Area"
 567,4803302,G48003302,4803302,48,Texas,03302,El Paso City (East) PUMA,POINT (-969431.7136235024 -587454.5030740966),Metro,"El Paso, TX Metro Area"
 568,4803304,G48003304,4803304,48,Texas,03304,El Paso City (Central) PUMA,POINT (-980492.4432661048 -584853.9247744358),Metro,"El Paso, TX Metro Area"
@@ -701,10 +701,10 @@
 699,4804623,G48004623,4804623,48,Texas,04623,Harris County (East)--Baytown City PUMA,POINT (96227.89233630484 -857085.2656133956),T34,"Houston-The Woodlands-Sugar Land, TX Metro Area"
 700,100400,G01000400,0100400,01,Alabama,00400,DeKalb & Jackson Counties PUMA,POINT (914901.0478109488 -270707.2771796303),Micro,"Scottsboro, AL Micro Area"
 701,102500,G01002500,0102500,01,Alabama,02500,"Houston, Dale, Geneva & Henry Counties--Dothan City PUMA",POINT (994174.8989757632 -638312.7682347593),Micro,"Ozark, AL Micro Area"
-702,101000,G01001000,0101000,01,Alabama,01000,"Talladega, Cherokee, Randolph, Cleburne & Clay Counties PUMA",POINT (943537.2236275058 -391248.1253316418),,
+702,101000,G01001000,0101000,01,Alabama,01000,"Talladega, Cherokee, Randolph, Cleburne & Clay Counties PUMA",POINT (943537.2236275058 -391248.1253316418),NOT_CBSA,
 703,100500,G01000500,0100500,01,Alabama,00500,Marshall & Madison (Southeast) Counties--Huntsville City (Far Southeast) PUMA,POINT (879922.3820754432 -300216.6834221771),Micro,"Albertville, AL Micro Area"
-704,102400,G01002400,0102400,01,Alabama,02400,"Russell, Pike, Barbour, Macon & Bullock Counties PUMA",POINT (977851.2816575099 -553689.3319935199),,
-705,102300,G01002300,0102300,01,Alabama,02300,"Coffee, Covington, Butler & Crenshaw Counties PUMA",POINT (908735.7825488453 -624310.8446644573),,
+704,102400,G01002400,0102400,01,Alabama,02400,"Russell, Pike, Barbour, Macon & Bullock Counties PUMA",POINT (977851.2816575099 -553689.3319935199),NOT_CBSA,
+705,102300,G01002300,0102300,01,Alabama,02300,"Coffee, Covington, Butler & Crenshaw Counties PUMA",POINT (908735.7825488453 -624310.8446644573),NOT_CBSA,
 706,101900,G01001900,0101900,01,Alabama,01900,Lee County--Auburn City PUMA,POINT (991451.379811324 -492402.1383596527),Metro,"Auburn-Opelika, AL Metro Area"
 707,102100,G01002100,0102100,01,Alabama,02100,"Elmore, Autauga, Montgomery (Outer) & Lowndes Counties PUMA",POINT (896037.3068630303 -529489.7872244676),Metro,"Montgomery, AL Metro Area"
 708,102000,G01002000,0102000,01,Alabama,02000,Montgomery City & Pike Road Town (North) PUMA,POINT (914004.0135602975 -529874.7215110909),Metro,"Montgomery, AL Metro Area"
@@ -759,7 +759,7 @@
 757,1211702,G12011702,1211702,12,Florida,11702,Seminole County (North Central) PUMA,POINT (1430542.0145762952 -863737.7373740205),T34,"Orlando-Kissimmee-Sanford, FL Metro Area"
 758,1211703,G12011703,1211703,12,Florida,11703,Seminole County (South Central) PUMA,POINT (1432841.8164172606 -874352.4236419728),T34,"Orlando-Kissimmee-Sanford, FL Metro Area"
 759,1211701,G12011701,1211701,12,Florida,11701,Seminole County (West) PUMA,POINT (1423232.484748694 -866877.2656099997),T34,"Orlando-Kissimmee-Sanford, FL Metro Area"
-760,1208900,G12008900,1208900,12,Florida,08900,Nassau & Baker Counties PUMA,POINT (1333327.9390564144 -686224.4293563006),,
+760,1208900,G12008900,1208900,12,Florida,08900,Nassau & Baker Counties PUMA,POINT (1333327.9390564144 -686224.4293563006),NOT_CBSA,
 761,1202300,G12002300,1202300,12,Florida,02300,"Columbia, Levy, Bradford, Gilchrist, Dixie & Union Counties PUMA",POINT (1279094.5867671673 -778220.9786218158),Metro,"Gainesville, FL Metro Area"
 762,1200102,G12000102,1200102,12,Florida,00102,Alachua County (Outer) PUMA,POINT (1315362.8751829227 -778819.6732991788),Metro,"Gainesville, FL Metro Area"
 763,1200101,G12000101,1200101,12,Florida,00101,Alachua County (Central)--Gainesville City (Central) PUMA,POINT (1317728.8364020507 -779898.3654180273),Metro,"Gainesville, FL Metro Area"
@@ -777,7 +777,7 @@
 775,1208302,G12008302,1208302,12,Florida,08302,Marion County (Central)--Ocala City PUMA,POINT (1342838.2031497047 -830576.0714866703),Metro,"Ocala, FL Metro Area"
 776,1210900,G12010900,1210900,12,Florida,10900,St. Johns County (North) PUMA,POINT (1395118.9174548632 -730481.1200971323),Metro,"Jacksonville, FL Metro Area"
 777,1210700,G12010700,1210700,12,Florida,10700,Putnam & St. Johns (South) Counties PUMA,POINT (1382423.8675264474 -773031.4633463703),Micro,"Palatka, FL Micro Area"
-778,1200500,G12000500,1200500,12,Florida,00500,"Walton, Washington, Holmes & Bay Counties PUMA",POINT (968831.3426681613 -720745.4549025702),,
+778,1200500,G12000500,1200500,12,Florida,00500,"Walton, Washington, Holmes & Bay Counties PUMA",POINT (968831.3426681613 -720745.4549025702),NOT_CBSA,
 779,1203101,G12003101,1203101,12,Florida,03101,Duval County (Outer)--Jacksonville City (North & West) PUMA,POINT (1362379.5761232572 -691626.9200508016),Metro,"Jacksonville, FL Metro Area"
 780,1203104,G12003104,1203104,12,Florida,03104,Duval County (East)--Jacksonville City (Beaches) PUMA,POINT (1391163.2379276522 -694089.1468015201),Metro,"Jacksonville, FL Metro Area"
 781,1203102,G12003102,1203102,12,Florida,03102,Duval County (Northwest Central)--Jacksonville City (Northwest) PUMA,POINT (1365653.4531954098 -695066.123229789),Metro,"Jacksonville, FL Metro Area"
@@ -785,7 +785,7 @@
 783,1203105,G12003105,1203105,12,Florida,03105,Duval County (Southeast)--Jacksonville City (Southeast) PUMA,POINT (1387762.3856250595 -707729.1206178586),Metro,"Jacksonville, FL Metro Area"
 784,1203107,G12003107,1203107,12,Florida,03107,Duval County (Southwest Central)--Jacksonville City (Southwest) PUMA,POINT (1365101.0733686336 -706012.3532969616),Metro,"Jacksonville, FL Metro Area"
 785,1203106,G12003106,1203106,12,Florida,03106,Duval County (South Central)--Jacksonville City (Southeast River) PUMA,POINT (1377675.8853739977 -711757.5812364367),Metro,"Jacksonville, FL Metro Area"
-786,1212100,G12012100,1212100,12,Florida,12100,"Suwannee, Taylor, Madison, Hamilton & Lafayette Counties PUMA",POINT (1217839.6176343986 -732133.7083719725),,
+786,1212100,G12012100,1212100,12,Florida,12100,"Suwannee, Taylor, Madison, Hamilton & Lafayette Counties PUMA",POINT (1217839.6176343986 -732133.7083719725),NOT_CBSA,
 787,1209702,G12009702,1209702,12,Florida,09702,Osceola County (East) PUMA,POINT (1464362.0223620932 -939930.0955527396),T34,"Orlando-Kissimmee-Sanford, FL Metro Area"
 788,1209701,G12009701,1209701,12,Florida,09701,Osceola County (West) PUMA,POINT (1423515.0258139055 -923104.1857920034),T34,"Orlando-Kissimmee-Sanford, FL Metro Area"
 789,1203500,G12003500,1203500,12,Florida,03500,Flagler & Volusia (North Central) Counties PUMA,POINT (1419638.9897379903 -788198.8545684138),Metro,"Deltona-Daytona Beach-Ormond Beach, FL Metro Area"
@@ -831,8 +831,8 @@
 829,1210501,G12010501,1210501,12,Florida,10501,Polk County (Northwest) PUMA,POINT (1377741.787723853 -936997.1807458531),Metro,"Lakeland-Winter Haven, FL Metro Area"
 830,1207301,G12007301,1207301,12,Florida,07301,Leon County (Central)--Tallahassee City (Central) PUMA,POINT (1119970.3283261978 -719875.0951752457),Metro,"Tallahassee, FL Metro Area"
 831,1206901,G12006901,1206901,12,Florida,06901,Lake County (North) PUMA,POINT (1402842.2505983126 -847055.5820613261),T34,"Orlando-Kissimmee-Sanford, FL Metro Area"
-832,1206300,G12006300,1206300,12,Florida,06300,Apalachee Region (Outside Leon County) PUMA,POINT (1071676.4454365463 -736365.024280934),,
-833,1209300,G12009300,1209300,12,Florida,09300,"Southeast Heartland--Highlands (South & East), Okeechobee, Hendry & Glades Counties PUMA",POINT (1479586.621320797 -1053930.4347806226),,
+832,1206300,G12006300,1206300,12,Florida,06300,Apalachee Region (Outside Leon County) PUMA,POINT (1071676.4454365463 -736365.024280934),NOT_CBSA,
+833,1209300,G12009300,1209300,12,Florida,09300,"Southeast Heartland--Highlands (South & East), Okeechobee, Hendry & Glades Counties PUMA",POINT (1479586.621320797 -1053930.4347806226),NOT_CBSA,
 834,1202700,G12002700,1202700,12,Florida,02700,"Southwest Heartland--Highlands (Northwest), DeSoto & Hardee Counties PUMA",POINT (1415862.9266583624 -1023287.7774748413),Micro,"Wauchula, FL Micro Area"
 835,1207300,G12007300,1207300,12,Florida,07300,Leon County (Outer) PUMA,POINT (1120729.2392767183 -717146.0367278825),Metro,"Tallahassee, FL Metro Area"
 836,1208611,G12008611,1208611,12,Florida,08611,Miami-Dade County (Northeast Central)--Miami City (North) PUMA,POINT (1592081.5261876823 -1166073.7114314395),T34,"Miami-Fort Lauderdale-West Palm Beach, FL Metro Area"
@@ -861,20 +861,20 @@
 859,1208613,G12008613,1208613,12,Florida,08613,Miami-Dade County (Northeast Central)--Miami City (Downtown) PUMA,POINT (1591794.0765008638 -1170308.326525816),T34,"Miami-Fort Lauderdale-West Palm Beach, FL Metro Area"
 860,1303700,G13003700,1303700,13,Georgia,03700,Northeast Georgia Regional Commission (East) PUMA,POINT (1179942.3558947672 -323148.3143343539),Metro,"Athens-Clarke County, GA Metro Area"
 861,1301500,G13001500,1301500,13,Georgia,01500,Middle Georgia Regional Commission (South)--Houston & Pulaski Counties PUMA,POINT (1158363.150125087 -498165.92980911146),Metro,"Warner Robins, GA Metro Area"
-862,1302800,G13002800,1302800,13,Georgia,02800,Northwest Georgia Regional Commission (Northeast) PUMA,POINT (1036412.3325911608 -253284.61842425936),,
+862,1302800,G13002800,1302800,13,Georgia,02800,Northwest Georgia Regional Commission (Northeast) PUMA,POINT (1036412.3325911608 -253284.61842425936),NOT_CBSA,
 863,1301800,G13001800,1301800,13,Georgia,01800,River Valley Regional Commission (Outside Muscogee & Chattahoochee Counties) PUMA,POINT (1081023.352667886 -524808.8828271664),Metro,"Columbus, GA-AL Metro Area"
 864,1304100,G13004100,1304100,13,Georgia,04100,Central Savannah River Area Regional Commission (East Central)--Columbia County PUMA,POINT (1262458.9413755657 -351349.49416588806),Metro,"Augusta-Richmond County, GA-SC Metro Area"
-865,1304200,G13004200,1304200,13,Georgia,04200,Central Savannah River Area Regional Commission (West & Outside Richmond & Columbia) PUMA,POINT (1245134.2860127303 -388119.65826053725),,
-866,1303200,G13003200,1303200,13,Georgia,03200,Georgia Mountains Regional Commission (North & Northwest) PUMA,POINT (1103668.6060112817 -239513.7316409564),,
+865,1304200,G13004200,1304200,13,Georgia,04200,Central Savannah River Area Regional Commission (West & Outside Richmond & Columbia) PUMA,POINT (1245134.2860127303 -388119.65826053725),NOT_CBSA,
+866,1303200,G13003200,1303200,13,Georgia,03200,Georgia Mountains Regional Commission (North & Northwest) PUMA,POINT (1103668.6060112817 -239513.7316409564),NOT_CBSA,
 867,1302600,G13002600,1302600,13,Georgia,02600,"Northwest Georgia Regional Commission--Walker, Catoosa, Chattooga & Dade Counties PUMA",POINT (968220.37040913 -258542.1706722737),Metro,"Chattanooga, TN-GA Metro Area"
 868,1300900,G13000900,1300900,13,Georgia,00900,Southwest Georgia Regional Commission (North Central)--Dougherty & Lee Counties PUMA,POINT (1113651.6782272013 -583371.1158596376),Metro,"Albany, GA Metro Area"
-869,1300300,G13000300,1300300,13,Georgia,00300,"Coastal Regional Commission (North)--Bulloch, Effingham & Screven Counties PUMA",POINT (1341300.1627578612 -455594.2935992146),,
+869,1300300,G13000300,1300300,13,Georgia,00300,"Coastal Regional Commission (North)--Bulloch, Effingham & Screven Counties PUMA",POINT (1341300.1627578612 -455594.2935992146),NOT_CBSA,
 870,1301300,G13001300,1301300,13,Georgia,01300,Heart of Georgia Altamaha Regional Commission (North & West) PUMA,POINT (1230312.321159148 -484585.09976405033),Micro,"Dublin, GA Micro Area"
 871,1301100,G13001100,1301100,13,Georgia,01100,Southwest Georgia Regional Commission (West & Central) PUMA,POINT (1086205.3121487764 -639023.0729584708),Metro,"Albany, GA Metro Area"
 872,1300500,G13000500,1300500,13,Georgia,00500,Southern Georgia Regional Commission (East & Central) PUMA,POINT (1277876.5907209623 -624776.5898942334),Micro,"Waycross, GA Micro Area"
 873,1302500,G13002500,1302500,13,Georgia,02500,"Northwest Georgia Regional Commission (Southwest)--Floyd, Polk & Haralson Counties PUMA",POINT (986705.1279633822 -327815.1357388073),Micro,"Cedartown, GA Micro Area"
 874,1302400,G13002400,1302400,13,Georgia,02400,Atlanta Regional Commission (South Central)--Fayette County PUMA,POINT (1060346.5630488633 -393017.9540791396),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
-875,1301200,G13001200,1301200,13,Georgia,01200,Heart of Georgia Altamaha Regional Commission (Southeast) PUMA,POINT (1281706.1705574333 -533444.2940249378),,
+875,1301200,G13001200,1301200,13,Georgia,01200,Heart of Georgia Altamaha Regional Commission (Southeast) PUMA,POINT (1281706.1705574333 -533444.2940249378),NOT_CBSA,
 876,1300200,G13000200,1300200,13,Georgia,00200,"Coastal Regional Commission (West)--Liberty, Bryan & Long Counties PUMA",POINT (1355332.3422620439 -526379.5134585996),Metro,"Hinesville, GA Metro Area"
 877,1301900,G13001900,1301900,13,Georgia,01900,Three Rivers Regional Commission (East) PUMA,POINT (1088982.7703968948 -425823.0477738272),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 878,1303001,G13003001,1303001,13,Georgia,03001,Atlanta Regional Commission (Northwest)--Cobb County (Central)--Marietta City PUMA,POINT (1049539.505515711 -334059.3739601454),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
@@ -895,7 +895,7 @@
 893,1304002,G13004002,1304002,13,Georgia,04002,Atlanta Regional Commission (Northeast)--Gwinnett County (North)--Sugar Hill City PUMA,POINT (1095682.683969165 -312046.1167082302),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 894,1304004,G13004004,1304004,13,Georgia,04004,Atlanta Regional Commission (Northeast)--Gwinnett County (East) PUMA,POINT (1105870.28093858 -323439.30341392104),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 895,1304500,G13004500,1304500,13,Georgia,04500,Northwest Georgia Regional Commission (Southeast)--Paulding County PUMA,POINT (1019504.3894197674 -340910.39784433716),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
-896,1300700,G13000700,1300700,13,Georgia,00700,Southern Georgia Regional Commission (West) PUMA,POINT (1189935.778510771 -608520.5684836679),,
+896,1300700,G13000700,1300700,13,Georgia,00700,Southern Georgia Regional Commission (West) PUMA,POINT (1189935.778510771 -608520.5684836679),NOT_CBSA,
 897,1302100,G13002100,1302100,13,Georgia,02100,Three Rivers Regional Commission (North Central)--Coweta County PUMA,POINT (1036454.7452581974 -402689.24761535047),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 898,1303800,G13003800,1303800,13,Georgia,03800,Northeast Georgia Regional Commission (Northwest)--Barrow & Jackson Counties PUMA,POINT (1131263.50535054 -308078.3771013672),Micro,"Jefferson, GA Micro Area"
 899,1303900,G13003900,1303900,13,Georgia,03900,"Northeast Georgia Regional Commission (Southwest)--Walton, Morgan & Jasper Counties PUMA",POINT (1136910.6602801788 -367638.61618266185),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
@@ -905,7 +905,7 @@
 903,1302001,G13002001,1302001,13,Georgia,02001,Atlanta Regional Commission (Central)--DeKalb County (East Central)--Redan PUMA,POINT (1088265.5615650204 -352221.3457558863),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 904,1301007,G13001007,1301007,13,Georgia,01007,Atlanta Regional Commission (Central)--Fulton County (East)--Atlanta City (Southeast) PUMA,POINT (1068022.2622652391 -355792.87736977247),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 905,1301008,G13001008,1301008,13,Georgia,01008,Atlanta Regional Commission (Central)--DeKalb County (South) PUMA,POINT (1081767.4030823929 -360832.18619613495),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
-906,1303500,G13003500,1303500,13,Georgia,03500,Georgia Mountains Regional Commission (Southeast) PUMA,POINT (1154018.6190462974 -264106.84553673654),,
+906,1303500,G13003500,1303500,13,Georgia,03500,Georgia Mountains Regional Commission (Southeast) PUMA,POINT (1154018.6190462974 -264106.84553673654),NOT_CBSA,
 907,1300100,G13000100,1300100,13,Georgia,00100,Coastal Regional Commission (South)--Glynn Camden & McIntosh Counties PUMA,POINT (1366047.7100416033 -601793.3796025871),Metro,"Brunswick, GA Metro Area"
 908,1303102,G13003102,1303102,13,Georgia,03102,Atlanta Regional Commission--Cherokee County (Outside Woodstock & Canton Cities) PUMA,POINT (1050929.582727508 -298898.48229984124),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
 909,1303101,G13003101,1303101,13,Georgia,03101,Atlanta Regional Commission--Cherokee County (Central)--Woodstock & Canton Cities PUMA,POINT (1050175.3088344848 -307866.1394464152),T34,"Atlanta-Sandy Springs-Roswell, GA Metro Area"
@@ -935,8 +935,8 @@
 933,3704800,G37004800,3704800,37,North Carolina,04800,Brunswick County PUMA,POINT (1617079.0480543887 -231934.6117186512),Metro,"Myrtle Beach-Conway-North Myrtle Beach, SC-NC Metro Area"
 934,4501600,G45001600,4501600,45,South Carolina,01600,"Greenwood, Abbeville & McCormick Counties PUMA",POINT (1249868.9254906923 -289700.2886063779),Micro,"Greenwood, SC Micro Area"
 935,4501400,G45001400,4501400,45,South Carolina,01400,"Beaufort & Jasper Counties--Hilton Head Island, Bluffton Towns & Beaufort City PUMA",POINT (1407148.5765878435 -456736.6994069173),Metro,"Hilton Head Island-Bluffton-Beaufort, SC Metro Area"
-936,4500800,G45000800,4500800,45,South Carolina,00800,"Sumter, Clarendon, Williamsburg & Lee Counties--Sumter City PUMA",POINT (1455509.4035791846 -293413.1267608572),,
-937,4501300,G45001300,4501300,45,South Carolina,01300,"Orangeburg, Colleton, Barnwell, Hampton, Bamberg & Allendale Counties PUMA",POINT (1387323.79658867 -381294.5804225062),,
+936,4500800,G45000800,4500800,45,South Carolina,00800,"Sumter, Clarendon, Williamsburg & Lee Counties--Sumter City PUMA",POINT (1455509.4035791846 -293413.1267608572),NOT_CBSA,
+937,4501300,G45001300,4501300,45,South Carolina,01300,"Orangeburg, Colleton, Barnwell, Hampton, Bamberg & Allendale Counties PUMA",POINT (1387323.79658867 -381294.5804225062),NOT_CBSA,
 938,4501101,G45001101,4501101,45,South Carolina,01101,Horry County (West & North)--Conway City & Red Hill PUMA,POINT (1548706.7443648188 -258319.11071913817),Metro,"Myrtle Beach-Conway-North Myrtle Beach, SC-NC Metro Area"
 939,4501102,G45001102,4501102,45,South Carolina,01102,"Horry County (Southeast)--Myrtle Beach, North Myrtle Beach Cities & Socastee (East) PUMA",POINT (1569452.0813098147 -275690.9677394643),Metro,"Myrtle Beach-Conway-North Myrtle Beach, SC-NC Metro Area"
 940,4500900,G45000900,4500900,45,South Carolina,00900,Florence & Darlington Counties--Florence City PUMA,POINT (1474664.483914588 -248912.86069369162),Metro,"Florence, SC Metro Area"
@@ -986,12 +986,12 @@
 984,500500,G05000500,0500500,05,Arkansas,00500,"Craighead (West), Greene, Randolph, Lawrence & Clay Counties PUMA",POINT (465738.24740617035 -137041.38942296282),Micro,"Paragould, AR Micro Area"
 985,500100,G05000100,0500100,05,Arkansas,00100,Benton County PUMA,POINT (155077.32291976933 -128682.87602916476),Metro,"Fayetteville-Springdale-Rogers, AR-MO Metro Area"
 986,801002,G08001002,0801002,08,Colorado,01002,"Mesa (Outside Grand Junction City), Montrose, Delta, San Miguel & Ouray Counties PUMA",POINT (-1055920.106215533 193957.64870945836),Micro,"Montrose, CO Micro Area"
-987,800800,G08000800,0800800,08,Colorado,00800,Southeast Colorado PUMA,POINT (-751156.8343604287 45543.5734242454),,
-988,800900,G08000900,0800900,08,Colorado,00900,"La Plata, Montezuma, Gunnison, Archuleta, Dolores, Hinsdale & San Juan Counties PUMA",POINT (-1013382.7495060541 97500.41661500017),,
-989,800400,G08000400,0800400,08,Colorado,00400,"Eagle, Summit, Grand & Jackson Counties PUMA",POINT (-881606.6845366542 322921.6707412909),,
+987,800800,G08000800,0800800,08,Colorado,00800,Southeast Colorado PUMA,POINT (-751156.8343604287 45543.5734242454),NOT_CBSA,
+988,800900,G08000900,0800900,08,Colorado,00900,"La Plata, Montezuma, Gunnison, Archuleta, Dolores, Hinsdale & San Juan Counties PUMA",POINT (-1013382.7495060541 97500.41661500017),NOT_CBSA,
+989,800400,G08000400,0800400,08,Colorado,00400,"Eagle, Summit, Grand & Jackson Counties PUMA",POINT (-881606.6845366542 322921.6707412909),NOT_CBSA,
 990,800801,G08000801,0800801,08,Colorado,00801,"DRCOG Mountains--Jefferson (West), Boulder (West), Clear Creek & Gilpin Counties PUMA",POINT (-801307.6626842031 295808.5403632285),T34,"Denver-Aurora-Lakewood, CO Metro Area"
 991,800600,G08000600,0800600,08,Colorado,00600,"Fremont, Chaffee, Park, Lake, Huerfano, Pueblo (Southwest) & Custer Counties PUMA",POINT (-821811.1714134366 154999.08127513298),Micro,"Cañon City, CO Micro Area"
-992,800100,G08000100,0800100,08,Colorado,00100,Northeast Colorado--Eastern Plains Region PUMA,POINT (-610341.1065638959 255203.64918936475),,
+992,800100,G08000100,0800100,08,Colorado,00100,Northeast Colorado--Eastern Plains Region PUMA,POINT (-610341.1065638959 255203.64918936475),NOT_CBSA,
 993,800823,G08000823,0800823,08,Colorado,00823,Douglas (Northeast) & Elbert (West) Counties--Parker Town & The Pinery PUMA,POINT (-734028.7491065 245321.61009384974),T34,"Denver-Aurora-Lakewood, CO Metro Area"
 994,804101,G08004101,0804101,08,Colorado,04101,El Paso (Outside Colorado Springs City) & Teller Counties--Fountain City PUMA,POINT (-742608.7825280551 182373.7972258762),Metro,"Colorado Springs, CO Metro Area"
 995,800807,G08000807,0800807,08,Colorado,00807,Adams County (West Central)--Commerce City & Brighton Cities PUMA,POINT (-745799.4791980179 304084.529518713),T34,"Denver-Aurora-Lakewood, CO Metro Area"
@@ -1001,7 +1001,7 @@
 999,800811,G08000811,0800811,08,Colorado,00811,Arapahoe County (Southwest)--Centennial (West & Central) & Greenwood Village Cities PUMA,POINT (-756483.8206835457 271171.1215343211),T34,"Denver-Aurora-Lakewood, CO Metro Area"
 1000,800816,G08000816,0800816,08,Colorado,00816,Denver City (Southwest) PUMA,POINT (-767211.807131347 280099.94445272343),T34,"Denver-Aurora-Lakewood, CO Metro Area"
 1001,800814,G08000814,0800814,08,Colorado,00814,Denver City (South Central) PUMA,POINT (-760762.7205957086 282606.2067100708),T34,"Denver-Aurora-Lakewood, CO Metro Area"
-1002,800200,G08000200,0800200,08,Colorado,00200,"Northwest Colorado--Garfield, Routt, Moffat & Rio Blanco Counties PUMA",POINT (-1003588.1725495142 367269.7378347003),,
+1002,800200,G08000200,0800200,08,Colorado,00200,"Northwest Colorado--Garfield, Routt, Moffat & Rio Blanco Counties PUMA",POINT (-1003588.1725495142 367269.7378347003),NOT_CBSA,
 1003,800103,G08000103,0800103,08,Colorado,00103,Larimer County (North)--Fort Collins City PUMA,POINT (-793039.3401449932 405987.3256578609),Metro,"Fort Collins, CO Metro Area"
 1004,800102,G08000102,0800102,08,Colorado,00102,Larimer County (South)--Loveland City PUMA,POINT (-788814.33347155 364113.09335056826),Metro,"Fort Collins, CO Metro Area"
 1005,800700,G08000700,0800700,08,Colorado,00700,Pueblo County (North)--Pueblo City & Pueblo West PUMA,POINT (-741659.7275431601 125225.40518365563),Metro,"Pueblo, CO Metro Area"
@@ -1028,8 +1028,8 @@
 1026,800808,G08000808,0800808,08,Colorado,00808,Arapahoe County (West)--Aurora (Southwest) & Centennial (East) Cities PUMA,POINT (-745396.2118435152 271365.70646509435),T34,"Denver-Aurora-Lakewood, CO Metro Area"
 1027,800803,G08000803,0800803,08,Colorado,00803,Boulder County (Central)--Boulder City PUMA,POINT (-779096.4042609977 321789.085511977),Metro,"Boulder, CO Metro Area"
 1028,1600100,G16000100,1600100,16,Idaho,00100,"Bonner, Latah, Shoshone, Boundary, Benewah & Kootenai (Southeast) Counties PUMA",POINT (-1527981.9841148844 1304961.4522581385),Metro,"Coeur d'Alene, ID Metro Area"
-1029,1600400,G16000400,1600400,16,Idaho,00400,"Ada (North), Payette, Canyon (North), Gem & Washington Counties--Eagle City PUMA",POINT (-1634261.074640418 928387.6489155862),,
-1030,1600300,G16000300,1600300,16,Idaho,00300,Central Idaho--Lewiston City & Nez Perce Reservation PUMA,POINT (-1474993.1474533896 992971.5362010566),,
+1029,1600400,G16000400,1600400,16,Idaho,00400,"Ada (North), Payette, Canyon (North), Gem & Washington Counties--Eagle City PUMA",POINT (-1634261.074640418 928387.6489155862),NOT_CBSA,
+1030,1600300,G16000300,1600300,16,Idaho,00300,Central Idaho--Lewiston City & Nez Perce Reservation PUMA,POINT (-1474993.1474533896 992971.5362010566),NOT_CBSA,
 1031,1601100,G16001100,1601100,16,Idaho,01100,"Bingham (Outside Fort Hall AIR), Madison, Jefferson, Fremont & Teton Counties PUMA",POINT (-1271713.6486206104 808536.3257036192),Micro,"Rexburg, ID Micro Area"
 1032,1601000,G16001000,1601000,16,Idaho,01000,"Elmore, Jerome, Blaine, Minidoka, Gooding, Lincoln & Camas Counties PUMA",POINT (-1492867.5191089688 788700.2412408938),Micro,"Hailey, ID Micro Area"
 1033,1601300,G16001300,1601300,16,Idaho,01300,"Southeast Idaho--Pocatello, Chubbuck Cities & Fort Hall Reservation PUMA",POINT (-1305839.776465758 676216.3006569026),Metro,"Pocatello, ID Metro Area"
@@ -1042,7 +1042,7 @@
 1040,1600500,G16000500,1600500,16,Idaho,00500,Canyon (South) & Owyhee Counties--Caldwell & Nampa (South & West) Cities PUMA,POINT (-1633608.767388851 746998.1041186523),Metro,"Boise City, ID Metro Area"
 1041,1600200,G16000200,1600200,16,Idaho,00200,"Kootenai County (Northwest)--Coeur d'Alene, Post Falls & Hayden Cities PUMA",POINT (-1558987.2752192074 1319157.528750584),Metro,"Coeur d'Alene, ID Metro Area"
 1042,1702100,G17002100,1702100,17,Illinois,02100,Champaign County--Champaign & Urbana Cities PUMA,POINT (658098.35164382 322884.7650487564),Metro,"Champaign-Urbana, IL Metro Area"
-1043,1700300,G17000300,1700300,17,Illinois,00300,"Adams, Pike, Brown, Schuyler & Mason Counties PUMA",POINT (445124.5016269297 287491.8632601716),,
+1043,1700300,G17000300,1700300,17,Illinois,00300,"Adams, Pike, Brown, Schuyler & Mason Counties PUMA",POINT (445124.5016269297 287491.8632601716),NOT_CBSA,
 1044,1703310,G17003310,1703310,17,Illinois,03310,"Lake County--Vernon, Moraine, West Deerfield & Libertyville (Southeast) Townships PUMA",POINT (663885.5479339169 554776.8016684417),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1045,1703309,G17003309,1703309,17,Illinois,03309,"Lake County (East Central)--Warren, Libertyville (North & East) & Shields Townships PUMA",POINT (660116.2338637348 568223.5574722377),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1046,1703602,G17003602,1703602,17,Illinois,03602,"McHenry County (Southeast)--Algonquin, McHenry & Nunda Townships PUMA",POINT (632064.5427860158 561668.95127718),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
@@ -1050,21 +1050,21 @@
 1048,1703306,G17003306,1703306,17,Illinois,03306,"Lake County (Northwest)--Avon, Lake Villa, Antioch & Grant Townships PUMA",POINT (645235.4314512446 577026.1418911748),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1049,1703700,G17003700,1703700,17,Illinois,03700,Kendall & Grundy Counties PUMA,POINT (627884.8505674335 463797.2492313478),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1050,1703308,G17003308,1703308,17,Illinois,03308,"Lake County (Southwest)--Ela, Freemont, Wauconda & Cuba Townships PUMA",POINT (646774.3613100149 557976.119480746),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
-1051,1702200,G17002200,1702200,17,Illinois,02200,"Livingston, Ford, Iroquois & Vermilion Counties PUMA",POINT (664374.0337821674 378091.1187912952),,
-1052,1700800,G17000800,1700800,17,Illinois,00800,South & Southeast Illinois PUMA,POINT (646509.2555253974 49580.74657825975),,
-1053,1700501,G17000501,1700501,17,Illinois,00501,"Montgomery, Bond, Clinton, Fayette & Effingham Counties PUMA",POINT (583703.8579189834 187133.45237640862),,
-1054,1700401,G17000401,1700401,17,Illinois,00401,"Cass, Morgan, Scott, Greene, Macoupin, Jersey & Calhoun Counties PUMA",POINT (490570.5150001793 232395.5231742854),,
+1051,1702200,G17002200,1702200,17,Illinois,02200,"Livingston, Ford, Iroquois & Vermilion Counties PUMA",POINT (664374.0337821674 378091.1187912952),NOT_CBSA,
+1052,1700800,G17000800,1700800,17,Illinois,00800,South & Southeast Illinois PUMA,POINT (646509.2555253974 49580.74657825975),NOT_CBSA,
+1053,1700501,G17000501,1700501,17,Illinois,00501,"Montgomery, Bond, Clinton, Fayette & Effingham Counties PUMA",POINT (583703.8579189834 187133.45237640862),NOT_CBSA,
+1054,1700401,G17000401,1700401,17,Illinois,00401,"Cass, Morgan, Scott, Greene, Macoupin, Jersey & Calhoun Counties PUMA",POINT (490570.5150001793 232395.5231742854),NOT_CBSA,
 1055,1702501,G17002501,1702501,17,Illinois,02501,"Knox, Stark, Bureau, Marshall & Woodford Counties PUMA",POINT (531035.6716462368 419963.34903979336),Metro,"Peoria, IL Metro Area"
 1056,1700900,G17000900,1700900,17,Illinois,00900,"Jackson, Williamson, Franklin & Perry Counties PUMA",POINT (594336.9691230847 64892.78786307088),Metro,"Carbondale-Marion, IL Metro Area"
-1057,1700104,G17000104,1700104,17,Illinois,00104,"Jo Daviess, Carroll, Whiteside & Lee Counties PUMA",POINT (508966.07146355894 516448.7214240896),,
-1058,1700202,G17000202,1700202,17,Illinois,00202,"Henry, Mercer, Henderson, Warren, Hancock, McDonough & Fulton Counties PUMA",POINT (451869.0999622154 380425.7557935119),,
+1057,1700104,G17000104,1700104,17,Illinois,00104,"Jo Daviess, Carroll, Whiteside & Lee Counties PUMA",POINT (508966.07146355894 516448.7214240896),NOT_CBSA,
+1058,1700202,G17000202,1700202,17,Illinois,00202,"Henry, Mercer, Henderson, Warren, Hancock, McDonough & Fulton Counties PUMA",POINT (451869.0999622154 380425.7557935119),NOT_CBSA,
 1059,1702901,G17002901,1702901,17,Illinois,02901,Winnebago (Northeast) & Boone Counties PUMA,POINT (580552.4550950723 565066.1154418929),Metro,"Rockford, IL Metro Area"
 1060,1701602,G17001602,1701602,17,Illinois,01602,"Menard, Logan, De Witt, Piatt, Moultrie, Shelby & Christian Counties PUMA",POINT (589362.2629515155 278342.46841268),Metro,"Decatur, IL Metro Area"
-1061,1700700,G17000700,1700700,17,Illinois,00700,"Clark, Jasper, Crawford, Lawrence, Richland, Clay & Wayne Counties PUMA",POINT (678816.9355413637 177843.77936663353),,
+1061,1700700,G17000700,1700700,17,Illinois,00700,"Clark, Jasper, Crawford, Lawrence, Richland, Clay & Wayne Counties PUMA",POINT (678816.9355413637 177843.77936663353),NOT_CBSA,
 1062,1700600,G17000600,1700600,17,Illinois,00600,"Douglas, Edgar, Coles & Cumberland Counties PUMA",POINT (674360.7150474433 261521.18386013547),Micro,"Charleston-Mattoon, IL Micro Area"
 1063,1702400,G17002400,1702400,17,Illinois,02400,LaSalle County PUMA,POINT (590187.7811375756 452778.2938016512),Micro,"Ottawa-Peru, IL Micro Area"
 1064,1703601,G17003601,1703601,17,Illinois,03601,"McHenry County (North, West & Central) PUMA",POINT (612841.4492428383 565932.2272193272),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
-1065,1701001,G17001001,1701001,17,Illinois,01001,"Monroe, Randolph, Washington, Jefferson & Marion Counties PUMA",POINT (570534.574909435 112636.8867462278),,
+1065,1701001,G17001001,1701001,17,Illinois,01001,"Monroe, Randolph, Washington, Jefferson & Marion Counties PUMA",POINT (570534.574909435 112636.8867462278),NOT_CBSA,
 1066,1702000,G17002000,1702000,17,Illinois,02000,McLean County PUMA,POINT (600565.5293669809 357791.9105810158),Metro,"Bloomington, IL Metro Area"
 1067,1700105,G17000105,1700105,17,Illinois,00105,Rock Island County PUMA,POINT (450029.06923211325 457392.2342871552),Metro,"Davenport-Moline-Rock Island, IA-IL Metro Area"
 1068,1703005,G17003005,1703005,17,Illinois,03005,Kane County (Southeast)--Aurora Township PUMA,POINT (633304.0117914088 503686.6656502088),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
@@ -1132,7 +1132,7 @@
 1130,1801200,G18001200,1801200,18,Indiana,01200,Tippecanoe County--Lafayette & West Lafayette Cities PUMA,POINT (765222.585918631 360408.4840310264),Metro,"Lafayette-West Lafayette, IN Metro Area"
 1131,1802200,G18002200,1802200,18,Indiana,02200,Hendricks County PUMA,POINT (804311.5490194615 294549.5501758128),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 1132,1803200,G18003200,1803200,18,Indiana,03200,"Warrick, Gibson & Posey Counties PUMA",POINT (729700.8125880564 105588.8882038546),Metro,"Evansville, IN-KY Metro Area"
-1133,1802700,G18002700,1802700,18,Indiana,02700,"Greene, Daviess, Owen, Orange & Martin Counties PUMA",POINT (791107.7870520733 191405.21789661545),,
+1133,1802700,G18002700,1802700,18,Indiana,02700,"Greene, Daviess, Owen, Orange & Martin Counties PUMA",POINT (791107.7870520733 191405.21789661545),NOT_CBSA,
 1134,1800102,G18000102,1800102,18,Indiana,00102,Lake County (Northeast)--Gary City & Griffith Town PUMA,POINT (715856.602772622 489329.53188613435),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1135,1800101,G18000101,1800101,18,Indiana,00101,Lake County (Northwest)--Hammond & East Chicago Cities PUMA,POINT (703876.6930910634 494317.5084264931),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1136,1800103,G18000103,1800103,18,Indiana,00103,Lake County (Central) PUMA,POINT (714929.5349379 480941.39887550974),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
@@ -1142,48 +1142,48 @@
 1140,1800300,G18000300,1800300,18,Indiana,00300,LaPorte County PUMA,POINT (765518.9587725793 490626.4314706355),Metro,"Michigan City-La Porte, IN Metro Area"
 1141,1801100,G18001100,1801100,18,Indiana,01100,"Montgomery, Clinton, White, Carroll & Benton Counties PUMA",POINT (769879.598052326 367736.00771795044),Metro,"Lafayette-West Lafayette, IN Metro Area"
 1142,1803300,G18003300,1803300,18,Indiana,03300,Vanderburgh County--Evansville City PUMA,POINT (730673.4106350718 91215.73884397946),Metro,"Evansville, IN-KY Metro Area"
-1143,1800700,G18000700,1800700,18,Indiana,00700,"Jasper, Starke, Fulton, Newton & Pulaski Counties PUMA",POINT (760747.3368045737 435226.337140732),,
+1143,1800700,G18000700,1800700,18,Indiana,00700,"Jasper, Starke, Fulton, Newton & Pulaski Counties PUMA",POINT (760747.3368045737 435226.337140732),NOT_CBSA,
 1144,1800401,G18000401,1800401,18,Indiana,00401,St. Joseph County (North)--South Bend City PUMA,POINT (802445.8815747105 510714.95028430497),Metro,"South Bend-Mishawaka, IN-MI Metro Area"
 1145,1800402,G18000402,1800402,18,Indiana,00402,St. Joseph County (Outside South Bend City)--Mishawaka City PUMA,POINT (801718.6072419119 501149.08141373954),Metro,"South Bend-Mishawaka, IN-MI Metro Area"
 1146,1800200,G18000200,1800200,18,Indiana,00200,Porter County PUMA,POINT (739460.7961995946 478507.3940521046),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
-1147,1801600,G18001600,1801600,18,Indiana,01600,"Clay, Sullivan, Parke, Fountain, Vermillion & Warren Counties PUMA",POINT (738500.982122793 284793.31578022),,
+1147,1801600,G18001600,1801600,18,Indiana,01600,"Clay, Sullivan, Parke, Fountain, Vermillion & Warren Counties PUMA",POINT (738500.982122793 284793.31578022),NOT_CBSA,
 1148,1802305,G18002305,1802305,18,Indiana,02305,Marion County--Center Township--Indianapolis City (Central) PUMA,POINT (835508.1238224655 298238.0176424292),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 1149,1802302,G18002302,1802302,18,Indiana,02302,Marion County--Washington Township (South & East)--Indianapolis City (North) PUMA,POINT (834709.9984874014 309119.0513929468),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 1150,1802307,G18002307,1802307,18,Indiana,02307,Marion County--Perry & Decatur (South & East) Townships--Indianapolis City (South) PUMA,POINT (832199.0607311609 286769.5631965965),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 1151,1802301,G18002301,1802301,18,Indiana,02301,Marion County--Pike & Washington (Northwest) Townships--Indianapolis City (Northwest) PUMA,POINT (824485.2857614405 309017.31982901506),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 1152,1802304,G18002304,1802304,18,Indiana,02304,Marion County--Wayne & Decatur (Northwest) Townships--Indianapolis City (West) PUMA,POINT (824932.9741579787 295675.7948428901),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
-1153,1900100,G19000100,1900100,19,Iowa,00100,"Sioux, Clay, Dickinson, O'Brien, Lyon, Emmet, Palo Alto & Osceola Counties PUMA",POINT (41934.291776742924 639280.3722617032),,
-1154,1900200,G19000200,1900200,19,Iowa,00200,"Cerro Gordo, Floyd, Kossuth, Hancock, Winnebago, Mitchell & Worth Counties PUMA",POINT (202248.11128545427 641420.5380067412),,
-1155,1900400,G19000400,1900400,19,Iowa,00400,"Bremer, Winneshiek, Fayette, Clayton, Allamakee, Chickasaw & Howard Counties PUMA",POINT (337237.43485811184 630239.4352039654),,
+1153,1900100,G19000100,1900100,19,Iowa,00100,"Sioux, Clay, Dickinson, O'Brien, Lyon, Emmet, Palo Alto & Osceola Counties PUMA",POINT (41934.291776742924 639280.3722617032),NOT_CBSA,
+1154,1900200,G19000200,1900200,19,Iowa,00200,"Cerro Gordo, Floyd, Kossuth, Hancock, Winnebago, Mitchell & Worth Counties PUMA",POINT (202248.11128545427 641420.5380067412),NOT_CBSA,
+1155,1900400,G19000400,1900400,19,Iowa,00400,"Bremer, Winneshiek, Fayette, Clayton, Allamakee, Chickasaw & Howard Counties PUMA",POINT (337237.43485811184 630239.4352039654),NOT_CBSA,
 1156,1901300,G19001300,1901300,19,Iowa,01300,Story & Boone Counties--Ames City PUMA,POINT (189230.27590061445 510502.35615854186),Metro,"Ames, IA Metro Area"
-1157,1900800,G19000800,1900800,19,Iowa,00800,"Clinton, Muscatine, Jones & Cedar Counties PUMA",POINT (416634.480676471 497540.1540335265),,
+1157,1900800,G19000800,1900800,19,Iowa,00800,"Clinton, Muscatine, Jones & Cedar Counties PUMA",POINT (416634.480676471 497540.1540335265),NOT_CBSA,
 1158,1902100,G19002100,1902100,19,Iowa,02100,Southwest Iowa--Council Bluffs City PUMA,POINT (48603.4064379577 419590.5848526241),Metro,"Omaha-Council Bluffs, NE-IA Metro Area"
-1159,1901800,G19001800,1901800,19,Iowa,01800,South Central Iowa PUMA,POINT (167640.11685481886 398828.523454029),,
+1159,1901800,G19001800,1901800,19,Iowa,01800,South Central Iowa PUMA,POINT (167640.11685481886 398828.523454029),NOT_CBSA,
 1160,1902000,G19002000,1902000,19,Iowa,02000,Woodbury & Plymouth Counties--Sioux City PUMA,POINT (-10481.901113952812 567020.9391237011),Metro,"Sioux City, IA-NE-SD Metro Area"
 1161,1902200,G19002200,1902200,19,Iowa,02200,"Wapello, Mahaska, Washington, Jefferson, Keokuk, Davis & Van Buren Counties PUMA",POINT (318176.5553245177 409780.5652998702),Micro,"Ottumwa, IA Micro Area"
-1162,1900700,G19000700,1900700,19,Iowa,00700,"Dubuque, Buchanan, Jackson & Delaware Counties--Dubuque City PUMA",POINT (397285.38932442584 557997.1310233639),,
-1163,1900600,G19000600,1900600,19,Iowa,00600,"Webster, Hardin, Hamilton, Butler, Wright, Grundy, Franklin & Humboldt Counties PUMA",POINT (203990.33567947135 570000.5550475335),,
+1162,1900700,G19000700,1900700,19,Iowa,00700,"Dubuque, Buchanan, Jackson & Delaware Counties--Dubuque City PUMA",POINT (397285.38932442584 557997.1310233639),NOT_CBSA,
+1163,1900600,G19000600,1900600,19,Iowa,00600,"Webster, Hardin, Hamilton, Butler, Wright, Grundy, Franklin & Humboldt Counties PUMA",POINT (203990.33567947135 570000.5550475335),NOT_CBSA,
 1164,1901600,G19001600,1901600,19,Iowa,01600,Polk County (East)--Ankeny & Altoona Cities PUMA,POINT (204350.77372384313 474628.2606183052),Metro,"Des Moines-West Des Moines, IA Metro Area"
 1165,1901500,G19001500,1901500,19,Iowa,01500,Polk (Southwest) & Dallas (East) Counties--West Des Moines & Urbandale Cities PUMA,POINT (178129.27676705294 466868.97650476254),Metro,"Des Moines-West Des Moines, IA Metro Area"
 1166,1901700,G19001700,1901700,19,Iowa,01700,Des Moines City PUMA,POINT (196753.4764781468 460092.2624716497),Metro,"Des Moines-West Des Moines, IA Metro Area"
-1167,1901900,G19001900,1901900,19,Iowa,01900,"Northwest Central Iowa--Storm Lake, Denison & Cherokee Region PUMA",POINT (69890.00096788006 542431.9653239432),,
+1167,1901900,G19001900,1901900,19,Iowa,01900,"Northwest Central Iowa--Storm Lake, Denison & Cherokee Region PUMA",POINT (69890.00096788006 542431.9653239432),NOT_CBSA,
 1168,1901400,G19001400,1901400,19,Iowa,01400,"Warren, Jasper, Marion, Dallas (West) & Madison Counties PUMA",POINT (206845.49858553713 448227.70043181273),Metro,"Des Moines-West Des Moines, IA Metro Area"
-1169,1902300,G19002300,1902300,19,Iowa,02300,"Des Moines, Lee, Henry & Louisa Counties PUMA",POINT (386233.2345703782 393004.1252090939),,
-1170,1901200,G19001200,1901200,19,Iowa,01200,"Marshall, Benton, Poweshiek, Tama & Iowa Counties PUMA",POINT (294364.8549998253 501545.84230899875),,
+1169,1902300,G19002300,1902300,19,Iowa,02300,"Des Moines, Lee, Henry & Louisa Counties PUMA",POINT (386233.2345703782 393004.1252090939),NOT_CBSA,
+1170,1901200,G19001200,1901200,19,Iowa,01200,"Marshall, Benton, Poweshiek, Tama & Iowa Counties PUMA",POINT (294364.8549998253 501545.84230899875),NOT_CBSA,
 1171,1901100,G19001100,1901100,19,Iowa,01100,Johnson County--Iowa City PUMA,POINT (364533.08382260014 475827.4997205554),Metro,"Iowa City, IA Metro Area"
 1172,1900500,G19000500,1900500,19,Iowa,00500,Black Hawk County--Waterloo & Cedar Falls Cities PUMA,POINT (301544.223256488 562543.697981196),Metro,"Waterloo-Cedar Falls, IA Metro Area"
 1173,1900900,G19000900,1900900,19,Iowa,00900,Scott County--Davenport City PUMA,POINT (444384.8060740932 476096.1422194341),Metro,"Davenport-Moline-Rock Island, IA-IL Metro Area"
 1174,1901000,G19001000,1901000,19,Iowa,01000,Linn County--Cedar Rapids City PUMA,POINT (361519.46063922823 521309.02151173144),Metro,"Cedar Rapids, IA Metro Area"
-1175,2001200,G20001200,2001200,20,Kansas,01200,"Southwest Kansas--Dodge City, Garden City & Liberal City PUMA",POINT (-419587.7637779538 25147.453307238404),,
+1175,2001200,G20001200,2001200,20,Kansas,01200,"Southwest Kansas--Dodge City, Garden City & Liberal City PUMA",POINT (-419587.7637779538 25147.453307238404),NOT_CBSA,
 1176,2001500,G20001500,2001500,20,Kansas,01500,Southeast Kansas PUMA,POINT (68411.48131453774 -20098.131686282937),Micro,"Parsons, KS Micro Area"
 1177,2000802,G20000802,2000802,20,Kansas,00802,"Shawnee (Outside Topeka City), Osage, Jackson, Brown & Wabaunsee Counties PUMA",POINT (14062.822273279304 184686.78918752045),Metro,"Topeka, KS Metro Area"
-1178,2000100,G20000100,2000100,20,Kansas,00100,Northwest Kansas PUMA,POINT (-374239.80661167396 197729.3184515498),,
+1178,2000100,G20000100,2000100,20,Kansas,00100,Northwest Kansas PUMA,POINT (-374239.80661167396 197729.3184515498),NOT_CBSA,
 1179,2000300,G20000300,2000300,20,Kansas,00300,"Riley, Geary & Pottawatomie Counties--Manhattan City PUMA",POINT (-47849.71951374206 198660.86197862113),Metro,"Manhattan, KS Metro Area"
-1180,2000200,G20000200,2000200,20,Kansas,00200,North Central Kansas--Salina City PUMA,POINT (-126263.60521078753 211788.13057605992),,
+1180,2000200,G20000200,2000200,20,Kansas,00200,North Central Kansas--Salina City PUMA,POINT (-126263.60521078753 211788.13057605992),NOT_CBSA,
 1181,2001400,G20001400,2001400,20,Kansas,01400,East Central Kansas PUMA,POINT (81737.61326562066 80847.28064583224),T34,"Kansas City, MO-KS Metro Area"
-1182,2001100,G20001100,2001100,20,Kansas,01100,South Central Kansas PUMA,POINT (-232096.23635325584 23849.773601490393),,
-1183,2000900,G20000900,2000900,20,Kansas,00900,Flint Hills Region--Emporia City PUMA,POINT (-31494.314806903003 49218.50827294624),,
-1184,2001000,G20001000,2001000,20,Kansas,01000,Central Kansas--Hutchinson City PUMA,POINT (-171703.04314877169 78926.89199978484),,
+1182,2001100,G20001100,2001100,20,Kansas,01100,South Central Kansas PUMA,POINT (-232096.23635325584 23849.773601490393),NOT_CBSA,
+1183,2000900,G20000900,2000900,20,Kansas,00900,Flint Hills Region--Emporia City PUMA,POINT (-31494.314806903003 49218.50827294624),NOT_CBSA,
+1184,2001000,G20001000,2001000,20,Kansas,01000,Central Kansas--Hutchinson City PUMA,POINT (-171703.04314877169 78926.89199978484),NOT_CBSA,
 1185,2000400,G20000400,2000400,20,Kansas,00400,Northeast Kansas PUMA,POINT (65763.07646711577 214799.71314023284),Metro,"Topeka, KS Metro Area"
 1186,2000801,G20000801,2000801,20,Kansas,00801,Shawnee County (Central)--Topeka City PUMA,POINT (27304.930437519277 173849.97119044518),Metro,"Topeka, KS Metro Area"
 1187,2000700,G20000700,2000700,20,Kansas,00700,Douglas County--Lawrence City PUMA,POINT (60795.81150419832 155417.85895320988),Metro,"Lawrence, KS Metro Area"
@@ -1201,25 +1201,25 @@
 1199,2101500,G21001500,2101500,21,Kentucky,01500,Green River Area Development District (Northeast)--Daviess & Hancock Counties PUMA,POINT (784487.7793027811 66794.37501328405),Metro,"Owensboro, KY Metro Area"
 1200,2100300,G21000300,2100300,21,Kentucky,00300,Pennyrile Area Development District (South) PUMA,POINT (739972.3463625456 -37139.98428761434),Metro,"Clarksville, TN-KY Metro Area"
 1201,2101400,G21001400,2101400,21,Kentucky,01400,Green River Area Development District (Southwest) PUMA,POINT (750673.4842273135 44940.32572837592),Metro,"Owensboro, KY Metro Area"
-1202,2600100,G26000100,2600100,26,Michigan,00100,Western Upper Peninsula PUMA,POINT (572816.636688446 1033617.3596221822),,
+1202,2600100,G26000100,2600100,26,Michigan,00100,Western Upper Peninsula PUMA,POINT (572816.636688446 1033617.3596221822),NOT_CBSA,
 1203,2600801,G26000801,2600801,26,Michigan,00801,Ottawa County (West) PUMA,POINT (799766.1236095192 652011.3986944978),Metro,"Grand Rapids-Wyoming, MI Metro Area"
 1204,2600802,G26000802,2600802,26,Michigan,00802,Ottawa County (East) PUMA,POINT (817960.846818101 655652.4608128773),Metro,"Grand Rapids-Wyoming, MI Metro Area"
 1205,2600700,G26000700,2600700,26,Michigan,00700,Muskegon County PUMA,POINT (793792.8024794464 689599.4375582278),Metro,"Muskegon, MI Metro Area"
 1206,2602400,G26002400,2602400,26,Michigan,02400,Berrien County PUMA,POINT (787902.8102948254 538808.186214749),Metro,"Niles-Benton Harbor, MI Metro Area"
 1207,2601001,G26001001,2601001,26,Michigan,01001,Kent County (Southwest) PUMA,POINT (832886.0811616725 648283.280659),Metro,"Grand Rapids-Wyoming, MI Metro Area"
-1208,2600600,G26000600,2600600,26,Michigan,00600,"Newaygo, Mason, Oceana & Lake Counties PUMA",POINT (800831.6648584213 743391.0492556046),,
-1209,2702100,G27002100,2702100,27,Minnesota,02100,Southwest Minnesota PUMA,POINT (62357.19933173229 706727.5204712522),,
+1208,2600600,G26000600,2600600,26,Michigan,00600,"Newaygo, Mason, Oceana & Lake Counties PUMA",POINT (800831.6648584213 743391.0492556046),NOT_CBSA,
+1209,2702100,G27002100,2702100,27,Minnesota,02100,Southwest Minnesota PUMA,POINT (62357.19933173229 706727.5204712522),NOT_CBSA,
 1210,2701700,G27001700,2701700,27,Minnesota,01700,Carver & Scott (West) Counties PUMA,POINT (175594.00044472955 814859.3953265732),T34,"Minneapolis-St. Paul-Bloomington, MN-WI Metro Area"
 1211,2701600,G27001600,2701600,27,Minnesota,01600,"Scott County (East)--Shakopee, Savage & Prior Lake Cities PUMA",POINT (201398.63818593742 805472.9889492278),T34,"Minneapolis-St. Paul-Bloomington, MN-WI Metro Area"
-1212,2701900,G27001900,2701900,27,Minnesota,01900,"Kandiyohi, McLeod, Meeker, Renville & Sibley Counties PUMA",POINT (104795.97809660222 827309.221373845),,
+1212,2701900,G27001900,2701900,27,Minnesota,01900,"Kandiyohi, McLeod, Meeker, Renville & Sibley Counties PUMA",POINT (104795.97809660222 827309.221373845),NOT_CBSA,
 1213,2702400,G27002400,2702400,27,Minnesota,02400,"Mower, Steele, Freeborn & Dodge Counties PUMA",POINT (236467.5959459342 709463.7889189454),Micro,"Austin, MN Micro Area"
 1214,2700900,G27000900,2700900,27,Minnesota,00900,Stearns County--St. Cloud City PUMA,POINT (108340.77798808244 901125.7273584272),Metro,"St. Cloud, MN Metro Area"
-1215,2700700,G27000700,2700700,27,Minnesota,00700,"Crow Wing, Morrison, Todd & Wadena Counties PUMA",POINT (118309.18934486207 978819.7371987442),,
+1215,2700700,G27000700,2700700,27,Minnesota,00700,"Crow Wing, Morrison, Todd & Wadena Counties PUMA",POINT (118309.18934486207 978819.7371987442),NOT_CBSA,
 1216,2701201,G27001201,2701201,27,Minnesota,01201,"Washington County (North)--Oakdale, Forest Lake, Stillwater & Hugo Cities PUMA",POINT (244824.71282045427 857672.3389645816),T34,"Minneapolis-St. Paul-Bloomington, MN-WI Metro Area"
-1217,2700600,G27000600,2700600,27,Minnesota,00600,"Chisago, Isanti, Pine, Mille Lacs & Kanabec Counties PUMA",POINT (226208.69517338712 943626.0566071804),,
+1217,2700600,G27000600,2700600,27,Minnesota,00600,"Chisago, Isanti, Pine, Mille Lacs & Kanabec Counties PUMA",POINT (226208.69517338712 943626.0566071804),NOT_CBSA,
 1218,2702000,G27002000,2702000,27,Minnesota,02000,"Brown, Lyon, Redwood, Chippewa, Yellow Medicine, Lac qui Parle & Lincoln Counties PUMA",POINT (26517.241004648065 794823.6873173385),Micro,"Marshall, MN Micro Area"
-1219,2700800,G27000800,2700800,27,Minnesota,00800,West Central Minnesota PUMA,POINT (8660.240306265698 943827.5808409175),,
-1220,2700100,G27000100,2700100,27,Minnesota,00100,"Clay, Polk, Roseau, Pennington, Marshall, Norman, Kittson & Red Lake Counties PUMA",POINT (-23575.7428340176 1178104.0922821779),,
+1219,2700800,G27000800,2700800,27,Minnesota,00800,West Central Minnesota PUMA,POINT (8660.240306265698 943827.5808409175),NOT_CBSA,
+1220,2700100,G27000100,2700100,27,Minnesota,00100,"Clay, Polk, Roseau, Pennington, Marshall, Norman, Kittson & Red Lake Counties PUMA",POINT (-23575.7428340176 1178104.0922821779),NOT_CBSA,
 1221,2700200,G27000200,2700200,27,Minnesota,00200,"Beltrami, Becker, Hubbard, Clearwater, Mahnomen & Lake of the Woods Counties PUMA",POINT (63545.86002197582 1147037.7828328246),Micro,"Bemidji, MN Micro Area"
 1222,2702300,G27002300,2702300,27,Minnesota,02300,"Rice, Goodhue & Le Sueur Counties PUMA",POINT (225664.16895166074 773702.673875169),Micro,"Faribault-Northfield, MN Micro Area"
 1223,2700400,G27000400,2700400,27,Minnesota,00400,"St. Louis (North), Koochiching, Lake & Cook Counties--Hibbing & Cloquet Cities PUMA",POINT (273431.6163340093 1154054.6684588033),Metro,"Duluth, MN-WI Metro Area"
@@ -1252,26 +1252,26 @@
 1250,2701410,G27001410,2701410,27,Minnesota,01410,Hennepin County--Bloomington & Richfield Cities PUMA,POINT (213261.52954314 824509.7405785247),T34,"Minneapolis-St. Paul-Bloomington, MN-WI Metro Area"
 1251,2701401,G27001401,2701401,27,Minnesota,01401,"Hennepin County (West)--Champlin, Rogers Cities & Lake Minnetonka PUMA",POINT (188255.36582674374 847189.8923336866),T34,"Minneapolis-St. Paul-Bloomington, MN-WI Metro Area"
 1252,2902800,G29002800,2902800,29,Missouri,02800,Jasper & Newton Counties PUMA,POINT (146236.06482419217 -48447.6269593828),Metro,"Joplin, MO Metro Area"
-1253,2900100,G29000100,2900100,29,Missouri,00100,Northwest Missouri PUMA,POINT (166943.92588169128 305544.91487801576),,
+1253,2900100,G29000100,2900100,29,Missouri,00100,Northwest Missouri PUMA,POINT (166943.92588169128 305544.91487801576),NOT_CBSA,
 1254,2900200,G29000200,2900200,29,Missouri,00200,"Buchanan, Andrew & DeKalb Counties PUMA",POINT (112699.76844282773 263988.86822514085),Metro,"St. Joseph, MO-KS Metro Area"
 1255,2900800,G29000800,2900800,29,Missouri,00800,"Johnson, Lafayette, Ray, Clinton & Caldwell Counties PUMA",POINT (175327.5426215466 191968.7704309214),T34,"Kansas City, MO-KS Metro Area"
-1256,2902300,G29002300,2902300,29,Missouri,02300,"Dunklin, Stoddard, New Madrid, Pemiscot & Mississippi Counties PUMA",POINT (550739.5816439518 -85524.13891641324),,
+1256,2902300,G29002300,2902300,29,Missouri,02300,"Dunklin, Stoddard, New Madrid, Pemiscot & Mississippi Counties PUMA",POINT (550739.5816439518 -85524.13891641324),NOT_CBSA,
 1257,2901500,G29001500,2901500,29,Missouri,01500,"Phelps, Crawford, Dent, Gasconade & Maries Counties PUMA",POINT (383686.3741372471 62149.59173574813),Micro,"Rolla, MO Micro Area"
-1258,2900300,G29000300,2900300,29,Missouri,00300,Northeast Missouri PUMA,POINT (331690.8105994262 284844.45870987256),,
+1258,2900300,G29000300,2900300,29,Missouri,00300,Northeast Missouri PUMA,POINT (331690.8105994262 284844.45870987256),NOT_CBSA,
 1259,2902500,G29002500,2902500,29,Missouri,02500,"Howell, Texas, Wright, Douglas, Oregon, Ozark & Shannon Counties PUMA",POINT (354850.1259000297 -49541.69136375364),Micro,"West Plains, MO Micro Area"
 1260,2900903,G29000903,2900903,29,Missouri,00903,Platte County PUMA,POINT (104805.03638853143 211304.26774416686),T34,"Kansas City, MO-KS Metro Area"
-1261,2901200,G29001200,2901200,29,Missouri,01200,"Lawrence, Henry, Vernon, Cedar, Barton, St. Clair & Dade Counties PUMA",POINT (175769.9729090956 30764.16795862328),,
+1261,2901200,G29001200,2901200,29,Missouri,01200,"Lawrence, Henry, Vernon, Cedar, Barton, St. Clair & Dade Counties PUMA",POINT (175769.9729090956 30764.16795862328),NOT_CBSA,
 1262,2900500,G29000500,2900500,29,Missouri,00500,"Cole, Callaway, Moniteau & Osage Counties PUMA",POINT (336881.4210127807 134661.61233884183),Metro,"Jefferson City, MO Metro Area"
-1263,2902700,G29002700,2902700,29,Missouri,02700,"Taney, Barry, Stone & McDonald Counties PUMA",POINT (207216.51284957354 -88622.94910078798),,
-1264,2902100,G29002100,2902100,29,Missouri,02100,"St. Francois, Washington, Perry & Ste. Genevieve Counties PUMA",POINT (487230.9952296898 54671.62635515405),,
+1263,2902700,G29002700,2902700,29,Missouri,02700,"Taney, Barry, Stone & McDonald Counties PUMA",POINT (207216.51284957354 -88622.94910078798),NOT_CBSA,
+1264,2902100,G29002100,2902100,29,Missouri,02100,"St. Francois, Washington, Perry & Ste. Genevieve Counties PUMA",POINT (487230.9952296898 54671.62635515405),NOT_CBSA,
 1265,2900700,G29000700,2900700,29,Missouri,00700,"Pettis, Randolph, Saline, Cooper, Howard, Carroll & Chariton Counties PUMA",POINT (253259.44505959755 192397.7851141559),Micro,"Marshall, MO Micro Area"
 1266,2900600,G29000600,2900600,29,Missouri,00600,Boone County PUMA,POINT (316601.446274792 173189.07929064348),Metro,"Columbia, MO Metro Area"
 1267,2901100,G29001100,2901100,29,Missouri,01100,Cass & Bates Counties PUMA,POINT (142959.94826697523 105859.0961511257),T34,"Kansas City, MO-KS Metro Area"
 1268,2902200,G29002200,2902200,29,Missouri,02200,"Cape Girardeau, Scott & Bollinger Counties PUMA",POINT (545608.5694462636 -7452.649027930703),Metro,"Cape Girardeau, MO-IL Metro Area"
-1269,2902400,G29002400,2902400,29,Missouri,02400,"Butler, Ripley, Wayne, Madison, Iron, Reynolds & Carter Counties PUMA",POINT (467720.3475468924 -30931.050264768357),,
-1270,2901400,G29001400,2901400,29,Missouri,01400,"Pulaski, Camden, Miller & Morgan Counties PUMA",POINT (296138.5300557898 75480.70077924935),,
+1269,2902400,G29002400,2902400,29,Missouri,02400,"Butler, Ripley, Wayne, Madison, Iron, Reynolds & Carter Counties PUMA",POINT (467720.3475468924 -30931.050264768357),NOT_CBSA,
+1270,2901400,G29001400,2901400,29,Missouri,01400,"Pulaski, Camden, Miller & Morgan Counties PUMA",POINT (296138.5300557898 75480.70077924935),NOT_CBSA,
 1271,2901300,G29001300,2901300,29,Missouri,01300,"Laclede, Polk, Benton, Dallas & Hickory Counties PUMA",POINT (252989.9625947167 42508.04093220206),Metro,"Springfield, MO Metro Area"
-1272,2900400,G29000400,2900400,29,Missouri,00400,"Lincoln, Warren, Audrain, Pike & Montgomery Counties PUMA",POINT (399654.80520403496 188726.74079960142),,
+1272,2900400,G29000400,2900400,29,Missouri,00400,"Lincoln, Warren, Audrain, Pike & Montgomery Counties PUMA",POINT (399654.80520403496 188726.74079960142),NOT_CBSA,
 1273,2902001,G29002001,2902001,29,Missouri,02001,Jefferson County (North) PUMA,POINT (477720.68121784704 118315.80911237099),T34,"St. Louis, MO-IL Metro Area"
 1274,2902002,G29002002,2902002,29,Missouri,02002,Jefferson County (South) PUMA,POINT (472251.33005304344 94900.51441619288),T34,"St. Louis, MO-IL Metro Area"
 1275,2901901,G29001901,2901901,29,Missouri,01901,St. Louis City (North) PUMA,POINT (496696.09568168933 146647.54497344166),T34,"St. Louis, MO-IL Metro Area"
@@ -1298,11 +1298,11 @@
 1296,2901806,G29001806,2901806,29,Missouri,01806,St. Louis County (Central West) PUMA,POINT (471678.3940699853 135122.84468364654),T34,"St. Louis, MO-IL Metro Area"
 1297,2900901,G29000901,2900901,29,Missouri,00901,Clay County (Northeast) PUMA,POINT (136972.8475991539 205982.93625485178),T34,"Kansas City, MO-KS Metro Area"
 1298,2900902,G29000902,2900902,29,Missouri,00902,"Kansas City (North Central), Gladstone City & North Kansas City PUMA",POINT (123894.92723171579 193515.5734247681),T34,"Kansas City, MO-KS Metro Area"
-1299,3000500,G30000500,3000500,30,Montana,00500,South Central Montana--Bozeman City PUMA,POINT (-1099024.8979419593 980399.8305158132),,
+1299,3000500,G30000500,3000500,30,Montana,00500,South Central Montana--Bozeman City PUMA,POINT (-1099024.8979419593 980399.8305158132),NOT_CBSA,
 1300,3000200,G30000200,3000200,30,Montana,00200,West Montana--Missoula City PUMA,POINT (-1397301.9001070978 1207355.411129927),Metro,"Missoula, MT Metro Area"
 1301,3000300,G30000300,3000300,30,Montana,00300,Southwest Montana--Butte-Silver Bow & Helena City PUMA,POINT (-1277164.8537410388 1060908.3143423218),Micro,"Butte-Silver Bow, MT Micro Area"
-1302,3000600,G30000600,3000600,30,Montana,00600,East Montana (Outside Billings City) PUMA,POINT (-789250.3572403151 1096665.1973651599),,
-1303,3000400,G30000400,3000400,30,Montana,00400,North Central Montana--Great Falls City PUMA,POINT (-1078582.0593174759 1224331.7123219436),,
+1302,3000600,G30000600,3000600,30,Montana,00600,East Montana (Outside Billings City) PUMA,POINT (-789250.3572403151 1096665.1973651599),NOT_CBSA,
+1303,3000400,G30000400,3000400,30,Montana,00400,North Central Montana--Great Falls City PUMA,POINT (-1078582.0593174759 1224331.7123219436),NOT_CBSA,
 1304,3000100,G30000100,3000100,30,Montana,00100,Northwest Montana--Kalispell City PUMA,POINT (-1350931.6624863464 1353668.2399575722),Micro,"Kalispell, MT Micro Area"
 1305,3000700,G30000700,3000700,30,Montana,00700,Billings City PUMA,POINT (-973363.8435347724 991027.613672835),Metro,"Billings, MT Metro Area"
 1306,3100400,G31000400,3100400,31,Nebraska,00400,Southwest Nebraska PUMA,POINT (-412536.69604776904 398515.56434075686),Micro,"North Platte, NE Micro Area"
@@ -1310,10 +1310,10 @@
 1308,3100500,G31000500,3100500,31,Nebraska,00500,South Central Nebraska PUMA,POINT (-234028.64995825643 332337.6219176567),Micro,"Kearney, NE Micro Area"
 1309,3100802,G31000802,3100802,31,Nebraska,00802,Lancaster County--Lincoln City (South) PUMA,POINT (-57689.02584335357 354235.14011440874),Metro,"Lincoln, NE Metro Area"
 1310,3100801,G31000801,3100801,31,Nebraska,00801,Lancaster County--Lincoln City (North) PUMA,POINT (-57427.321553713395 383444.0040813529),Metro,"Lincoln, NE Metro Area"
-1311,3100100,G31000100,3100100,31,Nebraska,00100,North Central & Northwest Nebraska PUMA,POINT (-470837.1908694619 546711.9241709447),,
+1311,3100100,G31000100,3100100,31,Nebraska,00100,North Central & Northwest Nebraska PUMA,POINT (-470837.1908694619 546711.9241709447),NOT_CBSA,
 1312,3100600,G31000600,3100600,31,Nebraska,00600,Southeast Nebraska PUMA,POINT (-73130.9463039578 340316.1498423757),Metro,"Lincoln, NE Metro Area"
 1313,3100701,G31000701,3100701,31,Nebraska,00701,"Dodge, Cass, Saunders & Washington Counties PUMA",POINT (-36937.74340270615 424159.1545928103),Metro,"Omaha-Council Bluffs, NE-IA Metro Area"
-1314,3100300,G31000300,3100300,31,Nebraska,00300,Central Nebraska PUMA,POINT (-254995.8885826871 447904.7199880386),,
+1314,3100300,G31000300,3100300,31,Nebraska,00300,Central Nebraska PUMA,POINT (-254995.8885826871 447904.7199880386),NOT_CBSA,
 1315,3100903,G31000903,3100903,31,Nebraska,00903,Douglas County--Omaha City (Northeast) PUMA,POINT (2700.051204213417 428239.6410555651),Metro,"Omaha-Council Bluffs, NE-IA Metro Area"
 1316,3100904,G31000904,3100904,31,Nebraska,00904,Douglas County--Omaha City (Southeast) PUMA,POINT (2295.479333965885 417622.15102878056),Metro,"Omaha-Council Bluffs, NE-IA Metro Area"
 1317,3100901,G31000901,3100901,31,Nebraska,00901,Douglas County--Omaha City (Northwest) PUMA,POINT (-17084.522959687183 429237.0763791837),Metro,"Omaha-Council Bluffs, NE-IA Metro Area"
@@ -1333,13 +1333,13 @@
 1331,3200409,G32000409,3200409,32,Nevada,00409,Clark County (Central)--Paradise (Northwest) & Winchester PUMA,POINT (-1697246.9545508455 15309.228823134112),T34,"Las Vegas-Henderson-Paradise, NV Metro Area"
 1332,3200406,G32000406,3200406,32,Nevada,00406,Las Vegas City (South Central) PUMA,POINT (-1701295.8494520055 23473.093041900305),T34,"Las Vegas-Henderson-Paradise, NV Metro Area"
 1333,3500200,G35000200,3500200,35,New Mexico,00200,"San Juan County (Northeast)--Farmington, Bloomfield & Aztec Cities PUMA",POINT (-1057362.0638923207 -7153.248159372143),Metro,"Farmington, NM Metro Area"
-1334,3800100,G38000100,3800100,38,North Dakota,00100,West North Dakota--Minot City PUMA,POINT (-485741.2428589179 1130822.1513778847),,
-1335,3800200,G38000200,3800200,38,North Dakota,00200,East Central North Dakota--Jamestown City PUMA,POINT (-221192.22869964113 1109044.8156995273),,
-1336,3800300,G38000300,3800300,38,North Dakota,00300,South Central North Dakota--Bismarck City PUMA,POINT (-327170.5612986056 1027675.9176968802),,
-1337,3800400,G38000400,3800400,38,North Dakota,00400,Northeast North Dakota--Grand Forks City PUMA,POINT (-146369.43738596427 1196487.898148881),,
+1334,3800100,G38000100,3800100,38,North Dakota,00100,West North Dakota--Minot City PUMA,POINT (-485741.2428589179 1130822.1513778847),NOT_CBSA,
+1335,3800200,G38000200,3800200,38,North Dakota,00200,East Central North Dakota--Jamestown City PUMA,POINT (-221192.22869964113 1109044.8156995273),NOT_CBSA,
+1336,3800300,G38000300,3800300,38,North Dakota,00300,South Central North Dakota--Bismarck City PUMA,POINT (-327170.5612986056 1027675.9176968802),NOT_CBSA,
+1337,3800400,G38000400,3800400,38,North Dakota,00400,Northeast North Dakota--Grand Forks City PUMA,POINT (-146369.43738596427 1196487.898148881),NOT_CBSA,
 1338,3800500,G38000500,3800500,38,North Dakota,00500,Cass County--Fargo City PUMA,POINT (-95448.96324072187 1054071.3633927433),Metro,"Fargo, ND-MN Metro Area"
-1339,4000100,G40000100,4000100,40,Oklahoma,00100,Northeast Oklahoma PUMA,POINT (72277.98063776235 -103094.42999990383),,
-1340,4001400,G40001400,4001400,40,Oklahoma,01400,"Garfield, Kay & Noble Counties--Enid City PUMA",POINT (-125468.03251873664 -107425.0080609883),,
+1339,4000100,G40000100,4000100,40,Oklahoma,00100,Northeast Oklahoma PUMA,POINT (72277.98063776235 -103094.42999990383),NOT_CBSA,
+1340,4001400,G40001400,4001400,40,Oklahoma,01400,"Garfield, Kay & Noble Counties--Enid City PUMA",POINT (-125468.03251873664 -107425.0080609883),NOT_CBSA,
 1341,4001204,G40001204,4001204,40,Oklahoma,01204,"Tulsa (West), Creek (Northeast) & Osage (Southeast) Counties--Tulsa City (West) PUMA",POINT (-8067.945473105058 -154701.71065380613),Metro,"Tulsa, OK Metro Area"
 1342,4001203,G40001203,4001203,40,Oklahoma,01203,Tulsa County (North)--Tulsa (North) & Owasso Cities PUMA,POINT (8370.07110304668 -135172.05884430915),Metro,"Tulsa, OK Metro Area"
 1343,4001301,G40001301,4001301,40,Oklahoma,01301,Rogers (Central) & Wagoner (West) Counties--Claremore City PUMA,POINT (30376.093653765744 -151813.204061632),Metro,"Tulsa, OK Metro Area"
@@ -1347,10 +1347,10 @@
 1345,4001202,G40001202,4001202,40,Oklahoma,01202,Tulsa County (Southeast)--Tulsa (Southeast) & Broken Arrow (West) Cities PUMA,POINT (15043.148144429577 -163179.9541370284),Metro,"Tulsa, OK Metro Area"
 1346,4001601,G40001601,4001601,40,Oklahoma,01601,"Washington, Osage (North & West), Pawnee & Creek (Northwest) Counties PUMA",POINT (-36644.12407313544 -103354.384992309),Metro,"Tulsa, OK Metro Area"
 1347,4100100,G41000100,4100100,41,Oregon,00100,"Umatilla, Union, Baker & Wallowa Counties PUMA",POINT (-1701312.8633610979 1069448.2618725388),Micro,"La Grande, OR Micro Area"
-1348,4600400,G46000400,4600400,46,South Dakota,00400,Jackrabbit Region PUMA,POINT (-163575.1160805934 728459.5853511627),,
+1348,4600400,G46000400,4600400,46,South Dakota,00400,Jackrabbit Region PUMA,POINT (-163575.1160805934 728459.5853511627),NOT_CBSA,
 1349,4600300,G46000300,4600300,46,South Dakota,00300,Northeast South Dakota PUMA,POINT (-181634.27959573563 875482.1286811818),Micro,"Aberdeen, SD Micro Area"
-1350,4600200,G46000200,4600200,46,South Dakota,00200,Lakota Region PUMA,POINT (-394340.1357949487 749070.6665691225),,
-1351,4600100,G46000100,4600100,46,South Dakota,00100,West South Dakota--Rapid City PUMA,POINT (-556746.9062992614 831881.697901161),,
+1350,4600200,G46000200,4600200,46,South Dakota,00200,Lakota Region PUMA,POINT (-394340.1357949487 749070.6665691225),NOT_CBSA,
+1351,4600100,G46000100,4600100,46,South Dakota,00100,West South Dakota--Rapid City PUMA,POINT (-556746.9062992614 831881.697901161),NOT_CBSA,
 1352,4600500,G46000500,4600500,46,South Dakota,00500,Southeast South Dakota (Outside Sioux Falls City) PUMA,POINT (-81474.75387110176 648752.3376388233),Metro,"Sioux Falls, SD Metro Area"
 1353,4600600,G46000600,4600600,46,South Dakota,00600,Sioux Falls City PUMA,POINT (-58852.52659734619 675619.5364218177),Metro,"Sioux Falls, SD Metro Area"
 1354,4700400,G47000400,4700400,47,Tennessee,00400,"Robertson, Dickson, Cheatham & Hickman Counties PUMA",POINT (780950.5155465655 -115151.53003874682),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
@@ -1362,8 +1362,8 @@
 1360,4702503,G47002503,4702503,47,Tennessee,02503,Nashville-Davidson (Central) PUMA,POINT (820606.6578685908 -108852.20212007231),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
 1361,4702505,G47002505,4702505,47,Tennessee,02505,Nashville-Davidson (Southwest) PUMA,POINT (809517.7189505135 -118810.4359019695),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
 1362,4702502,G47002502,4702502,47,Tennessee,02502,Nashville-Davidson (North) PUMA,POINT (815573.7159841512 -97909.26992223957),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
-1363,4913001,G49013001,4913001,49,Utah,13001,Southeast Utah & Uintah Basin Region PUMA,POINT (-1199006.4916276662 266036.96503065364),,
-1364,4921001,G49021001,4921001,49,Utah,21001,Southwest & South Central Utah (Outside Washington County)--Cedar City PUMA,POINT (-1404435.8066300903 228171.3690943501),,
+1363,4913001,G49013001,4913001,49,Utah,13001,Southeast Utah & Uintah Basin Region PUMA,POINT (-1199006.4916276662 266036.96503065364),NOT_CBSA,
+1364,4921001,G49021001,4921001,49,Utah,21001,Southwest & South Central Utah (Outside Washington County)--Cedar City PUMA,POINT (-1404435.8066300903 228171.3690943501),NOT_CBSA,
 1365,4905001,G49005001,4905001,49,Utah,05001,"Cache, Summit, Morgan & Rich Counties PUMA",POINT (-1265645.4544742114 525882.7913649387),Metro,"Ogden-Clearfield, UT Metro Area"
 1366,4953001,G49053001,4953001,49,Utah,53001,Washington County--St. George City PUMA,POINT (-1528759.877210077 116591.9575141864),Metro,"St. George, UT Metro Area"
 1367,4903001,G49003001,4903001,49,Utah,03001,Tooele & Box Elder Counties PUMA,POINT (-1420592.6076391502 516305.26863757597),Metro,"Salt Lake City, UT Metro Area"
@@ -1395,14 +1395,14 @@
 1393,5310600,G53010600,5310600,53,Washington,10600,"Whitman, Asotin, Adams, Lincoln, Columbia & Garfield Counties PUMA",POINT (-1667999.2071760197 1249355.3373985174),Micro,"Othello, WA Micro Area"
 1394,5550000,G55050000,5550000,55,Wisconsin,50000,Walworth County PUMA,POINT (607059.4712408399 602694.2949623766),Micro,"Whitewater-Elkhorn, WI Micro Area"
 1395,5501300,G55001300,5501300,55,Wisconsin,01300,"Marinette, Oconto, Door & Florence Counties PUMA",POINT (622391.5608188796 896358.2526126469),Micro,"Marinette, WI-MI Micro Area"
-1396,5501400,G55001400,5501400,55,Wisconsin,01400,East Central Wisconsin PUMA,POINT (555400.0679106107 790927.5900284637),,
-1397,5500600,G55000600,5500600,55,Wisconsin,00600,"Oneida, Lincoln, Vilas, Langlade & Forest Counties PUMA",POINT (520287.5030730849 926661.5660994508),,
+1396,5501400,G55001400,5501400,55,Wisconsin,01400,East Central Wisconsin PUMA,POINT (555400.0679106107 790927.5900284637),NOT_CBSA,
+1397,5500600,G55000600,5500600,55,Wisconsin,00600,"Oneida, Lincoln, Vilas, Langlade & Forest Counties PUMA",POINT (520287.5030730849 926661.5660994508),NOT_CBSA,
 1398,5501500,G55001500,5501500,55,Wisconsin,01500,Outagamie County PUMA,POINT (597865.0480563082 797620.0106885795),Metro,"Appleton, WI Metro Area"
 1399,5501001,G55001001,5501001,55,Wisconsin,01001,Dodge & Jefferson Counties PUMA,POINT (586366.0648723488 667542.1886042526),Micro,"Beaver Dam, WI Micro Area"
 1400,5530000,G55030000,5530000,55,Wisconsin,30000,Racine County PUMA,POINT (645364.0315618707 614677.7265977677),Metro,"Racine, WI Metro Area"
-1401,5501601,G55001601,5501601,55,Wisconsin,01601,"Central Sands--Wood, Portage, Juneau & Adams Counties PUMA",POINT (488889.3235039198 767527.4239232251),,
+1401,5501601,G55001601,5501601,55,Wisconsin,01601,"Central Sands--Wood, Portage, Juneau & Adams Counties PUMA",POINT (488889.3235039198 767527.4239232251),NOT_CBSA,
 1402,5555103,G55055103,5555103,55,Wisconsin,55103,Eau Claire & Chippewa (South) Counties PUMA,POINT (370314.7029185907 832852.9920659694),Metro,"Eau Claire, WI Metro Area"
-1403,5500700,G55000700,5500700,55,Wisconsin,00700,West Central Wisconsin--Northern Mississippi Region PUMA,POINT (382359.2846576713 748177.186170498),,
+1403,5500700,G55000700,5500700,55,Wisconsin,00700,West Central Wisconsin--Northern Mississippi Region PUMA,POINT (382359.2846576713 748177.186170498),NOT_CBSA,
 1404,5510000,G55010000,5510000,55,Wisconsin,10000,Kenosha County PUMA,POINT (648455.8186690005 595791.7548660062),T34,"Chicago-Naperville-Elgin, IL-IN-WI Metro Area"
 1405,5501600,G55001600,5501600,55,Wisconsin,01600,Marathon County PUMA,POINT (491816.96966252703 843777.8074234683),Metro,"Wausau, WI Metro Area"
 1406,5555101,G55055101,5555101,55,Wisconsin,55101,"Barron, Polk, Clark & Chippewa (North) Counties PUMA",POINT (353399.83562423993 865594.7186403933),Metro,"Eau Claire, WI Metro Area"
@@ -1410,7 +1410,7 @@
 1408,5500102,G55000102,5500102,55,Wisconsin,00102,Dane County (East) PUMA,POINT (547680.758788702 643466.3735874819),Metro,"Madison, WI Metro Area"
 1409,5500103,G55000103,5500103,55,Wisconsin,00103,Dane County (West) PUMA,POINT (516128.6862786924 640056.6278246662),Metro,"Madison, WI Metro Area"
 1410,5500900,G55000900,5500900,55,Wisconsin,00900,La Crosse County PUMA,POINT (390737.94201817486 727141.2259085309),Metro,"La Crosse-Onalaska, WI-MN Metro Area"
-1411,5500100,G55000100,5500100,55,Wisconsin,00100,Northwest Wisconsin PUMA,POINT (377492.916502626 958484.9510947186),,
+1411,5500100,G55000100,5500100,55,Wisconsin,00100,Northwest Wisconsin PUMA,POINT (377492.916502626 958484.9510947186),NOT_CBSA,
 1412,5540701,G55040701,5540701,55,Wisconsin,40701,Milwaukee County (West) PUMA,POINT (646230.4997018527 642889.0539259991),Metro,"Milwaukee-Waukesha-West Allis, WI Metro Area"
 1413,5541002,G55041002,5541002,55,Wisconsin,41002,Milwaukee City (North Central) PUMA,POINT (648755.9820647169 652880.1831446448),Metro,"Milwaukee-Waukesha-West Allis, WI Metro Area"
 1414,5541003,G55041003,5541003,55,Wisconsin,41003,Milwaukee City (Central) PUMA,POINT (653043.3428432218 650835.5271400616),Metro,"Milwaukee-Waukesha-West Allis, WI Metro Area"
@@ -1433,11 +1433,11 @@
 1431,5570301,G55070301,5570301,55,Wisconsin,70301,Waukesha County (Central) PUMA,POINT (627176.4476245379 648426.749342471),Metro,"Milwaukee-Waukesha-West Allis, WI Metro Area"
 1432,5570101,G55070101,5570101,55,Wisconsin,70101,Waukesha County (West) PUMA,POINT (615325.4153280691 640878.1478153282),Metro,"Milwaukee-Waukesha-West Allis, WI Metro Area"
 1433,5570201,G55070201,5570201,55,Wisconsin,70201,Waukesha County (East) PUMA,POINT (637383.2612431184 644386.139892784),Metro,"Milwaukee-Waukesha-West Allis, WI Metro Area"
-1434,5600100,G56000100,5600100,56,Wyoming,00100,"Sheridan, Park, Teton, Lincoln & Big Horn Counties PUMA",POINT (-1070632.2997764295 803345.4404381519),,
+1434,5600100,G56000100,5600100,56,Wyoming,00100,"Sheridan, Park, Teton, Lincoln & Big Horn Counties PUMA",POINT (-1070632.2997764295 803345.4404381519),NOT_CBSA,
 1435,5600200,G56000200,5600200,56,Wyoming,00200,"Campbell, Goshen, Platte, Johnson, Washakie, Weston, Crook & Niobrara Counties PUMA",POINT (-755889.6193775702 726122.4115225759),Micro,"Gillette, WY Micro Area"
-1436,5600400,G56000400,5600400,56,Wyoming,00400,"Natrona, Carbon & Converse Counties PUMA",POINT (-861234.5078669379 595697.659532508),,
+1436,5600400,G56000400,5600400,56,Wyoming,00400,"Natrona, Carbon & Converse Counties PUMA",POINT (-861234.5078669379 595697.659532508),NOT_CBSA,
 1437,5600300,G56000300,5600300,56,Wyoming,00300,Laramie & Albany Counties PUMA,POINT (-771208.4401207025 488343.0748699722),Micro,"Laramie, WY Micro Area"
-1438,5600500,G56000500,5600500,56,Wyoming,00500,"Sweetwater, Fremont, Uinta, Sublette & Hot Springs Counties--Wind River Reservation PUMA",POINT (-1065394.2899331616 623444.8800580528),,
+1438,5600500,G56000500,5600500,56,Wyoming,00500,"Sweetwater, Fremont, Uinta, Sublette & Hot Springs Counties--Wind River Reservation PUMA",POINT (-1065394.2899331616 623444.8800580528),NOT_CBSA,
 1439,900102,G09000102,0900102,09,Connecticut,00102,Stamford & Greenwich Towns PUMA,POINT (1849396.4331186828 620631.2739618998),Metro,"Bridgeport-Stamford-Norwalk, CT Metro Area"
 1440,900101,G09000101,0900101,09,Connecticut,00101,"Fairfield, New Canaan, Wilton, Weston & Easton Towns PUMA",POINT (1865090.1914049182 638625.8594050275),Metro,"Bridgeport-Stamford-Norwalk, CT Metro Area"
 1441,900100,G09000100,0900100,09,Connecticut,00100,"Danbury, Ridgefield, Bethel, Brookfield, New Fairfield, Redding & Sherman Towns PUMA",POINT (1853027.1437205884 658470.2133813769),Metro,"Bridgeport-Stamford-Norwalk, CT Metro Area"
@@ -1486,25 +1486,25 @@
 1484,1803100,G18003100,1803100,18,Indiana,03100,"Dearborn, Franklin, Ripley, Switzerland & Ohio Counties PUMA",POINT (931782.0545818459 237795.21183394216),T34,"Cincinnati, OH-KY-IN Metro Area"
 1485,1800900,G18000900,1800900,18,Indiana,00900,"Huntington, Whitley, Adams & Wells Counties PUMA",POINT (893397.8802828059 426544.1567749882),Metro,"Fort Wayne, IN Metro Area"
 1486,1803000,G18003000,1803000,18,Indiana,03000,"Jefferson, Jennings, Decatur & Scott Counties PUMA",POINT (894462.616466738 215177.2317123043),Micro,"North Vernon, IN Micro Area"
-1487,1801500,G18001500,1801500,18,Indiana,01500,"Henry, Randolph, Jay & Blackford Counties PUMA",POINT (913004.9739822908 355659.2552106065),,
+1487,1801500,G18001500,1801500,18,Indiana,01500,"Henry, Randolph, Jay & Blackford Counties PUMA",POINT (913004.9739822908 355659.2552106065),NOT_CBSA,
 1488,1800600,G18000600,1800600,18,Indiana,00600,"Noble, DeKalb, LaGrange & Steuben Counties PUMA",POINT (890455.9397211676 500366.3946000109),Micro,"Kendallville, IN Micro Area"
-1489,2100600,G21000600,2100600,21,Kentucky,00600,Lake Cumberland Area Development District (West) PUMA,POINT (946544.0919057303 9772.013385470207),,
-1490,2101100,G21001100,2101100,21,Kentucky,01100,Big Sandy Area Development District PUMA,POINT (1164269.2604719908 94562.43176886252),,
+1489,2100600,G21000600,2100600,21,Kentucky,00600,Lake Cumberland Area Development District (West) PUMA,POINT (946544.0919057303 9772.013385470207),NOT_CBSA,
+1490,2101100,G21001100,2101100,21,Kentucky,01100,Big Sandy Area Development District PUMA,POINT (1164269.2604719908 94562.43176886252),NOT_CBSA,
 1491,2100700,G21000700,2100700,21,Kentucky,00700,Lake Cumberland Area Development District (East) PUMA,POINT (1001289.9002427048 -5839.498040727293),Micro,"Somerset, KY Micro Area"
 1492,2102000,G21002000,2102000,21,Kentucky,02000,Bluegrass Area Development District (West) PUMA,POINT (965401.4367539706 114147.58327214984),Micro,"Frankfort, KY Micro Area"
-1493,2101200,G21001200,2101200,21,Kentucky,01200,Lincoln Trail Area Development District (East) PUMA,POINT (918986.8005721526 69657.6376166998),,
+1493,2101200,G21001200,2101200,21,Kentucky,01200,Lincoln Trail Area Development District (East) PUMA,POINT (918986.8005721526 69657.6376166998),NOT_CBSA,
 1494,2100900,G21000900,2100900,21,Kentucky,00900,Cumberland Valley Area Development District (South) PUMA,POINT (1082854.5901995401 -7068.104242139148),Micro,"Middlesborough, KY Micro Area"
-1495,2101000,G21001000,2101000,21,Kentucky,01000,Kentucky River Area Development District PUMA,POINT (1112617.214717798 58716.93194733971),,
-1496,2102800,G21002800,2102800,21,Kentucky,02800,FIVCO Area Development District PUMA,POINT (1130927.1088618895 165138.62068349327),,
+1495,2101000,G21001000,2101000,21,Kentucky,01000,Kentucky River Area Development District PUMA,POINT (1112617.214717798 58716.93194733971),NOT_CBSA,
+1496,2102800,G21002800,2102800,21,Kentucky,02800,FIVCO Area Development District PUMA,POINT (1130927.1088618895 165138.62068349327),NOT_CBSA,
 1497,2101800,G21001800,2101800,21,Kentucky,01800,KIPDA Area Development District (Northeast) PUMA,POINT (928149.490553631 156485.3577205092),Metro,"Louisville/Jefferson County, KY-IN Metro Area"
 1498,2102300,G21002300,2102300,21,Kentucky,02300,Bluegrass Area Development District (Northeast) PUMA,POINT (1013459.2540859948 147011.07911763864),Metro,"Lexington-Fayette, KY Metro Area"
-1499,2102700,G21002700,2102700,21,Kentucky,02700,Buffalo Trace & Gateway Area Development Districts PUMA,POINT (1069853.1750041116 158263.76729526118),,
+1499,2102700,G21002700,2102700,21,Kentucky,02700,Buffalo Trace & Gateway Area Development Districts PUMA,POINT (1069853.1750041116 158263.76729526118),NOT_CBSA,
 1500,2100800,G21000800,2100800,21,Kentucky,00800,Cumberland Valley Area Development District (North) PUMA,POINT (1050558.2166062861 37714.389941226014),Micro,"London, KY Micro Area"
 1501,2102600,G21002600,2102600,21,Kentucky,02600,Northern Kentucky Area Development District (Southeast) PUMA,POINT (974682.436679458 189470.92703756335),T34,"Cincinnati, OH-KY-IN Metro Area"
 1502,2101600,G21001600,2101600,21,Kentucky,01600,KIPDA Area Development District (Southeast) PUMA,POINT (914105.6883961154 111647.71502859246),Metro,"Louisville/Jefferson County, KY-IN Metro Area"
 1503,2102100,G21002100,2102100,21,Kentucky,02100,Bluegrass Area Development District (South) PUMA,POINT (989588.7562616232 71860.45313303184),Micro,"Danville, KY Micro Area"
 1504,2102500,G21002500,2102500,21,Kentucky,02500,Northern Kentucky Area Development District (Northwest)--Boone County PUMA,POINT (965309.2061507837 222053.02560888237),T34,"Cincinnati, OH-KY-IN Metro Area"
-1505,2102200,G21002200,2102200,21,Kentucky,02200,Bluegrass Area Development District (Southeast) PUMA,POINT (1036626.197418027 91356.19269622979),,
+1505,2102200,G21002200,2102200,21,Kentucky,02200,Bluegrass Area Development District (Southeast) PUMA,POINT (1036626.197418027 91356.19269622979),NOT_CBSA,
 1506,2101901,G21001901,2101901,21,Kentucky,01901,Bluegrass Area Development District (Central)--Lexington-Fayette County (Central) PUMA,POINT (996868.5312988599 120134.02165126729),Metro,"Lexington-Fayette, KY Metro Area"
 1507,2101902,G21001902,2101902,21,Kentucky,01902,Bluegrass Area Development District (Central)--Lexington-Fayette County (Outer) PUMA,POINT (1001267.1701981986 121786.19793081713),Metro,"Lexington-Fayette, KY Metro Area"
 1508,2102400,G21002400,2102400,21,Kentucky,02400,Northern Kentucky Area Development District (North Central)--Kenton County PUMA,POINT (982375.9386040522 219994.0605762125),T34,"Cincinnati, OH-KY-IN Metro Area"
@@ -1514,10 +1514,10 @@
 1512,2101702,G21001702,2101702,21,Kentucky,01702,KIPDA Area Development District (West)--Louisville/Jefferson County (North Central) PUMA,POINT (891852.5129910208 131712.60658692566),Metro,"Louisville/Jefferson County, KY-IN Metro Area"
 1513,2101701,G21001701,2101701,21,Kentucky,01701,KIPDA Area Development District (West)--Louisville/Jefferson County (Northwest) PUMA,POINT (882651.2069155303 129427.43328402261),Metro,"Louisville/Jefferson County, KY-IN Metro Area"
 1514,2101706,G21001706,2101706,21,Kentucky,01706,KIPDA Area Development District (West)--Louisville/Jefferson County (Southwest) PUMA,POINT (882334.8273777529 116762.692141126),Metro,"Louisville/Jefferson County, KY-IN Metro Area"
-1515,2300500,G23000500,2300500,23,Maine,00500,"Coastal Maine Region--Hancock, Knox, Waldo & Lincoln Counties PUMA",POINT (2128559.5940436153 1088761.3002469128),,
+1515,2300500,G23000500,2300500,23,Maine,00500,"Coastal Maine Region--Hancock, Knox, Waldo & Lincoln Counties PUMA",POINT (2128559.5940436153 1088761.3002469128),NOT_CBSA,
 1516,2300400,G23000400,2300400,23,Maine,00400,Kennebec County PUMA,POINT (2057429.936168797 1058896.4869475304),Micro,"Augusta-Waterville, ME Micro Area"
-1517,2300100,G23000100,2300100,23,Maine,00100,Northeast Maine--Aroostook & Washington Counties PUMA,POINT (2111326.1024197275 1280932.0825248288),,
-1518,2300200,G23000200,2300200,23,Maine,00200,"Northwest Maine--Oxford, Somerset, Franklin & Piscataquis Counties PUMA",POINT (2015821.885057967 1158496.508216184),,
+1517,2300100,G23000100,2300100,23,Maine,00100,Northeast Maine--Aroostook & Washington Counties PUMA,POINT (2111326.1024197275 1280932.0825248288),NOT_CBSA,
+1518,2300200,G23000200,2300200,23,Maine,00200,"Northwest Maine--Oxford, Somerset, Franklin & Piscataquis Counties PUMA",POINT (2015821.885057967 1158496.508216184),NOT_CBSA,
 1519,2300700,G23000700,2300700,23,Maine,00700,Sagadahoc & Cumberland (North) Counties--Bath City & Brunswick PUMA,POINT (2047958.6197915922 1000878.5689245459),Metro,"Lewiston-Auburn, ME Metro Area"
 1520,2301000,G23001000,2301000,23,Maine,01000,"Cumberland County (Southeast)--Portland, South Portland & Westbrook Cities PUMA",POINT (2038458.2185448494 968356.8805820486),Metro,"Portland-South Portland, ME Metro Area"
 1521,2300800,G23000800,2300800,23,Maine,00800,South Maine--York (West) & Cumberland (West) Counties PUMA,POINT (2008964.3832916785 950308.1700057195),Metro,"Portland-South Portland, ME Metro Area"
@@ -1531,7 +1531,7 @@
 1529,2401201,G24001201,2401201,24,Maryland,01201,"Anne Arundel County (Northwest)--Severn, Odenton, Crofton, Maryland City & Fort Meade PUMA",POINT (1641881.0963818664 345849.21993137395),T34,"Baltimore-Columbia-Towson, MD Metro Area"
 1530,2401400,G24001400,2401400,24,Maryland,01400,"Wicomico, Worcester & Somerset Counties--Salisbury City PUMA",POINT (1759360.490452046 273191.97903513745),Metro,"Salisbury, MD-DE Metro Area"
 1531,2400200,G24000200,2400200,24,Maryland,00200,Washington County--Hagerstown City PUMA,POINT (1538036.8572606847 383397.96724286716),Metro,"Hagerstown-Martinsburg, MD-WV Metro Area"
-1532,2400100,G24000100,2400100,24,Maryland,00100,Allegany & Garrett Counties--Cumberland City PUMA,POINT (1435685.9506929633 359918.87348912883),,
+1532,2400100,G24000100,2400100,24,Maryland,00100,Allegany & Garrett Counties--Cumberland City PUMA,POINT (1435685.9506929633 359918.87348912883),NOT_CBSA,
 1533,2401300,G24001300,2401300,24,Maryland,01300,"Queen Anne's, Talbot, Caroline, Dorchester & Kent Counties PUMA",POINT (1707805.1173838708 330104.7649426252),Micro,"Easton, MD Micro Area"
 1534,2400601,G24000601,2400601,24,Maryland,00601,"Harford County (North & West)--Bel Air Town, Fallston & Jarrettsville PUMA",POINT (1659450.809619099 408043.86560523557),T34,"Baltimore-Columbia-Towson, MD Metro Area"
 1535,2400602,G24000602,2400602,24,Maryland,00602,Harford County (South & East)--Aberdeen & Havre de Grace Cities PUMA,POINT (1674933.396059583 393584.34431721084),T34,"Baltimore-Columbia-Towson, MD Metro Area"
@@ -1621,15 +1621,15 @@
 1619,2503603,G25003603,2503603,25,Massachusetts,03603,Norfolk County (Northeast)--Quincy City & Milton Town PUMA,POINT (2021973.0291430838 798596.4484148485),T34,"Boston-Cambridge-Newton, MA-NH Metro Area"
 1620,2503601,G25003601,2503601,25,Massachusetts,03601,Norfolk County (Southwest)--Greater Franklin Town City PUMA,POINT (2004904.0012381754 776198.2525573346),T34,"Boston-Cambridge-Newton, MA-NH Metro Area"
 1621,2602500,G26002500,2602500,26,Michigan,02500,Lenawee & Hillsdale Counties PUMA,POINT (961572.0409423186 551313.3292285894),Micro,"Adrian, MI Micro Area"
-1622,2601600,G26001600,2601600,26,Michigan,01600,"Tuscola, Sanilac & Huron Counties PUMA",POINT (1036688.6178843218 749924.6225153814),,
+1622,2601600,G26001600,2601600,26,Michigan,01600,"Tuscola, Sanilac & Huron Counties PUMA",POINT (1036688.6178843218 749924.6225153814),NOT_CBSA,
 1623,2602000,G26002000,2602000,26,Michigan,02000,Calhoun & Barry Counties PUMA,POINT (886316.1232529717 599753.3900499553),Metro,"Battle Creek, MI Metro Area"
-1624,2600300,G26000300,2600300,26,Michigan,00300,Northeast Lower Peninsula PUMA,POINT (932218.8700143825 898547.1531692011),,
+1624,2600300,G26000300,2600300,26,Michigan,00300,Northeast Lower Peninsula PUMA,POINT (932218.8700143825 898547.1531692011),NOT_CBSA,
 1625,2601200,G26001200,2601200,26,Michigan,01200,"Isabella, Gratiot & Clare Counties PUMA",POINT (900358.2000378823 740764.1408053637),Micro,"Mount Pleasant, MI Micro Area"
 1626,2601500,G26001500,2601500,26,Michigan,01500,Saginaw County PUMA,POINT (961518.3854604405 713841.0758527311),Metro,"Saginaw, MI Metro Area"
 1627,2602102,G26002102,2602102,26,Michigan,02102,Kalamazoo County (Central)--Kalamazoo & Portage Cities Area PUMA,POINT (851884.8306783119 576669.3425374973),Metro,"Kalamazoo-Portage, MI Metro Area"
 1628,2602600,G26002600,2602600,26,Michigan,02600,Jackson County PUMA,POINT (946630.2149962636 589640.7163938395),Metro,"Jackson, MI Metro Area"
 1629,2601400,G26001400,2601400,26,Michigan,01400,Bay & Midland Counties PUMA,POINT (944590.2636494578 749919.413000004),Metro,"Midland, MI Metro Area"
-1630,2601300,G26001300,2601300,26,Michigan,01300,"Iosco, Gladwin, Roscommon, Ogemaw & Arenac Counties PUMA",POINT (941529.0493989565 812383.7325289291),,
+1630,2601300,G26001300,2601300,26,Michigan,01300,"Iosco, Gladwin, Roscommon, Ogemaw & Arenac Counties PUMA",POINT (941529.0493989565 812383.7325289291),NOT_CBSA,
 1631,2603211,G26003211,2603211,26,Michigan,03211,Detroit City (South Central & Southeast) PUMA,POINT (1059789.4076738716 617551.1792962237),T34,"Detroit-Warren-Dearborn, MI Metro Area"
 1632,2603212,G26003212,2603212,26,Michigan,03212,Detroit City (Southwest) PUMA,POINT (1051178.4068539753 613019.8873627328),T34,"Detroit-Warren-Dearborn, MI Metro Area"
 1633,2603207,G26003207,2603207,26,Michigan,03207,Wayne County (Southeast)--Downriver Area (North) PUMA,POINT (1048118.635228196 602745.707310592),T34,"Detroit-Warren-Dearborn, MI Metro Area"
@@ -1671,7 +1671,7 @@
 1669,2602903,G26002903,2602903,26,Michigan,02903,Oakland County (East Central)--Troy & Rochester Area PUMA,POINT (1044626.0941958231 644785.1508025975),T34,"Detroit-Warren-Dearborn, MI Metro Area"
 1670,2602902,G26002902,2602902,26,Michigan,02902,Oakland County (Northeast) PUMA,POINT (1031852.4636169606 662313.3504493833),T34,"Detroit-Warren-Dearborn, MI Metro Area"
 1671,3300300,G33000300,3300300,33,New Hampshire,00300,"Strafford Region--Strafford, Rockingham (Northern) & Carroll (Southeastern) Counties PUMA",POINT (1991438.0260364201 912957.0898826761),T34,"Boston-Cambridge-Newton, MA-NH Metro Area"
-1672,3300200,G33000200,3300200,33,New Hampshire,00200,"Lakes Region--Belknap, Carroll & Merrimack (Northern) Counties PUMA",POINT (1955402.0209409243 951632.681497067),,
+1672,3300200,G33000200,3300200,33,New Hampshire,00200,"Lakes Region--Belknap, Carroll & Merrimack (Northern) Counties PUMA",POINT (1955402.0209409243 951632.681497067),NOT_CBSA,
 1673,3300700,G33000700,3300700,33,New Hampshire,00700,Outer Manchester City PUMA,POINT (1969374.9883063394 873093.4437524115),Metro,"Manchester-Nashua, NH Metro Area"
 1674,3301000,G33001000,3301000,33,New Hampshire,01000,Seacoast Region--Rockingham County (Southern)--Portsmouth City PUMA,POINT (2003620.836610846 873688.9778467818),T34,"Boston-Cambridge-Newton, MA-NH Metro Area"
 1675,3300500,G33000500,3300500,33,New Hampshire,00500,Southwestern New Hampshire--Cheshire & Sullivan Counties PUMA,POINT (1903753.388588717 867392.1735769782),Micro,"Keene, NH Micro Area"
@@ -1753,8 +1753,8 @@
 1751,3400305,G34000305,3400305,34,New Jersey,00305,"Bergen County (East)--Tenafly, Park Ridge & Cresskill Boroughs PUMA",POINT (1822084.3760818937 601663.2994716094),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1752,3400308,G34000308,3400308,34,New Jersey,00308,"Bergen County (Central)--Ridgewood Village, Glen Rock & Westwood Boroughs PUMA",POINT (1813000.2487331955 602650.071913969),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1753,3400306,G34000306,3400306,34,New Jersey,00306,"Bergen County (Northwest)--Ramsey, Oakland & Franklin Lakes Boroughs PUMA",POINT (1803134.3134211572 605242.299385631),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
-1754,3600200,G36000200,3600200,36,New York,00200,"Clinton, Franklin, Essex & Hamilton Counties PUMA",POINT (1729390.2424103862 952419.9897213083),,
-1755,3602701,G36002701,3602701,36,New York,02701,Sullivan & Ulster (West) Counties PUMA,POINT (1749248.691802114 679845.3817309603),,
+1754,3600200,G36000200,3600200,36,New York,00200,"Clinton, Franklin, Essex & Hamilton Counties PUMA",POINT (1729390.2424103862 952419.9897213083),NOT_CBSA,
+1755,3602701,G36002701,3602701,36,New York,02701,Sullivan & Ulster (West) Counties PUMA,POINT (1749248.691802114 679845.3817309603),NOT_CBSA,
 1756,3602702,G36002702,3602702,36,New York,02702,Ulster County (East) PUMA,POINT (1791279.208393807 691864.2399708971),Metro,"Kingston, NY Metro Area"
 1757,3602401,G36002401,3602401,36,New York,02401,Chemung (South) & Steuben (East) Counties--Greater Elmira & Greater Corning Cities PUMA,POINT (1562281.7141354757 673404.673113726),Metro,"Elmira, NY Metro Area"
 1758,3602402,G36002402,3602402,36,New York,02402,"Steuben (North & West), Schuyler & Chemung (North) Counties PUMA",POINT (1526582.5604244312 688012.3640062938),Micro,"Corning, NY Micro Area"
@@ -1796,12 +1796,12 @@
 1794,3600702,G36000702,3600702,36,New York,00702,Onondaga County (North) PUMA,POINT (1585867.2265611964 799795.461622245),Metro,"Syracuse, NY Metro Area"
 1795,3600703,G36000703,3600703,36,New York,00703,Onondaga County (Central)--Syracuse City (Outer) PUMA,POINT (1595571.4184944748 787322.02642267),Metro,"Syracuse, NY Metro Area"
 1796,3600701,G36000701,3600701,36,New York,00701,Onondaga County (Central)--Syracuse City PUMA,POINT (1597517.9986904117 787989.5008396917),Metro,"Syracuse, NY Metro Area"
-1797,3602100,G36002100,3602100,36,New York,02100,Columbia & Greene Counties PUMA,POINT (1796604.117289934 743644.6564753759),,
+1797,3602100,G36002100,3602100,36,New York,02100,Columbia & Greene Counties PUMA,POINT (1796604.117289934 743644.6564753759),NOT_CBSA,
 1798,3602801,G36002801,3602801,36,New York,02801,Dutchess County (North & East) PUMA,POINT (1821637.6819036219 697379.9432215907),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1799,3602802,G36002802,3602802,36,New York,02802,Dutchess County (Southwest) PUMA,POINT (1815342.403676874 669414.7831283475),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1800,3601700,G36001700,3601700,36,New York,01700,Schenectady County--Schenectady City PUMA,POINT (1768108.6321467382 800618.2774415304),Metro,"Albany-Schenectady-Troy, NY Metro Area"
 1801,3601400,G36001400,3601400,36,New York,01400,Ontario & Yates Counties PUMA,POINT (1517194.3911314062 740922.4098268718),Metro,"Rochester, NY Metro Area"
-1802,3602203,G36002203,3602203,36,New York,02203,"Chenango, Delaware & Broome (East) Counties PUMA",POINT (1686462.2069028968 721421.5732221382),,
+1802,3602203,G36002203,3602203,36,New York,02203,"Chenango, Delaware & Broome (East) Counties PUMA",POINT (1686462.2069028968 721421.5732221382),NOT_CBSA,
 1803,3601802,G36001802,3601802,36,New York,01802,Saratoga County (Outer) PUMA,POINT (1774006.325912946 838929.7162689568),Metro,"Albany-Schenectady-Troy, NY Metro Area"
 1804,3601801,G36001801,3601801,36,New York,01801,Saratoga County (South & Central) PUMA,POINT (1786580.4096223465 819192.2583323078),Metro,"Albany-Schenectady-Troy, NY Metro Area"
 1805,3602002,G36002002,3602002,36,New York,02002,Albany County (Outside Albany City) PUMA,POINT (1779846.7198703776 777965.0340430026),Metro,"Albany-Schenectady-Troy, NY Metro Area"
@@ -1845,7 +1845,7 @@
 1843,3604010,G36004010,3604010,36,New York,04010,"NYC-Brooklyn Community District 17--East Flatbush, Farragut & Rugby PUMA",POINT (1833828.6088998655 566607.7023653795),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1844,3604002,G36004002,3604002,36,New York,04002,NYC-Brooklyn Community District 4--Bushwick PUMA,POINT (1833672.185106652 572240.6386077559),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1845,3601500,G36001500,3601500,36,New York,01500,Madison & Cortland Counties PUMA,POINT (1627598.9858457597 764121.8447291449),Metro,"Syracuse, NY Metro Area"
-1846,3600500,G36000500,3600500,36,New York,00500,Jefferson & Lewis Counties PUMA,POINT (1613613.8973082146 890940.1242235842),,
+1846,3600500,G36000500,3600500,36,New York,00500,Jefferson & Lewis Counties PUMA,POINT (1613613.8973082146 890940.1242235842),NOT_CBSA,
 1847,3601000,G36001000,3601000,36,New York,01000,Genesee & Orleans Counties PUMA,POINT (1431829.156787653 762834.3997155543),Micro,"Batavia, NY Micro Area"
 1848,3602903,G36002903,3602903,36,New York,02903,Orange County (Southeast) PUMA,POINT (1793572.6881583966 631933.0962651839),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
 1849,3602902,G36002902,3602902,36,New York,02902,Orange County (Northwest) PUMA,POINT (1770580.262639335 642938.5577417191),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
@@ -1853,7 +1853,7 @@
 1851,3601101,G36001101,3601101,36,New York,01101,Niagara County (Southwest)--Greater Niagara Falls & North Tonawanda Area PUMA,POINT (1375381.1279194374 750046.7073590427),Metro,"Buffalo-Cheektowaga-Niagara Falls, NY Metro Area"
 1852,3601102,G36001102,3601102,36,New York,01102,Niagara County (North & East) PUMA,POINT (1389434.438048396 766736.5594062486),Metro,"Buffalo-Cheektowaga-Niagara Falls, NY Metro Area"
 1853,3603101,G36003101,3603101,36,New York,03101,Putnam County PUMA,POINT (1828724.949354793 654970.6547269267),T34,"New York-Newark-Jersey City, NY-NJ-PA Metro Area"
-1854,3601300,G36001300,3601300,36,New York,01300,Livingston & Wyoming Counties PUMA,POINT (1457522.2401614347 722659.8795499055),,
+1854,3601300,G36001300,3601300,36,New York,01300,Livingston & Wyoming Counties PUMA,POINT (1457522.2401614347 722659.8795499055),NOT_CBSA,
 1855,3601900,G36001900,3601900,36,New York,01900,Rensselaer County--Troy City PUMA,POINT (1814322.8974619089 799297.7332594111),Metro,"Albany-Schenectady-Troy, NY Metro Area"
 1856,3600402,G36000402,3600402,36,New York,00402,Oneida County (Central)--Greater Utica & Rome Cities PUMA,POINT (1655227.65038304 811907.5056929162),Metro,"Utica-Rome, NY Metro Area"
 1857,3600800,G36000800,3600800,36,New York,00800,Wayne & Seneca Counties PUMA,POINT (1534315.0533971786 771222.0130155319),Micro,"Seneca Falls, NY Micro Area"
@@ -1904,22 +1904,22 @@
 1902,3703400,G37003400,3703400,37,North Carolina,03400,Rowan County PUMA,POINT (1383003.5867451886 -95545.87130582948),T34,"Charlotte-Concord-Gastonia, NC-SC Metro Area"
 1903,3702900,G37002900,3702900,37,North Carolina,02900,Iredell (South)--Mooresville Town & Statesville City PUMA,POINT (1350965.9094922526 -94554.75627978655),T34,"Charlotte-Concord-Gastonia, NC-SC Metro Area"
 1904,3700400,G37000400,3700400,37,North Carolina,00400,"Granville, Person & Caswell Counties PUMA",POINT (1507063.8640403878 7479.109268691787),Metro,"Durham-Chapel Hill, NC Metro Area"
-1905,3700800,G37000800,3700800,37,North Carolina,00800,South & West Albemarle Sound & Northern Outer Banks Regions PUMA,POINT (1731635.492811382 -11329.002298330683),,
-1906,3700100,G37000100,3700100,37,North Carolina,00100,"Boone High Country--Watauga, Ashe, Yancey, Avery & Mitchell Counties PUMA",POINT (1254816.0808068651 -56276.020465408474),,
+1905,3700800,G37000800,3700800,37,North Carolina,00800,South & West Albemarle Sound & Northern Outer Banks Regions PUMA,POINT (1731635.492811382 -11329.002298330683),NOT_CBSA,
+1906,3700100,G37000100,3700100,37,North Carolina,00100,"Boone High Country--Watauga, Ashe, Yancey, Avery & Mitchell Counties PUMA",POINT (1254816.0808068651 -56276.020465408474),NOT_CBSA,
 1907,3701100,G37001100,3701100,37,North Carolina,01100,Johnston County PUMA,POINT (1576376.4378155752 -75393.01542029377),Metro,"Raleigh, NC Metro Area"
 1908,3701000,G37001000,3701000,37,North Carolina,01000,Wilson & Greene Counties--Wilson City PUMA,POINT (1622750.167530752 -55587.63244520073),Micro,"Wilson, NC Micro Area"
 1909,3700600,G37000600,3700600,37,North Carolina,00600,"Halifax, Hertford, Northampton & Warren (East) Counties PUMA",POINT (1636579.7946697925 30226.75821079887),Micro,"Roanoke Rapids, NC Micro Area"
 1910,3704300,G37004300,3704300,37,North Carolina,04300,Craven County PUMA,POINT (1697070.6774723732 -96578.90955564908),Metro,"New Bern, NC Metro Area"
 1911,3700700,G37000700,3700700,37,North Carolina,00700,Northeast Albemarle Sound Region PUMA,POINT (1732404.878750156 48670.11993767854),Micro,"Elizabeth City, NC Micro Area"
-1912,3702300,G37002300,3702300,37,North Carolina,02300,"Haywood, Madison, Swain, Graham & Jackson (North) Counties PUMA",POINT (1146045.528587418 -138554.96852795864),,
+1912,3702300,G37002300,3702300,37,North Carolina,02300,"Haywood, Madison, Swain, Graham & Jackson (North) Counties PUMA",POINT (1146045.528587418 -138554.96852795864),NOT_CBSA,
 1913,3703800,G37003800,3703800,37,North Carolina,03800,Harnett County PUMA,POINT (1534834.4699731416 -100025.57411846289),Micro,"Dunn, NC Micro Area"
 1914,3700200,G37000200,3700200,37,North Carolina,00200,"Wilkesboro High Country--Surry, Wilkes & Alleghany Counties PUMA",POINT (1329629.5686891223 -26591.566261391064),Micro,"North Wilkesboro, NC Micro Area"
 1915,3704400,G37004400,3704400,37,North Carolina,04400,"Carteret, Beaufort & Pamlico Counties PUMA",POINT (1722790.7468279756 -80363.93659335704),Metro,"New Bern, NC Metro Area"
 1916,3702800,G37002800,3702800,37,North Carolina,02800,Catawba County--Hickory City PUMA,POINT (1321460.0048227925 -102817.54374310709),Metro,"Hickory-Lenoir-Morganton, NC Metro Area"
 1917,3700900,G37000900,3700900,37,North Carolina,00900,Nash & Edgecombe Counties--Rocky Mount City PUMA,POINT (1617440.3279036025 -19275.46106451238),Metro,"Rocky Mount, NC Metro Area"
-1918,3703900,G37003900,3703900,37,North Carolina,03900,Sampson & Duplin Counties PUMA,POINT (1605403.2330664527 -132732.27077639822),,
+1918,3703900,G37003900,3703900,37,North Carolina,03900,Sampson & Duplin Counties PUMA,POINT (1605403.2330664527 -132732.27077639822),NOT_CBSA,
 1919,3703700,G37003700,3703700,37,North Carolina,03700,Moore & Montgomery Counties PUMA,POINT (1465877.1611302025 -117838.67404152961),Micro,"Pinehurst-Southern Pines, NC Micro Area"
-1920,3705300,G37005300,3705300,37,North Carolina,05300,Union (East) & Anson Counties--Monroe City PUMA,POINT (1415913.1219314933 -165462.03049862568),,
+1920,3705300,G37005300,3705300,37,North Carolina,05300,Union (East) & Anson Counties--Monroe City PUMA,POINT (1415913.1219314933 -165462.03049862568),NOT_CBSA,
 1921,3701301,G37001301,3701301,37,North Carolina,01301,Durham County (South)--Durham City (South) PUMA,POINT (1519556.5123670888 -38525.65437740416),Metro,"Durham-Chapel Hill, NC Metro Area"
 1922,3701302,G37001302,3701302,37,North Carolina,01302,Durham County (North)--Durham City (North) PUMA,POINT (1521459.3867167025 -20788.993022732426),Metro,"Durham-Chapel Hill, NC Metro Area"
 1923,3704200,G37004200,3704200,37,North Carolina,04200,Pitt County--Greenville City PUMA,POINT (1662207.5726061717 -50160.32937320365),Metro,"Greenville, NC Metro Area"
@@ -1971,8 +1971,8 @@
 1969,3705002,G37005002,3705002,37,North Carolina,05002,Cumberland County (East)--Hope Mills & Spring Lake Towns PUMA,POINT (1549346.7262080086 -134200.06148057312),Metro,"Fayetteville, NC Metro Area"
 1970,3904500,G39004500,3904500,39,Ohio,04500,"Darke, Shelby & Preble Counties PUMA",POINT (968966.5164559723 347095.246678335),Micro,"Greenville, OH Micro Area"
 1971,3903000,G39003000,3903000,39,Ohio,03000,Tuscarawas & Harrison Counties PUMA,POINT (1231319.9776810831 418039.33523860335),Micro,"New Philadelphia-Dover, OH Micro Area"
-1972,3902400,G39002400,3902400,39,Ohio,02400,Hancock & Putnam Counties PUMA,POINT (1007783.23966332 457820.1728122435),,
-1973,3905200,G39005200,3905200,39,Ohio,05200,"Highland, Clinton & Adams Counties PUMA",POINT (1058608.8895369633 250466.07836287035),,
+1972,3902400,G39002400,3902400,39,Ohio,02400,Hancock & Putnam Counties PUMA,POINT (1007783.23966332 457820.1728122435),NOT_CBSA,
+1973,3905200,G39005200,3905200,39,Ohio,05200,"Highland, Clinton & Adams Counties PUMA",POINT (1058608.8895369633 250466.07836287035),NOT_CBSA,
 1974,3905600,G39005600,3905600,39,Ohio,05600,Clermont County (West) PUMA,POINT (1003883.5229402579 241313.36923422004),T34,"Cincinnati, OH-KY-IN Metro Area"
 1975,3905700,G39005700,3905700,39,Ohio,05700,Clermont (East) & Brown Counties PUMA,POINT (1029773.0187073135 230422.27293433974),T34,"Cincinnati, OH-KY-IN Metro Area"
 1976,3901300,G39001300,3901300,39,Ohio,01300,Ashtabula County PUMA,POINT (1254542.1484122556 572260.0111878236),Micro,"Ashtabula, OH Micro Area"
@@ -1980,7 +1980,7 @@
 1978,3903400,G39003400,3903400,39,Ohio,03400,Columbiana County PUMA,POINT (1268965.012386051 468121.62132100476),Micro,"Salem, OH Micro Area"
 1979,3901400,G39001400,3901400,39,Ohio,01400,Trumbull (Outside Warren City) & Mahoning (Outside Youngstown City) Counties PUMA,POINT (1260064.4839659734 517959.7397545436),Metro,"Youngstown-Warren-Boardman, OH-PA Metro Area"
 1980,3904300,G39004300,3904300,39,Ohio,04300,Clark County PUMA,POINT (1032113.216582982 337296.82499710197),Metro,"Springfield, OH Metro Area"
-1981,3905000,G39005000,3905000,39,Ohio,05000,"Athens, Gallia & Meigs Counties PUMA",POINT (1184499.2506986489 264461.454610919),,
+1981,3905000,G39005000,3905000,39,Ohio,05000,"Athens, Gallia & Meigs Counties PUMA",POINT (1184499.2506986489 264461.454610919),NOT_CBSA,
 1982,3900700,G39000700,3900700,39,Ohio,00700,Erie & Sandusky Counties PUMA,POINT (1080469.0333697281 506775.9877055389),Micro,"Fremont, OH Micro Area"
 1983,3900100,G39000100,3900100,39,Ohio,00100,"Defiance, Williams, Henry & Paulding Counties PUMA",POINT (958371.9119427281 488048.3883694688),Micro,"Defiance, OH Micro Area"
 1984,3901900,G39001900,3901900,39,Ohio,01900,Medina County PUMA,POINT (1170319.4016297287 492348.27343499585),T34,"Cleveland-Elyria, OH Metro Area"
@@ -1988,10 +1988,10 @@
 1986,3902200,G39002200,3902200,39,Ohio,02200,Richland County PUMA,POINT (1123271.0096497652 446652.46175520355),Metro,"Mansfield, OH Metro Area"
 1987,3904800,G39004800,3904800,39,Ohio,04800,Ross & Fayette Counties PUMA,POINT (1088255.591782647 288569.02756514726),Micro,"Chillicothe, OH Micro Area"
 1988,3900200,G39000200,3900200,39,Ohio,00200,"Wood (South), Fulton & Lucas (Southwest) Counties--Bowling Green City PUMA",POINT (1003466.1327412891 506393.4092155275),Metro,"Toledo, OH Metro Area"
-1989,3902300,G39002300,3902300,39,Ohio,02300,"Seneca, Crawford & Wyandot Counties PUMA",POINT (1072164.504226648 460394.61380164634),,
+1989,3902300,G39002300,3902300,39,Ohio,02300,"Seneca, Crawford & Wyandot Counties PUMA",POINT (1072164.504226648 460394.61380164634),NOT_CBSA,
 1990,3902900,G39002900,3902900,39,Ohio,02900,"Holmes, Guernsey & Coshocton Counties PUMA",POINT (1194537.276884568 401969.6396714891),Micro,"Coshocton, OH Micro Area"
 1991,3902700,G39002700,3902700,39,Ohio,02700,"Logan, Champaign & Hardin Counties PUMA",POINT (1029576.5597584279 391962.8473238398),Micro,"Bellefontaine, OH Micro Area"
-1992,3904900,G39004900,3904900,39,Ohio,04900,"Jackson, Hocking, Pike & Vinton Counties PUMA",POINT (1136823.0839728904 271520.3720692677),,
+1992,3904900,G39004900,3904900,39,Ohio,04900,"Jackson, Hocking, Pike & Vinton Counties PUMA",POINT (1136823.0839728904 271520.3720692677),NOT_CBSA,
 1993,3903300,G39003300,3903300,39,Ohio,03300,Stark County (East) & Carroll County--Alliance City PUMA,POINT (1240027.4789851126 454487.98118353635),Metro,"Canton-Massillon, OH Metro Area"
 1994,3901200,G39001200,3901200,39,Ohio,01200,Geauga & Lake (South) Counties PUMA,POINT (1222658.4228199187 545784.1996501151),T34,"Cleveland-Elyria, OH Metro Area"
 1995,3901100,G39001100,3901100,39,Ohio,01100,"Lake County (East)--Mentor, Painesville Cities & Madison Village PUMA",POINT (1219384.8286655697 571022.0713125591),T34,"Cleveland-Elyria, OH Metro Area"
@@ -2005,7 +2005,7 @@
 2003,3900300,G39000300,3900300,39,Ohio,00300,"Lucas (West) & Wood (North Central) Counties--Perrysburg, Sylvania & Maumee Cities PUMA",POINT (1009881.2502019241 525055.1087283448),Metro,"Toledo, OH Metro Area"
 2004,3902600,G39002600,3902600,39,Ohio,02600,"Auglaize, Mercer & Van Wert Counties PUMA",POINT (963029.129621481 411105.12639045244),Micro,"Celina, OH Micro Area"
 2005,3901700,G39001700,3901700,39,Ohio,01700,Portage County PUMA,POINT (1227288.0570270217 506742.6932754666),Metro,"Akron, OH Metro Area"
-2006,3903500,G39003500,3903500,39,Ohio,03500,Belmont & Jefferson Counties PUMA,POINT (1270109.4805551718 400989.22508358455),,
+2006,3903500,G39003500,3903500,39,Ohio,03500,Belmont & Jefferson Counties PUMA,POINT (1270109.4805551718 400989.22508358455),NOT_CBSA,
 2007,3905506,G39005506,3905506,39,Ohio,05506,"Hamilton County (North Central)--Sharonville, Blue Ash, Springdale & Reading Cities PUMA",POINT (987083.72765398 256528.34307451776),T34,"Cincinnati, OH-KY-IN Metro Area"
 2008,3905502,G39005502,3905502,39,Ohio,05502,"Hamilton County (Central)--Forest Park City, White Oak, Bridgetown & Finneytown PUMA",POINT (975138.2411156406 251539.11941135314),T34,"Cincinnati, OH-KY-IN Metro Area"
 2009,3905503,G39005503,3905503,39,Ohio,05503,Cincinnati City (West) PUMA,POINT (975469.0275108232 242650.43316632943),T34,"Cincinnati, OH-KY-IN Metro Area"
@@ -2067,10 +2067,10 @@
 2065,4201100,G42001100,4201100,42,Pennsylvania,01100,"Mifflin, Union, Snyder & Juniata Counties PUMA",POINT (1555687.4413563355 512300.6623260192),Micro,"Selinsgrove, PA Micro Area"
 2066,4202200,G42002200,4202200,42,Pennsylvania,02200,Blair & Huntingdon Counties--Altoona City PUMA,POINT (1495082.6509152018 470628.1163677576),Micro,"Huntingdon, PA Micro Area"
 2067,4201900,G42001900,4201900,42,Pennsylvania,01900,Indiana & Armstrong Counties PUMA,POINT (1395526.824298001 484454.27904787223),Micro,"Indiana, PA Micro Area"
-2068,4200500,G42000500,4200500,42,Pennsylvania,00500,"Pike, Wayne & Susquehanna Counties PUMA",POINT (1688360.9894856904 646468.1002213579),,
-2069,4200300,G42000300,4200300,42,Pennsylvania,00300,"Clearfield, McKean, Elk, Potter & Cameron Counties PUMA",POINT (1453339.9836713374 581018.62091148),,
+2068,4200500,G42000500,4200500,42,Pennsylvania,00500,"Pike, Wayne & Susquehanna Counties PUMA",POINT (1688360.9894856904 646468.1002213579),NOT_CBSA,
+2069,4200300,G42000300,4200300,42,Pennsylvania,00300,"Clearfield, McKean, Elk, Potter & Cameron Counties PUMA",POINT (1453339.9836713374 581018.62091148),NOT_CBSA,
 2070,4201501,G42001501,4201501,42,Pennsylvania,01501,Lawrence & Beaver (North) Counties--New Castle City PUMA,POINT (1302336.2389891634 494920.2365460473),Micro,"New Castle, PA Micro Area"
-2071,4203800,G42003800,4203800,42,Pennsylvania,03800,"Somerset, Bedford & Fulton Counties PUMA",POINT (1460122.989023793 411375.12940405845),,
+2071,4203800,G42003800,4203800,42,Pennsylvania,03800,"Somerset, Bedford & Fulton Counties PUMA",POINT (1460122.989023793 411375.12940405845),NOT_CBSA,
 2072,4202701,G42002701,4202701,42,Pennsylvania,02701,Berks County (Northwest)--Wyomissing Borough PUMA,POINT (1659908.6190899345 502705.2012026034),Metro,"Reading, PA Metro Area"
 2073,4202702,G42002702,4202702,42,Pennsylvania,02702,Berks County (Southwest)--Reading City PUMA,POINT (1681046.901227488 486749.0724804895),Metro,"Reading, PA Metro Area"
 2074,4202703,G42002703,4202703,42,Pennsylvania,02703,Berks County (East) PUMA,POINT (1686940.7733178067 510097.5844242315),Metro,"Reading, PA Metro Area"
@@ -2093,7 +2093,7 @@
 2091,4202003,G42002003,4202003,42,Pennsylvania,02003,Westmoreland County (East) PUMA,POINT (1397099.9427931614 434762.0818501144),T34,"Pittsburgh, PA Metro Area"
 2092,4202002,G42002002,4202002,42,Pennsylvania,02002,Westmoreland County (Southwest)--Greensburg City PUMA,POINT (1369528.7013113312 425475.7922276999),T34,"Pittsburgh, PA Metro Area"
 2093,4202001,G42002001,4202001,42,Pennsylvania,02001,Westmoreland County (Northwest)--Murrysville Municipality & New Kensington City PUMA,POINT (1367209.6594101943 454168.0919946352),T34,"Pittsburgh, PA Metro Area"
-2094,4201300,G42001300,4201300,42,Pennsylvania,01300,"Venango, Jefferson, Clarion & Forest Counties PUMA",POINT (1375090.978361939 545615.5992166001),,
+2094,4201300,G42001300,4201300,42,Pennsylvania,01300,"Venango, Jefferson, Clarion & Forest Counties PUMA",POINT (1375090.978361939 545615.5992166001),NOT_CBSA,
 2095,4203900,G42003900,4203900,42,Pennsylvania,03900,Fayette County PUMA,POINT (1378519.115555252 390103.75509123324),T34,"Pittsburgh, PA Metro Area"
 2096,4203106,G42003106,4203106,42,Pennsylvania,03106,Montgomery County (South Central) PUMA,POINT (1745388.9170485088 484724.9802412574),T34,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metro Area"
 2097,4203103,G42003103,4203103,42,Pennsylvania,03103,Montgomery County (Southwest)--King of Prussia & Ardmore (East) PUMA,POINT (1731580.2853663694 478333.0515471403),T34,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metro Area"
@@ -2102,7 +2102,7 @@
 2100,4203101,G42003101,4203101,42,Pennsylvania,03101,Montgomery County (Northwest)--Pottstown Borough PUMA,POINT (1711494.6613495355 494539.8250021458),T34,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metro Area"
 2101,4203104,G42003104,4203104,42,Pennsylvania,03104,Montgomery County (Central)--Norristown Borough PUMA,POINT (1730362.0553497544 487832.0989296552),T34,"Philadelphia-Camden-Wilmington, PA-NJ-DE-MD Metro Area"
 2102,4202600,G42002600,4202600,42,Pennsylvania,02600,Schuylkill County PUMA,POINT (1645749.1347986972 531183.4884950418),Micro,"Pottsville, PA Micro Area"
-2103,4204002,G42004002,4204002,42,Pennsylvania,04002,Washington (South) & Greene Counties PUMA,POINT (1332437.3782460336 384118.6180482471),,
+2103,4204002,G42004002,4204002,42,Pennsylvania,04002,Washington (South) & Greene Counties PUMA,POINT (1332437.3782460336 384118.6180482471),NOT_CBSA,
 2104,4202402,G42002402,4202402,42,Pennsylvania,02402,Dauphin County (Outer)--Hershey PUMA,POINT (1606282.2275081528 491907.0870757662),Metro,"Harrisburg-Carlisle, PA Metro Area"
 2105,4202401,G42002401,4202401,42,Pennsylvania,02401,Dauphin County (Central)--Harrisburg City & Colonial Park PUMA,POINT (1604808.562026261 475202.3526327238),Metro,"Harrisburg-Carlisle, PA Metro Area"
 2106,4202100,G42002100,4202100,42,Pennsylvania,02100,Cambria County PUMA,POINT (1444700.7758677907 467411.9914971383),Metro,"Johnstown, PA Metro Area"
@@ -2167,27 +2167,27 @@
 2165,4701601,G47001601,4701601,47,Tennessee,01601,"Anderson, Union & Knox (North) Counties--Oak Ridge (East) & Clinton Cities PUMA",POINT (1062790.3875691649 -80436.75034722552),Metro,"Knoxville, TN Metro Area"
 2166,4701500,G47001500,4701500,47,Tennessee,01500,Sevier & Jefferson Counties PUMA,POINT (1115573.8471946549 -108399.05361106806),Micro,"Sevierville, TN Micro Area"
 2167,4701400,G47001400,4701400,47,Tennessee,01400,"Hamblen, Cocke & Grainger Counties PUMA",POINT (1131906.6124125053 -81370.72780120767),Metro,"Morristown, TN Metro Area"
-2168,4700600,G47000600,4700600,47,Tennessee,00600,"Warren, Macon, Smith, DeKalb, Cannon & Trousdale Counties PUMA",POINT (897559.7520546904 -114524.1400123631),,
+2168,4700600,G47000600,4700600,47,Tennessee,00600,"Warren, Macon, Smith, DeKalb, Cannon & Trousdale Counties PUMA",POINT (897559.7520546904 -114524.1400123631),NOT_CBSA,
 2169,4701700,G47001700,4701700,47,Tennessee,01700,Blount County PUMA,POINT (1080265.1614576858 -134353.30344727347),Metro,"Knoxville, TN Metro Area"
 2170,4701300,G47001300,4701300,47,Tennessee,01300,Washington County--Johnson City PUMA,POINT (1197601.2914658769 -49984.07133574574),Metro,"Johnson City, TN Metro Area"
 2171,4701200,G47001200,4701200,47,Tennessee,01200,"Greene, Carter, Unicoi & Johnson Counties PUMA",POINT (1205347.6515401434 -53357.76640355908),Metro,"Johnson City, TN Metro Area"
 2172,4700700,G47000700,4700700,47,Tennessee,00700,"Putnam, Overton, Jackson, Clay & Pickett Counties PUMA",POINT (937427.6885609956 -76317.3865369548),Micro,"Cookeville, TN Micro Area"
 2173,4701000,G47001000,4701000,47,Tennessee,01000,Hawkins & Sullivan (Northwest) Counties--Kingsport City PUMA,POINT (1158924.7920433371 -37519.82797514827),Metro,"Kingsport-Bristol-Bristol, TN-VA Metro Area"
-2174,4701800,G47001800,4701800,47,Tennessee,01800,"Roane, Loudon & Monroe Counties--Oak Ridge City (West) PUMA",POINT (1043700.8572545415 -146290.31027816792),,
+2174,4701800,G47001800,4701800,47,Tennessee,01800,"Roane, Loudon & Monroe Counties--Oak Ridge City (West) PUMA",POINT (1043700.8572545415 -146290.31027816792),NOT_CBSA,
 2175,4701602,G47001602,4701602,47,Tennessee,01602,Knox County (East) PUMA,POINT (1084389.8064315962 -95949.04575363151),Metro,"Knoxville, TN Metro Area"
 2176,4701604,G47001604,4701604,47,Tennessee,01604,Knox County (West)--Farragut Town PUMA,POINT (1059256.3128475135 -111469.12028671839),Metro,"Knoxville, TN Metro Area"
 2177,4701603,G47001603,4701603,47,Tennessee,01603,Knoxville City PUMA,POINT (1074494.0454501393 -103076.48761796292),Metro,"Knoxville, TN Metro Area"
 2178,4701100,G47001100,4701100,47,Tennessee,01100,Sullivan County (Southeast)--Bristol City PUMA,POINT (1213518.4451559118 -23493.283857013033),Metro,"Kingsport-Bristol-Bristol, TN-VA Metro Area"
 2179,5000100,G50000100,5000100,50,Vermont,00100,"Northwest Vermont--Chittenden, Franklin & Grand Isle Counties--Burlington City PUMA",POINT (1799434.8849796185 1022554.6838512054),Metro,"Burlington-South Burlington, VT Metro Area"
 2180,5000400,G50000400,5000400,50,Vermont,00400,"Southwest Vermont--Rutland, Bennington & Addison Counties PUMA",POINT (1824670.2336749665 901457.4419049422),Micro,"Rutland, VT Micro Area"
-2181,5000200,G50000200,5000200,50,Vermont,00200,"Northeast Vermont--Washington, Caledonia, Orleans, Lamoille & Essex Counties PUMA",POINT (1862556.4138175983 1026256.8322505909),,
+2181,5000200,G50000200,5000200,50,Vermont,00200,"Northeast Vermont--Washington, Caledonia, Orleans, Lamoille & Essex Counties PUMA",POINT (1862556.4138175983 1026256.8322505909),NOT_CBSA,
 2182,5000300,G50000300,5000300,50,Vermont,00300,"Southeast Vermont--Windsor, Windham & Orange Counties PUMA",POINT (1866934.122161717 904002.3677981697),Micro,"Claremont-Lebanon, NH-VT Micro Area"
 2183,5151090,G51051090,5151090,51,Virginia,51090,Thomas Jefferson Planning District Commission (North) PUMA,POINT (1506081.546556395 216845.96974441368),Metro,"Charlottesville, VA Metro Area"
-2184,5151010,G51051010,5151010,51,Virginia,51010,LENOWISCO & Cumberland Plateau Planning District Commissions PUMA,POINT (1202300.6417735352 27856.312597045755),,
+2184,5151010,G51051010,5151010,51,Virginia,51010,LENOWISCO & Cumberland Plateau Planning District Commissions PUMA,POINT (1202300.6417735352 27856.312597045755),NOT_CBSA,
 2185,5151087,G51051087,5151087,51,Virginia,51087,Rappahannock-Rapidan Regional Commission PUMA,POINT (1545025.0424295282 263670.8320108107),T34,"Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area"
 2186,5151080,G51051080,5151080,51,Virginia,51080,Central Shenandoah Planning District Commission (Southwest) PUMA,POINT (1434517.7120829807 191776.93375337985),Metro,"Staunton-Waynesboro, VA Metro Area"
-2187,5151125,G51051125,5151125,51,Virginia,51125,"Middle Peninsula, Northern Neck & Accomack-Northampton Planning District Commissions PUMA",POINT (1696017.2826396304 203253.52920678467),,
-2188,5151105,G51051105,5151105,51,Virginia,51105,Southside Planning District Commission & Commonwealth Regional Council PUMA,POINT (1542935.128071845 91284.1666016638),,
+2187,5151125,G51051125,5151125,51,Virginia,51125,"Middle Peninsula, Northern Neck & Accomack-Northampton Planning District Commissions PUMA",POINT (1696017.2826396304 203253.52920678467),NOT_CBSA,
+2188,5151105,G51051105,5151105,51,Virginia,51105,Southside Planning District Commission & Commonwealth Regional Council PUMA,POINT (1542935.128071845 91284.1666016638),NOT_CBSA,
 2189,5151120,G51051120,5151120,51,Virginia,51120,George Washington Regional Commission (South) PUMA,POINT (1602358.3821168137 227058.99603016948),Metro,"Richmond, VA Metro Area"
 2190,5151245,G51051245,5151245,51,Virginia,51245,"Manassas, Manassas Park Cities & Prince William County (Central)--Buckhall & Sudley PUMA",POINT (1585430.7734674707 295053.67551453307),T34,"Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area"
 2191,5151084,G51051084,5151084,51,Virginia,51084,Northern Shenandoah Valley Regional Commission (North) PUMA,POINT (1516135.7888391628 330479.3077664376),Metro,"Winchester, VA-WV Metro Area"
@@ -2199,8 +2199,8 @@
 2197,5151045,G51051045,5151045,51,Virginia,51045,Roanoke Valley-Alleghany Regional Commission (Outside Roanoke & Salem Cities) PUMA,POINT (1400325.7472751148 105604.36273014636),Metro,"Roanoke, VA Metro Area"
 2198,5151044,G51051044,5151044,51,Virginia,51044,"Roanoke Valley-Alleghany Regional Commission (Roanoke, Salem Cities & Vinton Town) PUMA",POINT (1400595.401969351 93711.0846288516),Metro,"Roanoke, VA Metro Area"
 2199,5151097,G51051097,5151097,51,Virginia,51097,West Piedmont Planning District Commission PUMA,POINT (1432713.2244132226 39068.45332888693),Micro,"Martinsville, VA Micro Area"
-2200,5151085,G51051085,5151085,51,Virginia,51085,Northern Shenandoah Valley Regional Commission (South) PUMA,POINT (1499821.2104188045 284106.6414598151),,
-2201,5151020,G51051020,5151020,51,Virginia,51020,Mount Rogers Planning District Commission PUMA,POINT (1293241.6081381326 23868.770448043735),,
+2200,5151085,G51051085,5151085,51,Virginia,51085,Northern Shenandoah Valley Regional Commission (South) PUMA,POINT (1499821.2104188045 284106.6414598151),NOT_CBSA,
+2201,5151020,G51051020,5151020,51,Virginia,51020,Mount Rogers Planning District Commission PUMA,POINT (1293241.6081381326 23868.770448043735),NOT_CBSA,
 2202,5151040,G51051040,5151040,51,Virginia,51040,New River Valley Planning District Commission PUMA,POINT (1355401.8219480033 68011.47124581804),Metro,"Blacksburg-Christiansburg-Radford, VA Metro Area"
 2203,5151186,G51051186,5151186,51,Virginia,51186,Hampton City PUMA,POINT (1717314.3649716594 127978.80592888167),Metro,"Virginia Beach-Norfolk-Newport News, VA-NC Metro Area"
 2204,5151175,G51051175,5151175,51,Virginia,51175,Newport News City PUMA,POINT (1703121.5803801354 130928.69793724729),Metro,"Virginia Beach-Norfolk-Newport News, VA-NC Metro Area"
@@ -2238,13 +2238,13 @@
 2236,5159305,G51059305,5159305,51,Virginia,59305,"Fairfax County (North Central)--Vienna Town, Oakton & Fair Oaks (East) PUMA",POINT (1596648.5865389304 314671.44946277974),T34,"Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area"
 2237,5159304,G51059304,5159304,51,Virginia,59304,Fairfax County (Southwest)--Centreville (Southeast) & Lorton PUMA,POINT (1601013.0324772317 297084.1739107887),T34,"Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area"
 2238,5159302,G51059302,5159302,51,Virginia,59302,"Fairfax County (Southeast)--Woodlawn, Rose Hill & Mount Vernon PUMA",POINT (1617173.431272967 301729.8551807392),T34,"Washington-Arlington-Alexandria, DC-VA-MD-WV Metro Area"
-2239,5401300,G54001300,5401300,54,West Virginia,01300,"Logan, Mingo, Wyoming & McDowell Counties PUMA",POINT (1236887.4118319 106471.24797330795),,
+2239,5401300,G54001300,5401300,54,West Virginia,01300,"Logan, Mingo, Wyoming & McDowell Counties PUMA",POINT (1236887.4118319 106471.24797330795),NOT_CBSA,
 2240,5400100,G54000100,5400100,54,West Virginia,00100,"Ohio, Marshall, Hancock & Brooke Counties PUMA",POINT (1293919.366204013 392186.93783530715),Metro,"Wheeling, WV-OH Metro Area"
-2241,5401100,G54001100,5401100,54,West Virginia,01100,"Greenbrier, Nicholas, Summers, Monroe & Pocahontas Counties PUMA",POINT (1344757.0736097938 177193.34468439236),,
+2241,5401100,G54001100,5401100,54,West Virginia,01100,"Greenbrier, Nicholas, Summers, Monroe & Pocahontas Counties PUMA",POINT (1344757.0736097938 177193.34468439236),NOT_CBSA,
 2242,5400500,G54000500,5400500,54,West Virginia,00500,"Randolph, Upshur, Barbour, Lewis, Hardy, Grant, Pendleton & Tucker Counties PUMA",POINT (1398067.7029713348 279818.9358273652),Micro,"Elkins, WV Micro Area"
 2243,5400400,G54000400,5400400,54,West Virginia,00400,"Berkeley, Jefferson, Mineral, Hampshire & Morgan Counties PUMA",POINT (1490883.3186939529 350534.39148127363),Metro,"Winchester, VA-WV Metro Area"
 2244,5400300,G54000300,5400300,54,West Virginia,00300,Monongalia & Preston Counties--Morgantown City PUMA,POINT (1372903.1412186113 344483.89043100644),Metro,"Morgantown, WV Metro Area"
-2245,5400600,G54000600,5400600,54,West Virginia,00600,"Jackson, Wetzel, Roane, Braxton, Ritchie, Tyler, Gilmer & Calhoun Counties PUMA",POINT (1276542.5985935358 267995.5221444366),,
+2245,5400600,G54000600,5400600,54,West Virginia,00600,"Jackson, Wetzel, Roane, Braxton, Ritchie, Tyler, Gilmer & Calhoun Counties PUMA",POINT (1276542.5985935358 267995.5221444366),NOT_CBSA,
 2246,5400900,G54000900,5400900,54,West Virginia,00900,"Putnam, Boone & Lincoln Counties PUMA",POINT (1219670.5396675018 169907.40583700294),Metro,"Huntington-Ashland, WV-KY-OH Metro Area"
 2247,5400800,G54000800,5400800,54,West Virginia,00800,"Cabell, Wayne & Mason Counties--Huntington City PUMA",POINT (1185550.6873507488 190456.22135176838),Metro,"Huntington-Ashland, WV-KY-OH Metro Area"
 2248,5401000,G54001000,5401000,54,West Virginia,01000,Kanawha & Clay Counties--Charleston City PUMA,POINT (1258222.825169033 194450.29479645818),Metro,"Charleston, WV Metro Area"
@@ -2254,9 +2254,9 @@
 2252,200101,G02000101,0200101,02,Alaska,00101,Anchorage Municipality (North) PUMA,POINT (-3046369.284954603 3444804.695099472),Metro,"Anchorage, AK Metro Area"
 2253,200102,G02000102,0200102,02,Alaska,00102,Anchorage Municipality (South) PUMA,POINT (-3066527.492934694 3427531.800135976),Metro,"Anchorage, AK Metro Area"
 2254,200200,G02000200,0200200,02,Alaska,00200,Matanuska-Susitna & Kenai Peninsula Boroughs PUMA,POINT (-3101746.086382047 3508262.903115277),Metro,"Anchorage, AK Metro Area"
-2255,200300,G02000300,0200300,02,Alaska,00300,"Greater Fairbanks, Greater Juneau, Ketchikan Gateway Borough & Road-Connected Alaska PUMA",POINT (-2712190.627540414 3368600.924308973),,
-2256,200400,G02000400,0200400,02,Alaska,00400,Subsistence Alaska PUMA,POINT (-3153161.0098519237 3866661.269708487),,
-2257,600300,G06000300,0600300,06,California,00300,"Alpine, Amador, Calaveras, Inyo, Mariposa, Mono & Tuolumne Counties PUMA",POINT (-1957061.9322428578 202674.1672678509),,
+2255,200300,G02000300,0200300,02,Alaska,00300,"Greater Fairbanks, Greater Juneau, Ketchikan Gateway Borough & Road-Connected Alaska PUMA",POINT (-2712190.627540414 3368600.924308973),NOT_CBSA,
+2256,200400,G02000400,0200400,02,Alaska,00400,Subsistence Alaska PUMA,POINT (-3153161.0098519237 3866661.269708487),NOT_CBSA,
+2257,600300,G06000300,0600300,06,California,00300,"Alpine, Amador, Calaveras, Inyo, Mariposa, Mono & Tuolumne Counties PUMA",POINT (-1957061.9322428578 202674.1672678509),NOT_CBSA,
 2258,607302,G06007302,0607302,06,California,07302,"San Diego County (North & East)--Fallbrook, Alpine & Valley Center PUMA",POINT (-1890794.7984314892 -289754.4507090102),T34,"San Diego-Carlsbad, CA Metro Area"
 2259,606515,G06006515,0606515,06,California,06515,"Riverside County--Palm Desert, La Quinta (West) & Desert Hot Springs Cities PUMA",POINT (-1869181.562010999 -231576.4060421707),T34,"Riverside-San Bernardino-Ontario, CA Metro Area"
 2260,606507,G06006507,0606507,06,California,06507,"Riverside County (North Central)--San Jacinto, Beaumont, Banning & Calimesa Cities PUMA",POINT (-1906462.3957445417 -191535.48242212975),T34,"Riverside-San Bernardino-Ontario, CA Metro Area"
@@ -2265,8 +2265,8 @@
 2263,607104,G06007104,0607104,06,California,07104,"San Bernardino County (Southwest)--Phelan, Lake Arrowhead & Big Bear City PUMA",POINT (-1916806.4446046518 -147610.13765365336),T34,"Riverside-San Bernardino-Ontario, CA Metro Area"
 2264,1500301,G15000301,1500301,15,Hawaii,00301,Honolulu County--Rural Oahu PUMA,POINT (-6137250.388995958 327061.923098799),Metro,"Urban Honolulu, HI Metro Area"
 2265,3200300,G32000300,3200300,32,Nevada,00300,Rural Nevada PUMA,POINT (-1730971.0426015796 412595.1562791079),Micro,"Elko, NV Micro Area"
-2266,4100300,G41000300,4100300,41,Oregon,00300,"Klamath, Malheur, Lake & Harney Counties PUMA",POINT (-1879346.2374858926 845399.5108074825),,
-2267,4100200,G41000200,4100200,41,Oregon,00200,North Central Oregon--The Dalles City PUMA,POINT (-1885375.2813563778 1057076.6708217084),,
+2266,4100300,G41000300,4100300,41,Oregon,00300,"Klamath, Malheur, Lake & Harney Counties PUMA",POINT (-1879346.2374858926 845399.5108074825),NOT_CBSA,
+2267,4100200,G41000200,4100200,41,Oregon,00200,North Central Oregon--The Dalles City PUMA,POINT (-1885375.2813563778 1057076.6708217084),NOT_CBSA,
 2268,5311706,G53011706,5311706,53,Washington,11706,Snohomish County (North)--Marysville & Arlington Cities PUMA,POINT (-1902018.1185291305 1449972.610733375),T34,"Seattle-Tacoma-Bellevue, WA Metro Area"
 2269,5311705,G53011705,5311705,53,Washington,11705,Snohomish County (Central & Southeast)--Lake Stevens & Monroe Cities PUMA,POINT (-1908864.5825381272 1423300.4279132388),T34,"Seattle-Tacoma-Bellevue, WA Metro Area"
 2270,5310800,G53010800,5310800,53,Washington,10800,Grant & Kittitas Counties PUMA,POINT (-1810513.9467060545 1309548.9001253515),Micro,"Ellensburg, WA Micro Area"
@@ -2278,7 +2278,7 @@
 2276,100200,G01000200,0100200,01,Alabama,00200,Limestone & Madison (Outer) Counties--Huntsville City (Far West & Southwest) PUMA,POINT (833746.4767093003 -259728.6492795476),Metro,"Huntsville, AL Metro Area"
 2277,101700,G01001700,0101700,01,Alabama,01700,"Dallas, Bibb, Marengo, Hale, Sumter, Perry & Greene Counties PUMA",POINT (783541.4278413295 -514896.44668761303),Metro,"Tuscaloosa, AL Metro Area"
 2278,101800,G01001800,0101800,01,Alabama,01800,"Chilton, Tallapoosa, Chambers & Coosa Counties PUMA",POINT (923303.9269319873 -467509.9777349793),Micro,"Talladega-Sylacauga, AL Micro Area"
-2279,102200,G01002200,0102200,01,Alabama,02200,Southwest Alabama PUMA,POINT (791304.7266624018 -624542.4352131763),,
+2279,102200,G01002200,0102200,01,Alabama,02200,Southwest Alabama PUMA,POINT (791304.7266624018 -624542.4352131763),NOT_CBSA,
 2280,100800,G01000800,0100800,01,Alabama,00800,St. Clair & Blount Counties PUMA,POINT (876759.7759990649 -364664.47350315563),Metro,"Birmingham-Hoover, AL Metro Area"
 2281,100700,G01000700,0100700,01,Alabama,00700,Cullman & Winston Counties PUMA,POINT (813579.1958682204 -338022.1555293478),Micro,"Cullman, AL Micro Area"
 2282,100600,G01000600,0100600,01,Alabama,00600,Morgan & Lawrence Counties--Decatur City PUMA,POINT (809531.3350207343 -299019.83533773443),Metro,"Decatur, AL Metro Area"
@@ -2295,8 +2295,8 @@
 2293,400300,G04000300,0400300,04,Arizona,00300,Navajo & Apache Counties PUMA,POINT (-1245562.9919619532 -145410.0878543637),Micro,"Show Low, AZ Micro Area"
 2294,500300,G05000300,0500300,05,Arkansas,00300,"Baxter, Boone, Carroll, Marion, Madison, Newton & Searcy Counties PUMA",POINT (260195.83677264338 -149309.65506493938),Micro,"Harrison, AR Micro Area"
 2295,501300,G05001300,0501300,05,Arkansas,01300,"Pope, Johnson, Yell, Conway & Perry Counties PUMA",POINT (257443.2498298169 -248573.40676632128),Micro,"Russellville, AR Micro Area"
-2296,501500,G05001500,0501500,05,Arkansas,01500,"Logan, Polk, Franklin, Sevier, Howard & Scott Counties PUMA",POINT (179178.72033719518 -309898.74437882775),,
-2297,500400,G05000400,0500400,05,Arkansas,00400,"Independence, Cleburne, Van Buren, Sharp, Izard, Stone & Fulton Counties PUMA",POINT (364145.46039159695 -171918.6104282127),,
+2296,501500,G05001500,0501500,05,Arkansas,01500,"Logan, Polk, Franklin, Sevier, Howard & Scott Counties PUMA",POINT (179178.72033719518 -309898.74437882775),NOT_CBSA,
+2297,500400,G05000400,0500400,05,Arkansas,00400,"Independence, Cleburne, Van Buren, Sharp, Izard, Stone & Fulton Counties PUMA",POINT (364145.46039159695 -171918.6104282127),NOT_CBSA,
 2298,501400,G05001400,0501400,05,Arkansas,01400,Sebastian & Crawford Counties PUMA,POINT (156858.2252639409 -233359.67081374585),Metro,"Fort Smith, AR-OK Metro Area"
 2299,500200,G05000200,0500200,05,Arkansas,00200,Washington County PUMA,POINT (159445.2179914946 -168905.14638503268),Metro,"Fayetteville-Springdale-Rogers, AR-MO Metro Area"
 2300,500700,G05000700,0500700,05,Arkansas,00700,"St. Francis, Poinsett, Phillips, Cross, Lee & Monroe Counties PUMA",POINT (467897.35328858485 -270463.8579937434),Micro,"Forrest City, AR Micro Area"
@@ -2312,9 +2312,9 @@
 2310,3500100,G35000100,3500100,35,New Mexico,00100,Northwest New Mexico--Navajo Nation PUMA,POINT (-1094437.831557358 -140050.01602003857),Micro,"Gallup, NM Micro Area"
 2311,3500500,G35000500,3500500,35,New Mexico,00500,Santa Fe County PUMA,POINT (-895423.2649572003 -176305.70122397118),Metro,"Santa Fe, NM Metro Area"
 2312,4001302,G40001302,4001302,40,Oklahoma,01302,"Muskogee, Okmulgee, Wagoner (East) & McIntosh Counties PUMA",POINT (33980.33054616819 -212725.1524171841),Micro,"Muskogee, OK Micro Area"
-2313,4001501,G40001501,4001501,40,Oklahoma,01501,"Payne, Seminole, Creek (Southwest), Hughes & Okfuskee Counties--Stillwater City PUMA",POINT (-45801.210808287266 -223866.4437479725),,
-2314,4000400,G40000400,4000400,40,Oklahoma,00400,Southwest Oklahoma PUMA,POINT (-303193.0201160571 -252937.24152137857),,
-2315,4000500,G40000500,4000500,40,Oklahoma,00500,Panhandle & Northwest Oklahoma PUMA,POINT (-333101.13400034327 -102149.22147672274),,
+2313,4001501,G40001501,4001501,40,Oklahoma,01501,"Payne, Seminole, Creek (Southwest), Hughes & Okfuskee Counties--Stillwater City PUMA",POINT (-45801.210808287266 -223866.4437479725),NOT_CBSA,
+2314,4000400,G40000400,4000400,40,Oklahoma,00400,Southwest Oklahoma PUMA,POINT (-303193.0201160571 -252937.24152137857),NOT_CBSA,
+2315,4000500,G40000500,4000500,40,Oklahoma,00500,Panhandle & Northwest Oklahoma PUMA,POINT (-333101.13400034327 -102149.22147672274),NOT_CBSA,
 2316,4001102,G40001102,4001102,40,Oklahoma,01102,"Pottawatomie (North), Logan & Lincoln Counties--Shawnee City PUMA",POINT (-98520.46427149102 -196861.64882341656),Metro,"Oklahoma City, OK Metro Area"
 2317,4000200,G40000200,4000200,40,Oklahoma,00200,"Cherokee, Sequoyah & Adair Counties PUMA",POINT (105764.98941289348 -194465.3852195126),Micro,"Tahlequah, OK Micro Area"
 2318,4703000,G47003000,4703000,47,Tennessee,03000,Madison & Chester Counties--Jackson City PUMA,POINT (649865.0430455679 -194226.3792282571),Metro,"Jackson, TN Metro Area"
@@ -2325,14 +2325,14 @@
 2323,4702700,G47002700,4702700,47,Tennessee,02700,"Maury, Bedford & Marshall Counties PUMA",POINT (825847.8014755341 -178882.85370820278),Micro,"Lewisburg, TN Micro Area"
 2324,4800100,G48000100,4800100,48,Texas,00100,Panhandle Regional Planning Commission (Outside Potter & Randall Counties) PUMA,POINT (-494156.6199571402 -218518.66657015018),Metro,"Amarillo, TX Metro Area"
 2325,4800200,G48000200,4800200,48,Texas,00200,Panhandle Regional Planning Commission--Potter County--Amarillo City (North) PUMA,POINT (-530384.0317867632 -218636.76521801797),Metro,"Amarillo, TX Metro Area"
-2326,3704900,G37004900,3704900,37,North Carolina,04900,"Columbus, Bladen & Robeson (East) Counties PUMA",POINT (1573482.7932089388 -198570.7592525181),,
-2327,3702400,G37002400,3702400,37,North Carolina,02400,"Jackson (South), Macon, Cherokee & Clay Counties PUMA",POINT (1119549.506266113 -188314.93242962833),,
+2326,3704900,G37004900,3704900,37,North Carolina,04900,"Columbus, Bladen & Robeson (East) Counties PUMA",POINT (1573482.7932089388 -198570.7592525181),NOT_CBSA,
+2327,3702400,G37002400,3702400,37,North Carolina,02400,"Jackson (South), Macon, Cherokee & Clay Counties PUMA",POINT (1119549.506266113 -188314.93242962833),NOT_CBSA,
 2328,3702500,G37002500,3702500,37,North Carolina,02500,Henderson & Transylvania Counties PUMA,POINT (1201077.608519488 -165341.77601766383),Micro,"Brevard, NC Micro Area"
 2329,3704600,G37004600,3704600,37,North Carolina,04600,Pender & New Hanover (North) Counties PUMA,POINT (1638623.3886494706 -179246.11666272758),Metro,"Wilmington, NC Metro Area"
 2330,3705100,G37005100,3705100,37,North Carolina,05100,Robeson County (West)--Lumberton City PUMA,POINT (1524837.010286434 -180494.37687422676),Micro,"Lumberton, NC Micro Area"
-2331,4500700,G45000700,4500700,45,South Carolina,00700,"Lancaster, Chesterfield & Marlboro Counties PUMA",POINT (1430472.1975551082 -200536.63025716532),,
+2331,4500700,G45000700,4500700,45,South Carolina,00700,"Lancaster, Chesterfield & Marlboro Counties PUMA",POINT (1430472.1975551082 -200536.63025716532),NOT_CBSA,
 2332,4500400,G45000400,4500400,45,South Carolina,00400,"Cherokee, Newberry, Chester & Union Counties PUMA",POINT (1314654.9915240163 -220112.3652997696),Metro,"Spartanburg, SC Metro Area"
-2333,4501000,G45001000,4501000,45,South Carolina,01000,"Georgetown, Marion & Dillon Counties PUMA",POINT (1521595.8125561734 -275550.25114748656),,
+2333,4501000,G45001000,4501000,45,South Carolina,01000,"Georgetown, Marion & Dillon Counties PUMA",POINT (1521595.8125561734 -275550.25114748656),NOT_CBSA,
 2334,4500101,G45000101,4500101,45,South Carolina,00101,Pickens & Oconee Counties--Easley & Clemson Cities PUMA,POINT (1183219.4703764915 -219522.0802709579),Micro,"Seneca, SC Micro Area"
 2335,4500102,G45000102,4500102,45,South Carolina,00102,Greenville County (North)--Greer City (North & West) & Taylors (Central & East) PUMA,POINT (1225287.931186607 -185307.31838167246),Metro,"Greenville-Anderson-Mauldin, SC Metro Area"
 2336,4500501,G45000501,4500501,45,South Carolina,00501,York County (West & Outside Rock Hill City) PUMA,POINT (1332124.9842028958 -178441.74761285403),T34,"Charlotte-Concord-Gastonia, NC-SC Metro Area"
@@ -2356,9 +2356,9 @@
 2354,1802306,G18002306,1802306,18,Indiana,02306,Marion County--Warren & Franklin Townships--Indianapolis City (East & Southeast) PUMA,POINT (846342.3843367349 294621.65961170575),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 2355,1802303,G18002303,1802303,18,Indiana,02303,Marion County--Lawrence Township--Indianapolis (Northeast) & Lawrence Cities PUMA,POINT (845246.527560718 310834.0178090869),T34,"Indianapolis-Carmel-Anderson, IN Metro Area"
 2356,2100400,G21000400,2100400,21,Kentucky,00400,Barren River Area Development District (Outer) PUMA,POINT (860251.3612661541 -13741.73059556123),Metro,"Bowling Green, KY Metro Area"
-2357,2101300,G21001300,2101300,21,Kentucky,01300,Lincoln Trail Area Development District (West) PUMA,POINT (848178.959986339 67572.80717639044),,
+2357,2101300,G21001300,2101300,21,Kentucky,01300,Lincoln Trail Area Development District (West) PUMA,POINT (848178.959986339 67572.80717639044),NOT_CBSA,
 2358,2100500,G21000500,2100500,21,Kentucky,00500,Barren River Area Development District (Central)--Warren County PUMA,POINT (842890.2882782852 -14249.781685634534),Metro,"Bowling Green, KY Metro Area"
-2359,2600200,G26000200,2600200,26,Michigan,00200,Eastern Upper Peninsula PUMA,POINT (773171.5563664756 1006393.5142418342),,
+2359,2600200,G26000200,2600200,26,Michigan,00200,Eastern Upper Peninsula PUMA,POINT (773171.5563664756 1006393.5142418342),NOT_CBSA,
 2360,2602101,G26002101,2602101,26,Michigan,02101,Kalamazoo County (Outer) PUMA,POINT (857002.0706055524 579035.3567491543),Metro,"Kalamazoo-Portage, MI Metro Area"
 2361,2601003,G26001003,2601003,26,Michigan,01003,Kent County (Southeast) PUMA,POINT (853107.2155149471 651598.5647763556),Metro,"Grand Rapids-Wyoming, MI Metro Area"
 2362,2601004,G26001004,2601004,26,Michigan,01004,Kent County (North) PUMA,POINT (843656.0424898032 680560.609744158),Metro,"Grand Rapids-Wyoming, MI Metro Area"
@@ -2374,6 +2374,6 @@
 2372,4702401,G47002401,4702401,47,Tennessee,02401,Rutherford County (North)--Smyrna Town & La Vergne City PUMA,POINT (853316.5760171247 -131510.54417528107),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
 2373,4700500,G47000500,4700500,47,Tennessee,00500,Sumner County--Hendersonville City PUMA,POINT (845555.1346444382 -73006.03095774697),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
 2374,4702501,G47002501,4702501,47,Tennessee,02501,Nashville-Davidson (East) PUMA,POINT (834713.9667902931 -111417.88173610524),Metro,"Nashville-Davidson--Murfreesboro--Franklin, TN Metro Area"
-2375,5310400,G53010400,5310400,53,Washington,10400,"Stevens, Okanogan, Pend Oreille & Ferry Counties PUMA",POINT (-1684664.9078774198 1429380.2688971201),,
+2375,5310400,G53010400,5310400,53,Washington,10400,"Stevens, Okanogan, Pend Oreille & Ferry Counties PUMA",POINT (-1684664.9078774198 1429380.2688971201),NOT_CBSA,
 2376,5310300,G53010300,5310300,53,Washington,10300,Chelan & Douglas Counties PUMA,POINT (-1811096.5073001115 1383753.5114905303),Metro,"Wenatchee, WA Metro Area"
 2377,5310100,G53010100,5310100,53,Washington,10100,Whatcom County--Bellingham City PUMA,POINT (-1887228.2197889574 1519303.5694334353),Metro,"Bellingham, WA Metro Area"
