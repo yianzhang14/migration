@@ -28,6 +28,7 @@ haversine = ">=2.9.0,<3"
 arviz = ">=0.13.0,<1"
 ipywidgets = ">=8.1.8,<9"
 jupyter = ">=1.1.1,<2"
+tomlkit = "<0.15.1"
 
 [tool.pixi.target.linux-64.pypi-dependencies]
 jax = { version = ">=0.11.0", extras = ["cuda12"] }

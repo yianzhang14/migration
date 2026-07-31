@@ -10,3 +10,7 @@ initial_explorations/
 resources/
 
 data/census/ACS/raw/
+
+kentucky/
+
+*estdata*.parquet*
