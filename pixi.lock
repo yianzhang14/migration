@@ -394,6 +394,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/50/32/e7ffa9c324ae260e5dbb4af2cd557bf7a8d155c8ac7b79a785fe1796fb92/nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/51/c0/00c9809d8b9346eb238a6bbd5f83e846a4ce4503da94a4c08cb7284c325b/multipledispatch-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/58/e6/1fa293b58b495799d511b49ab5a57c13590af8e226681096293073779600/pymc-5.26.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/5b/ab/5280d6920d59e739063effb59b54349a71ee66bdd11daa1664d08e68564a/xlogit-0.2.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/63/03/cde130e3ff706784f9efd47204f299b15113ea08203e98a556603dac245d/nvidia_nvshmem_cu12-3.7.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/67/1a/e6944e4cfd7c5386b15e4b4056084b3c8c676aca0a215d8b507a6cbc1263/openrouteservice-2.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6b/27/173b39b6282aca3e0deb3b15d145173ed7884eefc6660c3d5e829e362724/biogeme_optimization-0.0.11-py3-none-any.whl
@@ -747,6 +748,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/51/c0/00c9809d8b9346eb238a6bbd5f83e846a4ce4503da94a4c08cb7284c325b/multipledispatch-1.0.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/58/e6/1fa293b58b495799d511b49ab5a57c13590af8e226681096293073779600/pymc-5.26.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/59/6b/e6caeaff6bd1537becbbcde8985fd65a71374e33f9e8c1aa3371bd16c349/jaxlib-0.11.0-cp312-cp312-win_amd64.whl
+      - pypi: https://files.pythonhosted.org/packages/5b/ab/5280d6920d59e739063effb59b54349a71ee66bdd11daa1664d08e68564a/xlogit-0.2.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/67/1a/e6944e4cfd7c5386b15e4b4056084b3c8c676aca0a215d8b507a6cbc1263/openrouteservice-2.3.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6b/27/173b39b6282aca3e0deb3b15d145173ed7884eefc6660c3d5e829e362724/biogeme_optimization-0.0.11-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/7b/5b/26e3cca2589252ceabf964ba81514e6f48556553c9c2766e1a0fdceec696/python_levenshtein-0.27.3-py3-none-any.whl
@@ -8893,6 +8895,14 @@ packages:
   - numpy>=2.0
   - ml-dtypes>=0.5.0
   requires_python: '>=3.12'
+- pypi: https://files.pythonhosted.org/packages/5b/ab/5280d6920d59e739063effb59b54349a71ee66bdd11daa1664d08e68564a/xlogit-0.2.7-py3-none-any.whl
+  name: xlogit
+  version: 0.2.7
+  sha256: 7b091b5bb1e0b806892eccbc2b0f9b8b876bb80fcd994446faec80ac000fbc3f
+  requires_dist:
+  - numpy>=1.13.1
+  - scipy>=1.0.0
+  requires_python: '>=3.5'
 - pypi: https://files.pythonhosted.org/packages/63/03/cde130e3ff706784f9efd47204f299b15113ea08203e98a556603dac245d/nvidia_nvshmem_cu12-3.7.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
   name: nvidia-nvshmem-cu12
   version: 3.7.2

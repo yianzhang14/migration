@@ -34,7 +34,7 @@ tomlkit = "<0.15.1"
 jax = { version = ">=0.11.0", extras = ["cuda12"] }
 
 [tool.pixi.pypi-dependencies]
-# xlogit = ">=0.2.7, <0.3"
+xlogit = ">=0.2.7, <0.3"
 # cupy-cuda12x = ">=13.3.0, <14"
 biogeme = ">=3.3.2, <4"
 openrouteservice = ">=2.3.3,<3"
