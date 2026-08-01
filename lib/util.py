@@ -142,9 +142,6 @@ def build_long_data(
     move_long["proportion_same_race_white"] = (
         move_long["WHITE"] * move_long["OWN_RACE_ETH_PROP"]
     )
-    move_long["proportion_same_race_other"] = (
-        move_long["OTHER_RACE"] * move_long["OWN_RACE_ETH_PROP"]
-    )
 
     MOVE_ONLY_TERMS = [
         "destchoice_logdist",
@@ -188,7 +185,6 @@ def build_long_data(
         "proportion_same_race_indian",
         "proportion_also_latino",
         "proportion_same_race_white",
-        "proportion_same_race_other",
     ]
     move_long = move_long[
         ["person_id", "alt", "choice", "log_pop_offset"]
@@ -332,9 +328,6 @@ def build_long_data(
     )
     stay["proportion_same_race_white"] = (
         stay["Proportion of people White.ORIG"] * stay["WHITE"]
-    )
-    stay["proportion_same_race_other"] = (
-        stay["Proportion of people other race.ORIG"] * stay["OTHER_RACE"]
     )
 
     stay["alt"] = 0
