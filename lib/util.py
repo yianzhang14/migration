@@ -44,9 +44,9 @@ def build_long_data(
     # NAME_NUM.ORIG and ALT{i}_CBSA are factorized against the same CBSA-name codebook
     # (see create_estdata.ipynb), so they're directly comparable
     same_cbsa = (move_long["NAME_NUM.ORIG"] == move_long["CBSA"]).astype(float)
-    same_type_t34 = (move_long["TYPE_NUM.ORIG"] == 0).astype(float)
-    same_type_metro = (move_long["TYPE_NUM.ORIG"] == 1).astype(float)
-    same_type_nonmetro = (move_long["TYPE_NUM.ORIG"] == 2).astype(float)
+    origin_type_t34 = (move_long["TYPE_NUM.ORIG"] == 0).astype(float)
+    origin_type_metro = (move_long["TYPE_NUM.ORIG"] == 1).astype(float)
+    origin_type_nonmetro = (move_long["TYPE_NUM.ORIG"] == 2).astype(float)
     alt_type_t34 = (move_long["TYPE"] == 0).astype(float)
     alt_type_metro = (move_long["TYPE"] == 1).astype(float)
     alt_type_nonmetro = (move_long["TYPE"] == 2).astype(float)
@@ -63,14 +63,14 @@ def build_long_data(
     ).astype(float)
     # origin area type x destination area type; nonmetro_nonmetro is the omitted reference category,
     # matching the commented-out c_destchoice_nonmetro_nonmetro in modeling_mnl.ipynb's cell 22.
-    move_long["destchoice_T34_T34"] = same_type_t34 * alt_type_t34
-    move_long["destchoice_T34_metro"] = same_type_t34 * alt_type_metro
-    move_long["destchoice_T34_nonmetro"] = same_type_t34 * alt_type_nonmetro
-    move_long["destchoice_metro_T34"] = same_type_metro * alt_type_t34
-    move_long["destchoice_metro_metro"] = same_type_metro * alt_type_metro
-    move_long["destchoice_metro_nonmetro"] = same_type_metro * alt_type_nonmetro
-    move_long["destchoice_nonmetro_T34"] = same_type_nonmetro * alt_type_t34
-    move_long["destchoice_nonmetro_metro"] = same_type_nonmetro * alt_type_metro
+    move_long["destchoice_T34"] = alt_type_t34
+    move_long["destchoice_metro"] = alt_type_metro
+    # effective or between similar types
+    move_long["destchoice_same_cbsa_type"] = (
+        origin_type_t34 * alt_type_t34
+        + origin_type_metro * alt_type_metro
+        + origin_type_nonmetro * alt_type_nonmetro
+    )
 
     # shared terms (move-context value: comparing the mover to the destination)
     move_long["proportion_same_age_18_34"] = (
@@ -223,6 +223,9 @@ def build_long_data(
     stay["stay_naics_high_ed"] = stay["NAICS_HIGH_ED"]
     stay["stay_naics_agr_ext"] = stay["NAICS_AGR_EXT"]
 
+    stay["stay_T34"] = origin_type_t34
+    stay["stay_metro"] = origin_type_metro
+
     STAY_ONLY_TERMS = [
         "stay",
         "stay_age_18_22",
@@ -247,6 +250,8 @@ def build_long_data(
         "stay_naics_license",
         "stay_naics_high_ed",
         "stay_naics_agr_ext",
+        "stay_T34",
+        "stay_metro",
     ]
 
     HH_INCOME_COL = (
