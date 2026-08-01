@@ -148,14 +148,9 @@ def build_long_data(
         "destchoice_samecbsa",
         "destchoice_samestate",
         "destchoice_birthstate",
-        "destchoice_T34_T34",
-        "destchoice_T34_metro",
-        "destchoice_T34_nonmetro",
-        "destchoice_metro_T34",
-        "destchoice_metro_metro",
-        "destchoice_metro_nonmetro",
-        "destchoice_nonmetro_T34",
-        "destchoice_nonmetro_metro",
+        "destchoice_T34",
+        "destchoice_metro",
+        "destchoice_same_cbsa_type",
     ]
     SHARED_TERMS = [
         "proportion_same_age_18_34",
