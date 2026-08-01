@@ -25,10 +25,6 @@ def build_long_data(
     estimated) term in both this notebook's source model and Biogeme's un-wrapped `log(Variable(...))`
     calls.
 
-    `c_proportion_same_race_white` and `c_proportion_same_race_other` from `modeling_mnl.ipynb` are
-    omitted -- their source columns aren't in `lib.io.INDIV_COLS`, and one is populated from a
-    truncated column-name string in the source notebook.
-
     Returns `(long_df, STAY_ONLY_TERMS, SHARED_TERMS, MOVE_ONLY_TERMS)`. `long_df` is sorted by
     `(person_id, alt)`, so each person occupies a contiguous run of `num_alternatives + 1` rows in a
     fixed alt order.
@@ -144,10 +140,10 @@ def build_long_data(
     move_long["proportion_also_latino"] = (
         move_long["LATINO"] * move_long["OWN_RACE_ETH_PROP"]
     )
-    move_long["Proportion_same_race_white"] = (
+    move_long["proportion_same_race_white"] = (
         move_long["WHITE"] * move_long["OWN_RACE_ETH_PROP"]
     )
-    move_long["Proportion_same_race_other"] = (
+    move_long["proportion_same_race_other"] = (
         move_long["OTHER_RACE"] * move_long["OWN_RACE_ETH_PROP"]
     )
 
