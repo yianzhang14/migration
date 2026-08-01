@@ -7,7 +7,6 @@ dependencies = [
     "torch-choice>=1.0.6,<2",
     "biogeme>=3.3.2,<4",
     "openrouteservice>=2.3.3,<3",
-    "larch",
 ]
 
 [tool.pixi.workspace]
