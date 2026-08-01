@@ -7,6 +7,7 @@ dependencies = [
     "torch-choice>=1.0.6,<2",
     "biogeme>=3.3.2,<4",
     "openrouteservice>=2.3.3,<3",
+    "larch",
 ]
 
 [tool.pixi.workspace]
@@ -34,6 +35,10 @@ arviz = ">=0.13.0,<1"
 ipywidgets = ">=8.1.8,<9"
 jupyter = ">=1.1.1,<2"
 tomlkit = "<0.15.1"
+larch = ">=6.0.46,<7"
+
+[tool.pixi.target.linux-64.pypi-dependencies]
+jax = { version = ">=0.11.0, <0.12", extras = ["cuda12"] }
 
 [tool.ruff]
 target-version = "py312"
