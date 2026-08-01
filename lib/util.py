@@ -339,8 +339,16 @@ def build_long_data(
     ]
 
     long_df = pd.concat([stay, move_long], ignore_index=True, sort=False)
+
     varnames = STAY_ONLY_TERMS + SHARED_TERMS + MOVE_ONLY_TERMS
-    long_df[varnames + ["log_pop_offset"]] = long_df[varnames + ["log_pop_offset"]]
+
+    # make sure the shared terms are not na before fillna
+    problem = long_df[SHARED_TERMS + ["log_pop_offset"]].isna().sum()
+    assert problem.sum() == 0, problem[problem > 0]
+
+    long_df[varnames + ["log_pop_offset"]] = long_df[
+        varnames + ["log_pop_offset"]
+    ].fillna(0.0)
     long_df = long_df.sort_values(["person_id", "alt"]).reset_index(drop=True)
 
     num_persons = df_train["person_id"].nunique()
