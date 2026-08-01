@@ -31,7 +31,6 @@ def build_long_data(
     """
     move_long = wide_to_long(
         df_train,
-        id_col="person_id",
         alt_list=[f"ALT{i}" for i in range(1, num_alternatives + 1)],
         alt_name="alt_label",
         varying=ALT_VARYING_SUFFIXES,
@@ -365,7 +364,6 @@ def build_long_data(
 
 def wide_to_long(
     df: pd.DataFrame,
-    id_col: str,
     alt_list: list[str],
     alt_name: str,
     varying: list[str],
