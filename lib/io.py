@@ -10,12 +10,8 @@ downstream changes silently.
 import numpy as np
 import pandas as pd
 
-# same columns= restriction technique as modeling_mnl.ipynb: read only the columns V[0]/V[i]
-# actually reference, instead of the full ~3,800-column file, since most of it is unused census
-# fields. ALT_VARYING_SUFFIXES covers the ALT{i}_<suffix> destination columns V[i] uses;
-# INDIV_COLS covers everything else, plus CHOSEN/STAY/ALT{i}_PUMA needed to build ALT_CHOICE below.
-# NOTE: OWN_RACE_ETH_PCT / OWN_NAICS_GROUP_PCT here, not OWN_RACE_PCT / OWN_GROUP_PCT as modeling_mnl.ipynb's
-# cell 5 currently has -- see modeling_torch_choice.ipynb's intro cell for why.
+# columns each alternative has a measure of for each person
+# this is specifically the list of columns used in the modeling notebooks
 ALT_VARYING_SUFFIXES = [
     "ALT_COMMUTE_PCT",
     "CBSA",
@@ -39,6 +35,8 @@ ALT_VARYING_SUFFIXES = [
     "UNEMP_RATE",
 ]
 
+# columns that each person has a single value of, constant across alternatives
+# this is specifically the list of columns used in the modeling notebooks
 INDIV_COLS = [
     "CHOSEN",
     "STAY",
@@ -91,6 +89,8 @@ INDIV_COLS = [
     "Proportion of people Black.ORIG",
     "Proportion of people Indian.ORIG",
     "Proportion of people Latino.ORIG",
+    "Proportion of people White.ORIG",
+    "Proportion of people other race.ORIG",
     "Proportion of people in college.ORIG",
     "Proportion of people in military.ORIG",
     "RECENTLY_MARRIED",

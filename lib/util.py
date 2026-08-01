@@ -63,9 +63,9 @@ def build_long_data(
     move_long["destchoice_logdist"] = np.log(move_long["DIST"] + 1)
     move_long["destchoice_samecbsa"] = same_cbsa
     move_long["destchoice_samestate"] = same_state
-    move_long["destchoice_birthstate"] = (move_long["POBP"] == move_long["STATE"]).astype(
-        float
-    )
+    move_long["destchoice_birthstate"] = (
+        move_long["POBP"] == move_long["STATE"]
+    ).astype(float)
     # origin area type x destination area type; nonmetro_nonmetro is the omitted reference category,
     # matching the commented-out c_destchoice_nonmetro_nonmetro in modeling_mnl.ipynb's cell 22.
     move_long["destchoice_T34_T34"] = same_type_t34 * alt_type_t34
@@ -96,7 +96,9 @@ def build_long_data(
     move_long["proportion_foreign_if_foreign"] = (
         move_long["FOREIGN"] * move_long["FOREIGN_BORN_PCT"]
     )
-    move_long["median_hh_income_in_tens_of_thousands"] = move_long["HH_MED_INC"] / 10_000
+    move_long["median_hh_income_in_tens_of_thousands"] = (
+        move_long["HH_MED_INC"] / 10_000
+    )
     move_long["median_house_value_over_median_income"] = move_long[
         "MED_HOUSE_VALUE_OVER_MED_HH_INC"
     ]
@@ -106,8 +108,12 @@ def build_long_data(
     move_long["median_travel_time"] = move_long["MED_TRAVEL_TIME"]
     move_long["proportion_alt_commute"] = move_long["ALT_COMMUTE_PCT"]
     move_long["proportion_ent"] = move_long["ENT_JOBS_PCT"]
-    move_long["proportion_ent_18_34"] = move_long["AGE_18_34"] * move_long["ENT_JOBS_PCT"]
-    move_long["proportion_ent_35_64"] = move_long["AGE_35_64"] * move_long["ENT_JOBS_PCT"]
+    move_long["proportion_ent_18_34"] = (
+        move_long["AGE_18_34"] * move_long["ENT_JOBS_PCT"]
+    )
+    move_long["proportion_ent_35_64"] = (
+        move_long["AGE_35_64"] * move_long["ENT_JOBS_PCT"]
+    )
     move_long["proportion_also_mil"] = move_long["IN_MILITARY"] * move_long["MIL_PCT"]
     # c_proportion_same_naics_goods_trade uses ALT{i}_OWN_NAICS_GROUP_PCT here, not the mangled
     # f"{alt}OWN_GROUPOWN_NAICS_GROUP_PCT_PCT" that modeling_mnl.ipynb's cell 23 currently has.
@@ -137,6 +143,12 @@ def build_long_data(
     )
     move_long["proportion_also_latino"] = (
         move_long["LATINO"] * move_long["OWN_RACE_ETH_PCT"]
+    )
+    move_long["Proportion_same_race_white"] = (
+        move_long["WHITE"] * move_long["OWN_RACE_ETH_PCT"]
+    )
+    move_long["Proportion_same_race_other"] = (
+        move_long["OTHER_RACE"] * move_long["OWN_RACE_ETH_PCT"]
     )
 
     MOVE_ONLY_TERMS = [
@@ -180,9 +192,13 @@ def build_long_data(
         "proportion_same_race_aapi",
         "proportion_same_race_indian",
         "proportion_also_latino",
+        "proportion_same_race_white",
+        "proportion_same_race_other",
     ]
     move_long = move_long[
-        ["person_id", "alt", "choice", "log_pop_offset"] + MOVE_ONLY_TERMS + SHARED_TERMS
+        ["person_id", "alt", "choice", "log_pop_offset"]
+        + MOVE_ONLY_TERMS
+        + SHARED_TERMS
     ]
 
     stay = df_train.copy()
@@ -319,11 +335,19 @@ def build_long_data(
     stay["proportion_also_latino"] = (
         stay["Proportion of people Latino.ORIG"] * stay["LATINO"]
     )
+    stay["proportion_same_race_white"] = (
+        stay["Proportion of people White.ORIG"] * stay["WHITE"]
+    )
+    stay["proportion_same_race_other"] = (
+        stay["Proportion of people other race.ORIG"] * stay["OTHER_RACE"]
+    )
 
     stay["alt"] = 0
     stay["choice"] = (stay["ALT_CHOICE"] == 0).astype(int)
     stay = stay[
-        ["person_id", "alt", "choice", "log_pop_offset"] + STAY_ONLY_TERMS + SHARED_TERMS
+        ["person_id", "alt", "choice", "log_pop_offset"]
+        + STAY_ONLY_TERMS
+        + SHARED_TERMS
     ]
 
     long_df = pd.concat([stay, move_long], ignore_index=True, sort=False)
@@ -335,7 +359,10 @@ def build_long_data(
 
     num_persons = df_train["person_id"].nunique()
     num_alts = num_alternatives + 1
-    assert len(long_df) == num_persons * num_alts, (len(long_df), num_persons * num_alts)
+    assert len(long_df) == num_persons * num_alts, (
+        len(long_df),
+        num_persons * num_alts,
+    )
 
     return long_df, STAY_ONLY_TERMS, SHARED_TERMS, MOVE_ONLY_TERMS
 
