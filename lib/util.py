@@ -218,8 +218,8 @@ def build_long_data(
     stay["stay_naics_high_ed"] = stay["NAICS_HIGH_ED"]
     stay["stay_naics_agr_ext"] = stay["NAICS_AGR_EXT"]
 
-    stay["stay_T34"] = origin_type_t34
-    stay["stay_metro"] = origin_type_metro
+    stay["stay_T34"] = (stay["TYPE_NUM.ORIG"] == 0).astype(float)
+    stay["stay_metro"] = (stay["TYPE_NUM.ORIG"] == 1).astype(float)
 
     STAY_ONLY_TERMS = [
         "stay",
@@ -340,9 +340,7 @@ def build_long_data(
 
     long_df = pd.concat([stay, move_long], ignore_index=True, sort=False)
     varnames = STAY_ONLY_TERMS + SHARED_TERMS + MOVE_ONLY_TERMS
-    long_df[varnames + ["log_pop_offset"]] = long_df[
-        varnames + ["log_pop_offset"]
-    ].fillna(0.0)
+    long_df[varnames + ["log_pop_offset"]] = long_df[varnames + ["log_pop_offset"]]
     long_df = long_df.sort_values(["person_id", "alt"]).reset_index(drop=True)
 
     num_persons = df_train["person_id"].nunique()
