@@ -79,22 +79,22 @@ def build_long_data(
 
     # shared terms (move-context value: comparing the mover to the destination)
     move_long["proportion_same_age_18_34"] = (
-        move_long["AGE_18_34"] * move_long["OWN_AGE_PCT"]
+        move_long["AGE_18_34"] * move_long["OWN_AGE_PROP"]
     )
     move_long["proportion_same_age_35_64"] = (
-        move_long["AGE_35_64"] * move_long["OWN_AGE_PCT"]
+        move_long["AGE_35_64"] * move_long["OWN_AGE_PROP"]
     )
     move_long["proportion_same_age_65_plus"] = (
-        move_long["AGE_OVER_65"] * move_long["OWN_AGE_PCT"]
+        move_long["AGE_OVER_65"] * move_long["OWN_AGE_PROP"]
     )
     move_long["proportion_hh_with_children_if_have_children"] = (
-        move_long["HH_WITH_CHILD_PCT"] * move_long["CHILD"]
+        move_long["HH_WITH_CHILD_PROP"] * move_long["CHILD"]
     )
     move_long["proportion_college_if_in_college"] = (
-        move_long["IN_COLLEGE"] * move_long["COLLEGE_PCT"]
+        move_long["IN_COLLEGE"] * move_long["COLLEGE_PROP"]
     )
     move_long["proportion_foreign_if_foreign"] = (
-        move_long["FOREIGN"] * move_long["FOREIGN_BORN_PCT"]
+        move_long["FOREIGN"] * move_long["FOREIGN_BORN_PROP"]
     )
     move_long["median_hh_income_in_tens_of_thousands"] = (
         move_long["HH_MED_INC"] / 10_000
@@ -102,53 +102,53 @@ def build_long_data(
     move_long["median_house_value_over_median_income"] = move_long[
         "MED_HOUSE_VALUE_OVER_MED_HH_INC"
     ]
-    move_long["median_gross_rent_percentage_hh_inc"] = move_long["MED_RENT_PCT_HH_INC"]
+    move_long["median_gross_rent_percentage_hh_inc"] = move_long["MED_RENT_PROP_HH_INC"]
     move_long["unemp_rate"] = move_long["UNEMP_RATE"]
-    move_long["vacancy_rate"] = move_long["HOUSE_VACANCY_PCT"]
+    move_long["vacancy_rate"] = move_long["HOUSE_VACANCY_PROP"]
     move_long["median_travel_time"] = move_long["MED_TRAVEL_TIME"]
-    move_long["proportion_alt_commute"] = move_long["ALT_COMMUTE_PCT"]
-    move_long["proportion_ent"] = move_long["ENT_JOBS_PCT"]
+    move_long["proportion_alt_commute"] = move_long["ALT_COMMUTE_PROP"]
+    move_long["proportion_ent"] = move_long["ENT_JOBS_PROP"]
     move_long["proportion_ent_18_34"] = (
-        move_long["AGE_18_34"] * move_long["ENT_JOBS_PCT"]
+        move_long["AGE_18_34"] * move_long["ENT_JOBS_PROP"]
     )
     move_long["proportion_ent_35_64"] = (
-        move_long["AGE_35_64"] * move_long["ENT_JOBS_PCT"]
+        move_long["AGE_35_64"] * move_long["ENT_JOBS_PROP"]
     )
-    move_long["proportion_also_mil"] = move_long["IN_MILITARY"] * move_long["MIL_PCT"]
-    # c_proportion_same_naics_goods_trade uses ALT{i}_OWN_NAICS_GROUP_PCT here, not the mangled
-    # f"{alt}OWN_GROUPOWN_NAICS_GROUP_PCT_PCT" that modeling_mnl.ipynb's cell 23 currently has.
+    move_long["proportion_also_mil"] = move_long["IN_MILITARY"] * move_long["MIL_PROP"]
+    # c_proportion_same_naics_goods_trade uses ALT{i}_OWN_NAICS_GROUP_PROP here, not the mangled
+    # f"{alt}OWN_GROUPOWN_NAICS_GROUP_PROP_PROP" that modeling_mnl.ipynb's cell 23 currently has.
     move_long["proportion_same_naics_govt"] = (
-        move_long["NAICS_GOVT"] * move_long["OWN_NAICS_GROUP_PCT"]
+        move_long["NAICS_GOVT"] * move_long["OWN_NAICS_GROUP_PROP"]
     )
     move_long["proportion_same_naics_goods_trade"] = (
-        move_long["NAICS_GOODS_TRADE"] * move_long["OWN_NAICS_GROUP_PCT"]
+        move_long["NAICS_GOODS_TRADE"] * move_long["OWN_NAICS_GROUP_PROP"]
     )
     move_long["proportion_same_naics_license"] = (
-        move_long["NAICS_LICENSE"] * move_long["OWN_NAICS_GROUP_PCT"]
+        move_long["NAICS_LICENSE"] * move_long["OWN_NAICS_GROUP_PROP"]
     )
     move_long["proportion_same_naics_high_ed"] = (
-        move_long["NAICS_HIGH_ED"] * move_long["OWN_NAICS_GROUP_PCT"]
+        move_long["NAICS_HIGH_ED"] * move_long["OWN_NAICS_GROUP_PROP"]
     )
     move_long["proportion_same_naics_agr_ext"] = (
-        move_long["NAICS_AGR_EXT"] * move_long["OWN_NAICS_GROUP_PCT"]
+        move_long["NAICS_AGR_EXT"] * move_long["OWN_NAICS_GROUP_PROP"]
     )
     move_long["proportion_same_race_black"] = (
-        move_long["BLACK"] * move_long["OWN_RACE_ETH_PCT"]
+        move_long["BLACK"] * move_long["OWN_RACE_ETH_PROP"]
     )
     move_long["proportion_same_race_aapi"] = (
-        move_long["AAPI"] * move_long["OWN_RACE_ETH_PCT"]
+        move_long["AAPI"] * move_long["OWN_RACE_ETH_PROP"]
     )
     move_long["proportion_same_race_indian"] = (
-        move_long["INDIAN"] * move_long["OWN_RACE_ETH_PCT"]
+        move_long["INDIAN"] * move_long["OWN_RACE_ETH_PROP"]
     )
     move_long["proportion_also_latino"] = (
-        move_long["LATINO"] * move_long["OWN_RACE_ETH_PCT"]
+        move_long["LATINO"] * move_long["OWN_RACE_ETH_PROP"]
     )
     move_long["Proportion_same_race_white"] = (
-        move_long["WHITE"] * move_long["OWN_RACE_ETH_PCT"]
+        move_long["WHITE"] * move_long["OWN_RACE_ETH_PROP"]
     )
     move_long["Proportion_same_race_other"] = (
-        move_long["OTHER_RACE"] * move_long["OWN_RACE_ETH_PCT"]
+        move_long["OTHER_RACE"] * move_long["OWN_RACE_ETH_PROP"]
     )
 
     MOVE_ONLY_TERMS = [
@@ -309,19 +309,19 @@ def build_long_data(
         stay["Proportion of people in military.ORIG"] * stay["IN_MILITARY"]
     )
     stay["proportion_same_naics_govt"] = (
-        stay["NAICS_GROUP_PCT_GOVT.ORIG"] * stay["NAICS_GOVT"]
+        stay["NAICS_GROUP_PROP_GOVT.ORIG"] * stay["NAICS_GOVT"]
     )
     stay["proportion_same_naics_goods_trade"] = (
-        stay["NAICS_GROUP_PCT_GOODS_TRADE.ORIG"] * stay["NAICS_GOODS_TRADE"]
+        stay["NAICS_GROUP_PROP_GOODS_TRADE.ORIG"] * stay["NAICS_GOODS_TRADE"]
     )
     stay["proportion_same_naics_license"] = (
-        stay["NAICS_GROUP_PCT_LICENSE.ORIG"] * stay["NAICS_LICENSE"]
+        stay["NAICS_GROUP_PROP_LICENSE.ORIG"] * stay["NAICS_LICENSE"]
     )
     stay["proportion_same_naics_high_ed"] = (
-        stay["NAICS_GROUP_PCT_HIGH_ED.ORIG"] * stay["NAICS_HIGH_ED"]
+        stay["NAICS_GROUP_PROP_HIGH_ED.ORIG"] * stay["NAICS_HIGH_ED"]
     )
     stay["proportion_same_naics_agr_ext"] = (
-        stay["NAICS_GROUP_PCT_AGR_EXT.ORIG"] * stay["NAICS_AGR_EXT"]
+        stay["NAICS_GROUP_PROP_AGR_EXT.ORIG"] * stay["NAICS_AGR_EXT"]
     )
     stay["proportion_same_race_black"] = (
         stay["Proportion of people Black.ORIG"] * stay["BLACK"]
