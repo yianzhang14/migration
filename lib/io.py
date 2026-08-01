@@ -106,12 +106,8 @@ INDIV_COLS = [
 ]
 
 
-def read_estdata(
-    year: int,
-    num_alternatives: int,
-    data_dir: str = "../data",
-) -> pd.DataFrame:
-    """Read the `INDIV_COLS` + `ALT{i}_PUMA` + `ALT{i}_<suffix>` subset of `us_estdata_{year}.parquet`,
+def read_estdata(path: str, num_alternatives: int) -> pd.DataFrame:
+    """Read the `INDIV_COLS` + `ALT{i}_PUMA` + `ALT{i}_<suffix>` subset of `path`,
     clean dtypes, assign a 0-indexed `person_id`, and build `ALT_CHOICE`.
 
     Reads only the columns in this module's `INDIV_COLS`/`ALT_VARYING_SUFFIXES` instead of the full
@@ -139,7 +135,7 @@ def read_estdata(
     )
     needed_cols = list(dict.fromkeys(needed_cols))
 
-    df = pd.read_parquet(f"{data_dir}/us_estdata_{year}.parquet", columns=needed_cols)
+    df = pd.read_parquet(path, columns=needed_cols)
 
     cat_cols = df.dtypes[df.dtypes == "category"].keys()
     df[cat_cols] = df[cat_cols].apply(lambda x: x.astype(int))
