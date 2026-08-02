@@ -235,7 +235,7 @@ assert _ALT_SUFFIXES_USED <= set(ALT_VARYING_SUFFIXES), _ALT_SUFFIXES_USED - set
 def build_long_data(
     df_train: pd.DataFrame,
     num_alternatives: int,
-    dtype: np.dtype | type = np.float64,
+    dtype: np.dtype | type = np.float32,
 ) -> tuple[pd.DataFrame, list[str], list[str], list[str]]:
     """Reshape `df_train` (as returned by `lib.io.read_estdata`) into the long `(person_id, alt)`
     table shared by the torch-choice and Larch ports of `modeling_mnl.ipynb`: `alt=0` is staying,
