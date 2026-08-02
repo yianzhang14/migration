@@ -35,6 +35,8 @@ ipywidgets = ">=8.1.8,<9"
 jupyter = ">=1.1.1,<2"
 tomlkit = "<0.15.1"
 larch = ">=6.0.46,<7"
+rasterio = ">=1.5.0,<2"
+rasterstats = ">=0.21.0,<0.22"
 
 [tool.pixi.target.linux-64.pypi-dependencies]
 jax = { version = ">=0.11.0, <0.12", extras = ["cuda12"] }
