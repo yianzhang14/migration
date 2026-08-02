@@ -10,6 +10,8 @@ STRUCTURAL_INDIVIDUAL_COLS = {
     "ORIGIN_STATE",
     "NAME_NUM.ORIG",
     "POBP",
+    "CHOSEN",
+    "STAY"
 }
 STRUCTURAL_ALT_SUFFIXES = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"}
 
@@ -45,10 +47,10 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
     # NOTE: this assumes that NAICS code stays constant between the origin and destination
     StayOnlySpec("stay_mil", "IN_MILITARY"),
     StayOnlySpec("stay_naics_govt", "NAICS_GOVT"),
-    StayOnlySpec("stay_naics_goods_trade", "NAICS_GOODS_TRADE"),
-    StayOnlySpec("stay_naics_license", "NAICS_LICENSE"),
-    StayOnlySpec("stay_naics_high_ed", "NAICS_HIGH_ED"),
-    StayOnlySpec("stay_naics_agr_ext", "NAICS_AGR_EXT"),
+    # StayOnlySpec("stay_naics_goods_trade", "NAICS_GOODS_TRADE"),
+    # StayOnlySpec("stay_naics_license", "NAICS_LICENSE"),
+    # StayOnlySpec("stay_naics_high_ed", "NAICS_HIGH_ED"),
+    # StayOnlySpec("stay_naics_agr_ext", "NAICS_AGR_EXT"),
 ]
 
 STAY_ONLY_TERMS = [spec.name for spec in STAY_ONLY_SPECS] + ["stay_T34", "stay_metro"]
@@ -113,36 +115,46 @@ SHARED_SPECS: list[SharedSpec] = [
         ("FOREIGN",),
     ),
     SharedSpec(
-        "median_hh_income_in_tens_of_thousands",
-        "Median Household Income (In 2018 Inflation Adjusted Dollars).Median Household Income (In 2018 Inflation Adjusted Dollars).SE_A14006_001.ORIG",
-        "HH_MED_INC",
-        (1 / 10_000,),
+        "med_earnings_10k",
+        "Median earnings in thousands of dollars.ORIG",
+        "MED_EARNINGS_K",
+        (0.1, )
     ),
+    # SharedSpec(
+    #     "med_house_val_100k",
+    #     "Median house cost in hundreds of thousands of dollars.ORIG",
+    #     "MED_HOUSE_VAL_100k"
+    # ),
     SharedSpec(
-        "median_house_value_over_median_income",
-        "Median house value over median household income.ORIG",
-        "MED_HOUSE_VALUE_OVER_MED_HH_INC",
+        "med_rent_1k",
+        "Median gross rent in thousands of dollars.ORIG",
+        "MED_RENT_K"
     ),
-    SharedSpec(
-        "median_gross_rent_percentage_hh_inc",
-        "Median gross rent as a percentage of household income.ORIG",
-        "MED_RENT_PROP_HH_INC",
-    ),
+    # SharedSpec(
+    #     "median_house_value_over_median_income",
+    #     "Median house value over median household income.ORIG",
+    #     "MED_HOUSE_VALUE_OVER_MED_HH_INC",
+    # ),
+    # SharedSpec(
+    #     "median_gross_rent_percentage_hh_inc",
+    #     "Median gross rent as a percentage of household income.ORIG",
+    #     "MED_RENT_PROP_HH_INC",
+    # ),
     SharedSpec("vacancy_rate", "House vacancy proportion.ORIG", "HOUSE_VACANCY_PROP"),
     SharedSpec("median_travel_time", "Median travel time.ORIG", "MED_TRAVEL_TIME"),
     SharedSpec(
-        "proportion_ent", "Proportion of entertainment jobs.ORIG", "ENT_JOBS_PROP"
+        "amenities_est_per_capita", "AMENITIES_EST_PER_CAPITA.ORIG", "AMENITIES_EST_PER_CAPITA"
     ),
     SharedSpec(
-        "proportion_ent_18_34",
-        "Proportion of entertainment jobs.ORIG",
-        "ENT_JOBS_PROP",
+        "amenities_est_per_capita_18_34",
+        "AMENITIES_EST_PER_CAPITA.ORIG",
+        "AMENITIES_EST_PER_CAPITA",
         ("AGE_18_34",),
     ),
     SharedSpec(
-        "proportion_ent_35_64",
-        "Proportion of entertainment jobs.ORIG",
-        "ENT_JOBS_PROP",
+        "amenities_est_per_capita_35_64",
+        "AMENITIES_EST_PER_CAPITA.ORIG",
+        "AMENITIES_EST_PER_CAPITA",
         ("AGE_35_64",),
     ),
     SharedSpec(
@@ -162,12 +174,6 @@ SHARED_SPECS: list[SharedSpec] = [
         "NAICS_GROUP_PROP_GOODS_TRADE.ORIG",
         "OWN_NAICS_GROUP_PROP",
         ("NAICS_GOODS_TRADE",),
-    ),
-    SharedSpec(
-        "proportion_same_naics_license",
-        "NAICS_GROUP_PROP_LICENSE.ORIG",
-        "OWN_NAICS_GROUP_PROP",
-        ("NAICS_LICENSE",),
     ),
     SharedSpec(
         "proportion_same_naics_high_ed",
@@ -210,7 +216,17 @@ SHARED_SPECS: list[SharedSpec] = [
         "Proportion of people White.ORIG",
         "OWN_RACE_ETH_PROP",
         ("WHITE",),
+    ), 
+    SharedSpec(
+        "jan_avg_temp_c",
+        "JAN_AVG_TEMP_C.ORIG",
+        "JAN_AVG_TEMP_C"
     ),
+    SharedSpec(
+        "lf_prop_if_in_lf",
+        "Labor force participation rate.ORIG",
+        "LF_PARTCP_RATE",
+    )
 ]
 
 SHARED_TERMS = [spec.name for spec in SHARED_SPECS]
