@@ -101,7 +101,6 @@ def build_long_data(
     move_long["unemp_rate"] = move_long["UNEMP_RATE"]
     move_long["vacancy_rate"] = move_long["HOUSE_VACANCY_PROP"]
     move_long["median_travel_time"] = move_long["MED_TRAVEL_TIME"]
-    move_long["proportion_alt_commute"] = move_long["ALT_COMMUTE_PROP"]
     move_long["proportion_ent"] = move_long["ENT_JOBS_PROP"]
     move_long["proportion_ent_18_34"] = (
         move_long["AGE_18_34"] * move_long["ENT_JOBS_PROP"]
@@ -165,7 +164,6 @@ def build_long_data(
         "unemp_rate",
         "vacancy_rate",
         "median_travel_time",
-        "proportion_alt_commute",
         "proportion_ent",
         "proportion_ent_18_34",
         "proportion_ent_35_64",
@@ -288,7 +286,6 @@ def build_long_data(
     stay["unemp_rate"] = stay["Unemployment rate.ORIG"]
     stay["vacancy_rate"] = stay["House vacancy proportion.ORIG"]
     stay["median_travel_time"] = stay["Median travel time.ORIG"]
-    stay["proportion_alt_commute"] = stay["Proportion alternative commute.ORIG"]
     stay["proportion_ent"] = stay["Proportion of entertainment jobs.ORIG"]
     stay["proportion_ent_18_34"] = (
         stay["AGE_18_34"] * stay["Proportion of entertainment jobs.ORIG"]

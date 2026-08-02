@@ -13,7 +13,6 @@ import pandas as pd
 # columns each alternative has a measure of for each person
 # this is specifically the list of columns used in the modeling notebooks
 ALT_VARYING_SUFFIXES = [
-    "ALT_COMMUTE_PROP",
     "CBSA",
     "COLLEGE_PROP",
     "DIST",
