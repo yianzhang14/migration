@@ -10,7 +10,7 @@ downstream changes silently.
 import numpy as np
 import pandas as pd
 
-from .globals import ALT_VARYING_SUFFIXES, INDIV_COLS
+from .model_spec import required_alt_suffixes, required_individual_columns
 
 
 def read_puma_pop(path: str) -> pd.DataFrame:
@@ -40,12 +40,12 @@ def read_estdata(path: str, num_alternatives: int) -> pd.DataFrame:
     `ALT{i}_PUMA` matches `CHOSEN` -- same convention used throughout the modeling notebooks.
     """
     needed_cols = (
-        list(INDIV_COLS)
+        list(required_individual_columns())
         + [f"ALT{i}_PUMA" for i in range(1, num_alternatives + 1)]
         + [
             f"ALT{i}_{suf}"
             for i in range(1, num_alternatives + 1)
-            for suf in ALT_VARYING_SUFFIXES
+            for suf in required_alt_suffixes()
         ]
     )
     needed_cols = list(dict.fromkeys(needed_cols))
