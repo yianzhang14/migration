@@ -107,6 +107,14 @@ INDIV_COLS = [
 ]
 
 
+def read_puma_pop(path: str) -> pd.DataFrame:
+    puma_pop = pd.read_csv(path).set_index("Geo__geoid_")
+    puma_pop.index.name = "PUMA"
+    puma_pop.index = puma_pop.index.astype(str).str.zfill(7)
+    puma_pop = puma_pop.rename(columns={"SE_A00001_001": "TOT_POP"})
+    return puma_pop
+
+
 def read_estdata(path: str, num_alternatives: int) -> pd.DataFrame:
     """Read the `INDIV_COLS` + `ALT{i}_PUMA` + `ALT{i}_<suffix>` subset of `path`,
     clean dtypes, assign a 0-indexed `person_id`, and build `ALT_CHOICE`.
