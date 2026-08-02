@@ -4,7 +4,17 @@ from dataclasses import dataclass
 import numpy as np
 import pandas as pd
 
-from .io import ALT_VARYING_SUFFIXES
+from .globals import ALT_VARYING_SUFFIXES, INDIV_COLS
+
+# non-spec columns build_long_data reads directly (log-pop-offset, move-only terms)
+_STRUCTURAL_INDIVIDUAL_COLS = {
+    "Total Population.Total Population.SE_A00001_001.ORIG",
+    "TYPE_NUM.ORIG",
+    "ORIGIN_STATE",
+    "NAME_NUM.ORIG",
+    "POBP",
+}
+_STRUCTURAL_ALT_SUFFIXES = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"}
 
 
 @dataclass(frozen=True)
@@ -52,9 +62,7 @@ class SharedSpec:
     """One term shared between the stay and move contexts: `name`'s value is `origin_col`
     (person vs. their origin) on the stay row and `ALT{i}_{alt_suffix}` (mover vs. destination)
     on move rows, both scaled by the product of `factors` -- each factor is either a
-    `df_train` column name or a plain scalar. Applying the same `factors` to both sides is what
-    makes the stay/move symmetry auditable, since any asymmetry here is a silent
-    mis-specification of a single shared `Beta`."""
+    `df_train` column name or a plain scalar."""
 
     name: str
     origin_col: str
@@ -123,7 +131,6 @@ _SHARED_SPECS: list[SharedSpec] = [
         "Median gross rent as a percentage of household income.ORIG",
         "MED_RENT_PROP_HH_INC",
     ),
-    SharedSpec("unemp_rate", "Unemployment rate.ORIG", "UNEMP_RATE"),
     SharedSpec("vacancy_rate", "House vacancy proportion.ORIG", "HOUSE_VACANCY_PROP"),
     SharedSpec("median_travel_time", "Median travel time.ORIG", "MED_TRAVEL_TIME"),
     SharedSpec(
@@ -153,8 +160,6 @@ _SHARED_SPECS: list[SharedSpec] = [
         "OWN_NAICS_GROUP_PROP",
         ("NAICS_GOVT",),
     ),
-    # proportion_same_naics_goods_trade uses ALT{i}_OWN_NAICS_GROUP_PROP here, not the mangled
-    # f"{alt}OWN_GROUPOWN_NAICS_GROUP_PROP_PROP" that modeling_mnl.ipynb's cell 23 currently has.
     SharedSpec(
         "proportion_same_naics_goods_trade",
         "NAICS_GROUP_PROP_GOODS_TRADE.ORIG",
@@ -223,13 +228,27 @@ MOVE_ONLY_TERMS = [
     "destchoice_same_cbsa_type",
 ]
 
-# verify that all the ALT_COLS are covered in the load stage
-_ALT_SUFFIXES_USED = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"} | {
-    spec.alt_suffix for spec in _SHARED_SPECS
-}
-assert _ALT_SUFFIXES_USED <= set(ALT_VARYING_SUFFIXES), _ALT_SUFFIXES_USED - set(
-    ALT_VARYING_SUFFIXES
-)
+
+def required_alt_suffixes() -> set[str]:
+    """`ALT{i}_<suffix>` suffixes build_long_data reads: structural ones plus each SharedSpec's alt_suffix."""
+    return _STRUCTURAL_ALT_SUFFIXES | {spec.alt_suffix for spec in _SHARED_SPECS}
+
+
+def required_individual_columns() -> set[str]:
+    """Plain df_train columns build_long_data reads: StayOnlySpec sources, SharedSpec origin_col/factors, plus structural ones."""
+    cols = set(_STRUCTURAL_INDIVIDUAL_COLS)
+    cols.update(spec.source for spec in _STAY_ONLY_SPECS if spec.source is not None)
+    for spec in _SHARED_SPECS:
+        cols.add(spec.origin_col)
+        cols.update(factor for factor in spec.factors if isinstance(factor, str))
+    return cols
+
+
+# catches a spec referencing a column read_estdata won't have pulled in, before it's a runtime KeyError
+_missing_alt_suffixes = required_alt_suffixes() - set(ALT_VARYING_SUFFIXES)
+assert not _missing_alt_suffixes, _missing_alt_suffixes
+_missing_individual_cols = required_individual_columns() - set(INDIV_COLS)
+assert not _missing_individual_cols, _missing_individual_cols
 
 
 def build_long_data(
@@ -238,8 +257,7 @@ def build_long_data(
     dtype: np.dtype | type = np.float32,
 ) -> tuple[pd.DataFrame, list[str], list[str], list[str]]:
     """Reshape `df_train` (as returned by `lib.io.read_estdata`) into the long `(person_id, alt)`
-    table shared by the torch-choice and Larch ports of `modeling_mnl.ipynb`: `alt=0` is staying,
-    `alt=1..num_alternatives` are the move alternatives.
+    table  used by larch/torch choice
 
     `MOVE_ONLY_TERMS` are structurally zero at `alt=0` (they only make sense as a move decision, e.g.
     `destchoice_samestate`) and vice versa.
@@ -305,8 +323,6 @@ def build_long_data(
 
     # move-only terms (structurally zero at alt=0, since staying isn't a move-type decision)
     origin_state = col("ORIGIN_STATE")
-    # NAME_NUM.ORIG and ALT{i}_CBSA are factorized against the same CBSA-name codebook
-    # (see create_estdata.ipynb), so they're directly comparable
     origin_cbsa = col("NAME_NUM.ORIG")
     birth_state = col("POBP")
     # `origin_type_t34 * alt_type_t34 + origin_type_metro * alt_type_metro + ...` is an equality
@@ -352,7 +368,12 @@ def build_long_data(
         move_values = block[name][:, 1:]
         np.copyto(move_values, 0.0, where=np.isnan(move_values))
 
+    # create long df, combining the stay, destination, and shared variables
     long_df = pd.DataFrame(data, columns=feature_names, copy=False)
+
+    # insert choice model details: choice is 1 if the alternative was chosen
+    # alt says which alterantive a line represents
+    # person id tells which person a line's alternative pertains to
     alt = np.tile(np.arange(num_alts), n)
     long_df.insert(
         0, "choice", (alt == np.repeat(col("ALT_CHOICE"), num_alts)).astype(int)
@@ -360,6 +381,7 @@ def build_long_data(
     long_df.insert(0, "alt", alt)
     long_df.insert(0, "person_id", np.repeat(person_id, num_alts))
 
+    # sanity checks
     num_persons = df_train["person_id"].nunique()
     assert num_persons == n, (num_persons, n)
     assert len(long_df) == num_persons * num_alts, (
@@ -368,3 +390,51 @@ def build_long_data(
     )
 
     return long_df, list(STAY_ONLY_TERMS), list(SHARED_TERMS), list(MOVE_ONLY_TERMS)
+
+
+def print_utility_formula(long_df: pd.DataFrame) -> None:
+    """Print the stay and destination utility functions implied by `long_df` (as returned by
+    build_long_data). Each term is classified stay-only/move-only/shared by checking where
+    it's structurally zero in the data, not by importing the spec lists."""
+    stay_rows = long_df["alt"] == 0
+    move_rows = ~stay_rows
+    terms = [c for c in long_df.columns if c not in ("person_id", "alt", "choice")]
+
+    stay_terms, move_terms, shared_terms = [], [], []
+    for t in terms:
+        zero_at_stay = (long_df.loc[stay_rows, t] == 0).all()
+        zero_at_move = (long_df.loc[move_rows, t] == 0).all()
+        if zero_at_move and not zero_at_stay:
+            stay_terms.append(t)
+        elif zero_at_stay and not zero_at_move:
+            move_terms.append(t)
+        else:
+            shared_terms.append(t)
+
+    shared_by_name = {spec.name: spec for spec in _SHARED_SPECS}
+
+    def factors_str(spec: SharedSpec) -> str:
+        return "".join(
+            f"*Variable({f})" if isinstance(f, str) else f"*{f}" for f in spec.factors
+        )
+
+    def stay_term(t: str) -> str:
+        spec = shared_by_name.get(t)
+        if spec is None:
+            return f"Beta({t})*Variable({t})"
+        return f"Beta({t})*Variable({spec.origin_col}){factors_str(spec)}"
+
+    def move_term(t: str) -> str:
+        spec = shared_by_name.get(t)
+        if spec is None:
+            return f"Beta({t})*Variable({t})"
+        return f"Beta({t})*Variable(ALT{{i}}_{spec.alt_suffix}){factors_str(spec)}"
+
+    def formula(terms: list[str], term_fn: Callable[[str], str]) -> str:
+        lines = [term_fn(t) for t in terms]
+        return "    " + "\n    + ".join(lines)
+
+    print("Stay utility:")
+    print(formula(stay_terms + shared_terms, stay_term))
+    print("Destination utility:")
+    print(formula(move_terms + shared_terms, move_term))
