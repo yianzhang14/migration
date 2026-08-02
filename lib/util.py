@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from .io import ALT_VARYING_SUFFIXES
+from .io import ALT_VARYING_SUFFIXES, INDIV_COLS
 
 
 def build_long_data(
@@ -29,13 +29,17 @@ def build_long_data(
     `(person_id, alt)`, so each person occupies a contiguous run of `num_alternatives + 1` rows in a
     fixed alt order.
     """
+    # id_vars restricted to INDIV_COLS (+ person_id/ALT_CHOICE) rather than left to
+    # wide_to_long's default "everything not varying" inference to avoid extra columns
+    individual_vars = list(INDIV_COLS) + ["person_id", "ALT_CHOICE"]
     move_long = wide_to_long(
         df_train,
-        alt_list=[f"ALT{i}" for i in range(1, num_alternatives + 1)],
-        alt_name="alt_label",
-        varying=ALT_VARYING_SUFFIXES,
-        sep="_",
-        alt_is_prefix=True,
+        [f"ALT{i}" for i in range(1, num_alternatives + 1)],
+        "alt_label",
+        ALT_VARYING_SUFFIXES,
+        "_",
+        True,
+        individual_vars=individual_vars,
     )
     move_long["alt"] = move_long["alt_label"].str[len("ALT") :].astype(int)
     move_long["choice"] = (move_long["alt"] == move_long["ALT_CHOICE"]).astype(int)
@@ -185,7 +189,10 @@ def build_long_data(
         + SHARED_TERMS
     ]
 
-    stay = df_train.copy()
+    # subset to id_vars before copying -- stay never reads any ALT{i}_* column, so copying
+    # the full (num_alternatives-wide) df_train here would waste memory proportional to
+    # num_alternatives for no reason.
+    stay = df_train[individual_vars].copy()
     stay["stay"] = 1.0  # c_stay: the stay alternative-specific constant
     stay["stay_age_18_22"] = stay["AGE_18_22"]
     stay["stay_age_23_29"] = stay["AGE_23_29"]
@@ -346,7 +353,8 @@ def build_long_data(
     long_df[varnames + ["log_pop_offset"]] = long_df[
         varnames + ["log_pop_offset"]
     ].fillna(0.0)
-    long_df = long_df.sort_values(["person_id", "alt"]).reset_index(drop=True)
+    long_df.sort_values(["person_id", "alt"], inplace=True)
+    long_df.reset_index(drop=True, inplace=True)
 
     num_persons = df_train["person_id"].nunique()
     num_alts = num_alternatives + 1
@@ -365,14 +373,21 @@ def wide_to_long(
     varying: list[str],
     sep: str,
     alt_is_prefix: bool,
+    individual_vars: list[str] | None = None,
 ) -> pd.DataFrame:
+    """`id_vars` defaults to every column not in `varying` (the original behavior) --
+    pass it explicitly to avoid pulling unused columns into every one of the `len(alt_list)`
+    per-alternative frames before the final concat (see `build_long_data`'s usage)."""
     assert alt_is_prefix and sep == "_"
     varying_cols = {f"{alt}{sep}{suf}" for alt in alt_list for suf in varying}
-    id_vars = [c for c in df.columns if c not in varying_cols]
+
+    if individual_vars is None:
+        individual_vars = [c for c in df.columns if c not in varying_cols]
+
     frames = []
     for alt in alt_list:
         rename = {f"{alt}{sep}{suf}": suf for suf in varying}
-        sub = df[id_vars + list(rename.keys())].rename(columns=rename)
+        sub = df[individual_vars + list(rename.keys())].rename(columns=rename)
         sub[alt_name] = alt
         frames.append(sub)
     return pd.concat(frames, ignore_index=True)
