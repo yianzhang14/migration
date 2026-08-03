@@ -7,8 +7,10 @@ from .model_spec import (
     MOVE_ONLY_TERMS,
     SHARED_SPECS,
     SHARED_TERMS,
+    SIMPLE_MOVE_ONLY_SPECS,
     STAY_ONLY_SPECS,
     STAY_ONLY_TERMS,
+    DestOnlySpec,
     SharedSpec,
 )
 
@@ -68,7 +70,9 @@ def build_long_data(
 
     # stay-only terms (structurally zero at alt>=1)
     for spec in STAY_ONLY_SPECS:
-        block[spec.name][:, 0] = 1.0 if spec.source is None else col(spec.source)
+        value = 1.0 if spec.source is None else col(spec.source)
+        scale = spec.scale(col)
+        block[spec.name][:, 0] = value if scale is None else value * scale
     origin_type = col("TYPE_NUM.ORIG")
     block["stay_T34"][:, 0] = origin_type == 0
     block["stay_metro"][:, 0] = origin_type == 1
@@ -80,6 +84,15 @@ def build_long_data(
         values = col(spec.origin_col)
         target[:, 0] = values if scale is None else values * scale
         for i in range(1, num_alts):
+            values = col(f"ALT{i}_{spec.alt_suffix}")
+            target[:, i] = values if scale is None else values * scale
+
+    # destination-only terms (structurally zero at alt=0, like the hand-written move-only terms
+    # below, but read generically from ALT{i}_<suffix> the same way SHARED_SPECS is)
+    for spec in SIMPLE_MOVE_ONLY_SPECS:
+        target = block[spec.name]
+        for i in range(1, num_alts):
+            scale = spec.scale(col, i)
             values = col(f"ALT{i}_{spec.alt_suffix}")
             target[:, i] = values if scale is None else values * scale
 
@@ -176,8 +189,9 @@ def print_utility_formula(long_df: pd.DataFrame) -> None:
             shared_terms.append(t)
 
     shared_by_name = {spec.name: spec for spec in SHARED_SPECS}
+    simple_dest_only_by_name = {spec.name: spec for spec in SIMPLE_MOVE_ONLY_SPECS}
 
-    def factors_str(spec: SharedSpec) -> str:
+    def factors_str(spec: SharedSpec | DestOnlySpec) -> str:
         return "".join(
             f"*Variable({f})" if isinstance(f, str) else f"*{f}" for f in spec.factors
         )
@@ -189,7 +203,7 @@ def print_utility_formula(long_df: pd.DataFrame) -> None:
         return f"Beta({t})*Variable({spec.origin_col}){factors_str(spec)}"
 
     def move_term(t: str) -> str:
-        spec = shared_by_name.get(t)
+        spec = shared_by_name.get(t) or simple_dest_only_by_name.get(t)
         if spec is None:
             return f"Beta({t})*Variable({t})"
         return f"Beta({t})*Variable(ALT{{i}}_{spec.alt_suffix}){factors_str(spec)}"

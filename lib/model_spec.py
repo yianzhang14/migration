@@ -1,29 +1,80 @@
-from collections.abc import Callable
+from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 
 import numpy as np
 
-# non-spec columns build_long_data reads directly (log-pop-offset, move-only terms)
-STRUCTURAL_INDIVIDUAL_COLS = {
+BASE_INDIVIDUAL_COLS = {
     "Total Population.Total Population.SE_A00001_001.ORIG",
     "TYPE_NUM.ORIG",
     "ORIGIN_STATE",
     "NAME_NUM.ORIG",
     "POBP",
     "CHOSEN",
-    "STAY"
+    "STAY",
 }
-STRUCTURAL_ALT_SUFFIXES = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"}
+BASE_ALT_SUFFIXES = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"}
+
+
+def _scale(
+    factors: Iterable[str | float], col: Callable[[str], np.ndarray]
+) -> np.ndarray | float | None:
+    if not factors:
+        return None
+    result: np.ndarray | float = 1.0
+    for factor in factors:
+        result = result * (col(factor) if isinstance(factor, str) else factor)
+    return result
 
 
 @dataclass(frozen=True)
 class StayOnlySpec:
-    """One term in `_STAY_ONLY_SPECS`: `name`'s value on the stay row is `1.0` if `source` is
+    """One term in `STAY_ONLY_SPECS`: `name`'s value on the stay row is `1.0` if `source` is
     None (this is how `stay`, the alternative-specific constant for staying, is defined), else
-    `df_train[source]`."""
+    `df_train[source]`, scaled by the product of `factors` (see `SharedSpec`)."""
 
     name: str
     source: str | None = None
+    factors: tuple[str | float, ...] = ()
+
+    def scale(self, col: Callable[[str], np.ndarray]) -> np.ndarray | float | None:
+        return _scale(self.factors, col)
+
+
+@dataclass(frozen=True)
+class SharedSpec:
+    """One term shared between the stay and move contexts: `name`'s value is `origin_col`
+    (person vs. their origin) on the stay row and `ALT{i}_{alt_suffix}` (mover vs. destination)
+    on move rows, both scaled by the product of `factors` -- each factor is either a
+    `df_train` column name or a plain scalar."""
+
+    name: str
+    origin_col: str
+    alt_suffix: str
+    factors: tuple[str | float, ...] = ()
+
+    def scale(self, col: Callable[[str], np.ndarray]) -> np.ndarray | float | None:
+        return _scale(self.factors, col)
+
+
+@dataclass(frozen=True)
+class DestOnlySpec:
+    """`StayOnlySpec`'s mirror image: one term in `DEST_ONLY_SPECS` with no origin-side
+    counterpart. `name`'s value is `ALT{i}_{alt_suffix}` (mover vs. destination) on move rows,
+    scaled by the product of `factors` (see `SharedSpec`), and structurally `0` on the stay
+    row -- so it belongs in `MOVE_ONLY_TERMS` like the hand-written `destchoice_*` terms."""
+
+    name: str
+    alt_suffix: str
+    factors: tuple[str | float, ...] = ()
+
+    def scale(
+        self, col: Callable[[str], np.ndarray], alt: int
+    ) -> np.ndarray | float | None:
+        factors: list[str | float] = [
+            factor.replace("ALT_", f"ALT{alt}_") if isinstance(factor, str) else factor
+            for factor in self.factors
+        ]
+        return _scale(factors, col)
 
 
 STAY_ONLY_SPECS: list[StayOnlySpec] = [
@@ -54,27 +105,6 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
 ]
 
 STAY_ONLY_TERMS = [spec.name for spec in STAY_ONLY_SPECS] + ["stay_T34", "stay_metro"]
-
-
-@dataclass(frozen=True)
-class SharedSpec:
-    """One term shared between the stay and move contexts: `name`'s value is `origin_col`
-    (person vs. their origin) on the stay row and `ALT{i}_{alt_suffix}` (mover vs. destination)
-    on move rows, both scaled by the product of `factors` -- each factor is either a
-    `df_train` column name or a plain scalar."""
-
-    name: str
-    origin_col: str
-    alt_suffix: str
-    factors: tuple[str | float, ...] = ()
-
-    def scale(self, col: Callable[[str], np.ndarray]) -> np.ndarray | float | None:
-        if not self.factors:
-            return None
-        result: np.ndarray | float = 1.0
-        for factor in self.factors:
-            result = result * (col(factor) if isinstance(factor, str) else factor)
-        return result
 
 
 SHARED_SPECS: list[SharedSpec] = [
@@ -118,7 +148,7 @@ SHARED_SPECS: list[SharedSpec] = [
         "med_earnings_10k",
         "Median earnings in thousands of dollars.ORIG",
         "MED_EARNINGS_K",
-        (0.1, )
+        (0.1,),
     ),
     # SharedSpec(
     #     "med_house_val_100k",
@@ -126,9 +156,7 @@ SHARED_SPECS: list[SharedSpec] = [
     #     "MED_HOUSE_VAL_100k"
     # ),
     SharedSpec(
-        "med_rent_1k",
-        "Median gross rent in thousands of dollars.ORIG",
-        "MED_RENT_K"
+        "med_rent_1k", "Median gross rent in thousands of dollars.ORIG", "MED_RENT_K"
     ),
     # SharedSpec(
     #     "median_house_value_over_median_income",
@@ -143,7 +171,9 @@ SHARED_SPECS: list[SharedSpec] = [
     SharedSpec("vacancy_rate", "House vacancy proportion.ORIG", "HOUSE_VACANCY_PROP"),
     SharedSpec("median_travel_time", "Median travel time.ORIG", "MED_TRAVEL_TIME"),
     SharedSpec(
-        "amenities_est_per_capita", "AMENITIES_EST_PER_CAPITA.ORIG", "AMENITIES_EST_PER_CAPITA"
+        "amenities_est_per_capita",
+        "AMENITIES_EST_PER_CAPITA.ORIG",
+        "AMENITIES_EST_PER_CAPITA",
     ),
     SharedSpec(
         "amenities_est_per_capita_18_34",
@@ -216,22 +246,21 @@ SHARED_SPECS: list[SharedSpec] = [
         "Proportion of people White.ORIG",
         "OWN_RACE_ETH_PROP",
         ("WHITE",),
-    ), 
-    SharedSpec(
-        "jan_avg_temp_c",
-        "JAN_AVG_TEMP_C.ORIG",
-        "JAN_AVG_TEMP_C"
     ),
+    SharedSpec("jan_avg_temp_c", "JAN_AVG_TEMP_C.ORIG", "JAN_AVG_TEMP_C"),
     SharedSpec(
         "lf_prop_if_in_lf",
         "Labor force participation rate.ORIG",
         "LF_PARTCP_RATE",
-    )
+    ),
 ]
 
 SHARED_TERMS = [spec.name for spec in SHARED_SPECS]
 
-# these are computed ad-hoc in modeling_util.py
+# purely destination choice terms that can be automatically handled
+SIMPLE_MOVE_ONLY_SPECS: list[DestOnlySpec] = []
+
+# the non-simple ones are computed ad-hoc in modeling_util.py
 MOVE_ONLY_TERMS = [
     "destchoice_logdist",
     "destchoice_samecbsa",
@@ -240,19 +269,30 @@ MOVE_ONLY_TERMS = [
     "destchoice_T34",
     "destchoice_metro",
     "destchoice_same_cbsa_type",
-]
+] + [spec.name for spec in SIMPLE_MOVE_ONLY_SPECS]
 
 
 def required_alt_suffixes() -> set[str]:
-    """`ALT{i}_<suffix>` suffixes build_long_data reads: structural ones plus each SharedSpec's alt_suffix."""
-    return STRUCTURAL_ALT_SUFFIXES | {spec.alt_suffix for spec in SHARED_SPECS}
+    """`ALT{i}_<suffix>` suffixes build_long_data reads: structural ones plus each SharedSpec's
+    and DestOnlySpec's alt_suffix."""
+    return (
+        BASE_ALT_SUFFIXES
+        | {spec.alt_suffix for spec in SHARED_SPECS}
+        | {spec.alt_suffix for spec in SIMPLE_MOVE_ONLY_SPECS}
+    )
 
 
 def required_individual_columns() -> set[str]:
-    """Plain df_train columns build_long_data reads: StayOnlySpec sources, SharedSpec origin_col/factors, plus structural ones."""
-    cols = set(STRUCTURAL_INDIVIDUAL_COLS)
-    cols.update(spec.source for spec in STAY_ONLY_SPECS if spec.source is not None)
+    """Plain df_train columns build_long_data reads: StayOnlySpec source/factors, SharedSpec
+    origin_col/factors, DestOnlySpec factors, plus structural ones."""
+    cols = set(BASE_INDIVIDUAL_COLS)
+    for spec in STAY_ONLY_SPECS:
+        if spec.source is not None:
+            cols.add(spec.source)
+        cols.update(factor for factor in spec.factors if isinstance(factor, str))
     for spec in SHARED_SPECS:
         cols.add(spec.origin_col)
+        cols.update(factor for factor in spec.factors if isinstance(factor, str))
+    for spec in SIMPLE_MOVE_ONLY_SPECS:
         cols.update(factor for factor in spec.factors if isinstance(factor, str))
     return cols
