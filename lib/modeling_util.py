@@ -171,16 +171,14 @@ def print_utility_formula(long_df: pd.DataFrame) -> None:
     """Print the stay and destination utility functions implied by `long_df` (as returned by
     build_long_data). Each term is classified stay-only/move-only/shared by checking where
     it's structurally zero in the data, not by importing the spec lists."""
-    first = long_df.person_id.iat[0]
-    view = long_df[long_df.person_id == first]
-    stay_rows = view["alt"] == 0
+    stay_rows = long_df["alt"] == 0
     move_rows = ~stay_rows
-    terms = [c for c in view.columns if c not in ("person_id", "alt", "choice")]
+    terms = [c for c in long_df.columns if c not in ("person_id", "alt", "choice")]
 
     stay_terms, move_terms, shared_terms = [], [], []
     for t in terms:
-        zero_at_stay = (view.loc[stay_rows, t] == 0).all()
-        zero_at_move = (view.loc[move_rows, t] == 0).all()
+        zero_at_stay = (long_df.loc[stay_rows, t] == 0).all()
+        zero_at_move = (long_df.loc[move_rows, t] == 0).all()
         if zero_at_move and not zero_at_stay:
             stay_terms.append(t)
         elif zero_at_stay and not zero_at_move:

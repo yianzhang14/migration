@@ -91,17 +91,25 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
     StayOnlySpec("stay_recently_divorced_or_widowed", "RECENTLY_WIDOWED_OR_DIVORCED"),
     StayOnlySpec("stay_2work_mar", "WORK2_MAR"),
     StayOnlySpec("stay_single_parent", "SINGLE_PARENT"),
-    StayOnlySpec("stay_edu_college", "EDU_BACHELORS"),
-    StayOnlySpec("stay_edu_high", "EDU_HIGH"),
+    StayOnlySpec("stay_edu_at_least_bachelors", "EDU_BACHELORS_OR_HIGHER"),
+    StayOnlySpec("stay_edu_high_no_bachelors", "EDU_HIGH_BUT_NOT_BACHELORS"),
     StayOnlySpec("stay_in_college", "IN_COLLEGE"),
     StayOnlySpec("stay_foreign", "FOREIGN"),
     # NOTE: this assumes that NAICS code stays constant between the origin and destination
     StayOnlySpec("stay_mil", "IN_MILITARY"),
-    StayOnlySpec("stay_naics_govt", "NAICS_GOVT"),
+    # StayOnlySpec("stay_naics_govt", "NAICS_GOVT"),
     # StayOnlySpec("stay_naics_goods_trade", "NAICS_GOODS_TRADE"),
     # StayOnlySpec("stay_naics_license", "NAICS_LICENSE"),
     # StayOnlySpec("stay_naics_high_ed", "NAICS_HIGH_ED"),
     # StayOnlySpec("stay_naics_agr_ext", "NAICS_AGR_EXT"),
+    # StayOnlySpec("stay_med_earnings_10k", "Median earnings in tens of thousands of dollars.ORIG"),
+    StayOnlySpec("stay_med_earnings_10k_nohigh", "Median Earnings by Sex by Educational Attainment in the past 12 months (In 2018 Inflation Adjusted Dollars) (For Population Age 25+).Median Earnings Less than High School Graduate.SE_A15001_002.ORIG", (1 / 10_000, "EDU_NOHIGH")),
+    StayOnlySpec("stay_med_earnings_10k_high", "Median Earnings by Sex by Educational Attainment in the past 12 months (In 2018 Inflation Adjusted Dollars) (For Population Age 25+).Median Earnings High School Graduate (Includes Equivalency).SE_A15001_003.ORIG", (1 / 10_000, "EDU_ONLY_HIGH")),
+    StayOnlySpec("stay_med_earnings_10k_some_college", "Median Earnings by Sex by Educational Attainment in the past 12 months (In 2018 Inflation Adjusted Dollars) (For Population Age 25+).Median Earnings Some College or Associate's Degree.SE_A15001_004.ORIG", (1 / 10_000, "EDU_SOME_COLLEGE")),
+    StayOnlySpec("stay_med_earnings_10k_bachelors", "Median Earnings by Sex by Educational Attainment in the past 12 months (In 2018 Inflation Adjusted Dollars) (For Population Age 25+).Median Earnings Bachelor's Degree.SE_A15001_005.ORIG", (1 / 10_000, "EDU_ONLY_BACHELORS")),
+    StayOnlySpec("stay_med_earnings_10k_graduate", "Median Earnings by Sex by Educational Attainment in the past 12 months (In 2018 Inflation Adjusted Dollars) (For Population Age 25+).Median Earnings Graduate or Professional Degree.SE_A15001_006.ORIG", (1 / 10_000, "EDU_GRADUATE_DEG")),
+    StayOnlySpec("stay_med_rent_k", "Median gross rent in thousands of dollars.ORIG"),
+    StayOnlySpec("stay_vacancy_rate", "House vacancy proportion.ORIG"),
 ]
 
 STAY_ONLY_TERMS = [spec.name for spec in STAY_ONLY_SPECS] + ["stay_T34", "stay_metro"]
@@ -144,49 +152,18 @@ SHARED_SPECS: list[SharedSpec] = [
         "FOREIGN_BORN_PROP",
         ("FOREIGN",),
     ),
-    SharedSpec(
-        "med_earnings_10k",
-        "Median earnings in thousands of dollars.ORIG",
-        "MED_EARNINGS_K",
-        (0.1,),
-    ),
     # SharedSpec(
-    #     "med_house_val_100k",
-    #     "Median house cost in hundreds of thousands of dollars.ORIG",
-    #     "MED_HOUSE_VAL_100k"
-    # ),
-    SharedSpec(
-        "med_rent_1k", "Median gross rent in thousands of dollars.ORIG", "MED_RENT_K"
-    ),
-    # SharedSpec(
-    #     "median_house_value_over_median_income",
-    #     "Median house value over median household income.ORIG",
-    #     "MED_HOUSE_VALUE_OVER_MED_HH_INC",
+    #     "med_earnings_10k",
+    #     "Median earnings in tens of thousands of dollars.ORIG",
+    #     "MED_EARNINGS_10K",
     # ),
     # SharedSpec(
-    #     "median_gross_rent_percentage_hh_inc",
-    #     "Median gross rent as a percentage of household income.ORIG",
-    #     "MED_RENT_PROP_HH_INC",
+    #     "med_rent_1k",
+    #     "Median gross rent in thousands of dollars.ORIG",
+    #     "MED_RENT_K"
     # ),
-    SharedSpec("vacancy_rate", "House vacancy proportion.ORIG", "HOUSE_VACANCY_PROP"),
+    # SharedSpec("vacancy_rate", "House vacancy proportion.ORIG", "HOUSE_VACANCY_PROP"),
     SharedSpec("median_travel_time", "Median travel time.ORIG", "MED_TRAVEL_TIME"),
-    SharedSpec(
-        "amenities_est_per_capita",
-        "AMENITIES_EST_PER_CAPITA.ORIG",
-        "AMENITIES_EST_PER_CAPITA",
-    ),
-    SharedSpec(
-        "amenities_est_per_capita_18_34",
-        "AMENITIES_EST_PER_CAPITA.ORIG",
-        "AMENITIES_EST_PER_CAPITA",
-        ("AGE_18_34",),
-    ),
-    SharedSpec(
-        "amenities_est_per_capita_35_64",
-        "AMENITIES_EST_PER_CAPITA.ORIG",
-        "AMENITIES_EST_PER_CAPITA",
-        ("AGE_35_64",),
-    ),
     SharedSpec(
         "proportion_also_mil",
         "Proportion of people in military.ORIG",
@@ -246,19 +223,29 @@ SHARED_SPECS: list[SharedSpec] = [
         "Proportion of people White.ORIG",
         "OWN_RACE_ETH_PROP",
         ("WHITE",),
-    ),
-    SharedSpec("jan_avg_temp_c", "JAN_AVG_TEMP_C.ORIG", "JAN_AVG_TEMP_C"),
+    ), 
     SharedSpec(
-        "lf_prop_if_in_lf",
-        "Labor force participation rate.ORIG",
-        "LF_PARTCP_RATE",
+        "jan_avg_temp_c",
+        "JAN_AVG_TEMP_C.ORIG",
+        "JAN_AVG_TEMP_C"
     ),
 ]
+
 
 SHARED_TERMS = [spec.name for spec in SHARED_SPECS]
 
 # purely destination choice terms that can be automatically handled
-MOVE_ONLY_SPECS: list[DestOnlySpec] = []
+MOVE_ONLY_SPECS: list[DestOnlySpec] = [
+    DestOnlySpec("destchoice_vacancy_rate", "HOUSE_VACANCY_PROP"),
+    # DestOnlySpec("destchoice_med_earnings_10k", "MED_EARNINGS_10K"),
+    DestOnlySpec("destchoice_med_rent_k", "MED_RENT_K"),
+    DestOnlySpec("destchoice_unemp_rate", "UNEMP_RATE"),
+    DestOnlySpec("destchoice_med_earnings_10k_nohigh", "MED_EARNINGS_NOHIGH", (1 / 10_000, "EDU_NOHIGH")),
+    DestOnlySpec("destchoice_med_earnings_10k_high", "MED_EARNINGS_HIGH", (1 / 10_000, "EDU_ONLY_HIGH")),
+    DestOnlySpec("destchoice_med_earnings_10k_some_college", "MED_EARNINGS_SOME_COLLEGE", (1 / 10_000, "EDU_SOME_COLLEGE")),
+    DestOnlySpec("destchoice_med_earnings_10k_bachelors", "MED_EARNINGS_BACHELORS", (1 / 10_000, "EDU_ONLY_BACHELORS")),
+    DestOnlySpec("destchoice_med_earnings_10k_graduate", "MED_EARNINGS_GRADUATE", (1 / 10_000, "EDU_GRADUATE_DEG")),
+]
 
 # the non-simple ones are computed ad-hoc in modeling_util.py
 MOVE_ONLY_TERMS = [
