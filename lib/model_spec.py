@@ -222,7 +222,6 @@ SHARED_TERMS = [spec.name for spec in SHARED_SPECS]
 MOVE_ONLY_SPECS: list[DestOnlySpec] = [
     DestOnlySpec("destchoice_vacancy_rate", "HOUSE_VACANCY_PROP"),
     DestOnlySpec("destchoice_med_rent_k", "MED_RENT_K"),
-    DestOnlySpec("destchoice_unemp_rate", "UNEMP_RATE"),
     DestOnlySpec(
         "destchoice_med_earnings_10k_no_degree",
         "OWN_EARNINGS_10K_BY_EDU",
