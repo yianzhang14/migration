@@ -258,7 +258,7 @@ SHARED_SPECS: list[SharedSpec] = [
 SHARED_TERMS = [spec.name for spec in SHARED_SPECS]
 
 # purely destination choice terms that can be automatically handled
-SIMPLE_MOVE_ONLY_SPECS: list[DestOnlySpec] = []
+MOVE_ONLY_SPECS: list[DestOnlySpec] = []
 
 # the non-simple ones are computed ad-hoc in modeling_util.py
 MOVE_ONLY_TERMS = [
@@ -269,7 +269,7 @@ MOVE_ONLY_TERMS = [
     "destchoice_T34",
     "destchoice_metro",
     "destchoice_same_cbsa_type",
-] + [spec.name for spec in SIMPLE_MOVE_ONLY_SPECS]
+] + [spec.name for spec in MOVE_ONLY_SPECS]
 
 
 def required_alt_suffixes() -> set[str]:
@@ -278,7 +278,7 @@ def required_alt_suffixes() -> set[str]:
     return (
         BASE_ALT_SUFFIXES
         | {spec.alt_suffix for spec in SHARED_SPECS}
-        | {spec.alt_suffix for spec in SIMPLE_MOVE_ONLY_SPECS}
+        | {spec.alt_suffix for spec in MOVE_ONLY_SPECS}
     )
 
 
@@ -293,6 +293,6 @@ def required_individual_columns() -> set[str]:
     for spec in SHARED_SPECS:
         cols.add(spec.origin_col)
         cols.update(factor for factor in spec.factors if isinstance(factor, str))
-    for spec in SIMPLE_MOVE_ONLY_SPECS:
+    for spec in MOVE_ONLY_SPECS:
         cols.update(factor for factor in spec.factors if isinstance(factor, str))
     return cols

@@ -4,10 +4,10 @@ import numpy as np
 import pandas as pd
 
 from .model_spec import (
+    MOVE_ONLY_SPECS,
     MOVE_ONLY_TERMS,
     SHARED_SPECS,
     SHARED_TERMS,
-    SIMPLE_MOVE_ONLY_SPECS,
     STAY_ONLY_SPECS,
     STAY_ONLY_TERMS,
     DestOnlySpec,
@@ -89,7 +89,7 @@ def build_long_data(
 
     # destination-only terms (structurally zero at alt=0, like the hand-written move-only terms
     # below, but read generically from ALT{i}_<suffix> the same way SHARED_SPECS is)
-    for spec in SIMPLE_MOVE_ONLY_SPECS:
+    for spec in MOVE_ONLY_SPECS:
         target = block[spec.name]
         for i in range(1, num_alts):
             scale = spec.scale(col, i)
@@ -189,7 +189,7 @@ def print_utility_formula(long_df: pd.DataFrame) -> None:
             shared_terms.append(t)
 
     shared_by_name = {spec.name: spec for spec in SHARED_SPECS}
-    simple_dest_only_by_name = {spec.name: spec for spec in SIMPLE_MOVE_ONLY_SPECS}
+    move_only_specs = {spec.name: spec for spec in MOVE_ONLY_SPECS}
 
     def factors_str(spec: SharedSpec | DestOnlySpec) -> str:
         return "".join(
@@ -203,7 +203,7 @@ def print_utility_formula(long_df: pd.DataFrame) -> None:
         return f"Beta({t})*Variable({spec.origin_col}){factors_str(spec)}"
 
     def move_term(t: str) -> str:
-        spec = shared_by_name.get(t) or simple_dest_only_by_name.get(t)
+        spec = shared_by_name.get(t) or move_only_specs.get(t)
         if spec is None:
             return f"Beta({t})*Variable({t})"
         return f"Beta({t})*Variable(ALT{{i}}_{spec.alt_suffix}){factors_str(spec)}"
