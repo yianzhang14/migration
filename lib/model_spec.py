@@ -108,6 +108,7 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
     ),
     StayOnlySpec("stay_med_rent_k", "Median gross rent in thousands of dollars.ORIG"),
     StayOnlySpec("stay_vacancy_rate", "House vacancy proportion.ORIG"),
+    StayOnlySpec("stay_med_house_val_100k", "Median house cost in hundreds of thousands of dollars.ORIG"),
 ]
 
 STAY_ONLY_TERMS = [spec.name for spec in STAY_ONLY_SPECS] + ["stay_T34", "stay_metro"]
@@ -213,6 +214,7 @@ SHARED_SPECS: list[SharedSpec] = [
         ("WHITE",),
     ),
     SharedSpec("jan_avg_temp_c", "JAN_AVG_TEMP_C.ORIG", "JAN_AVG_TEMP_C"),
+    SharedSpec("rainfall_m", "AVG_TOT_PPT_M.ORIG", "AVG_TOT_PPT_M")
 ]
 
 
@@ -232,6 +234,8 @@ MOVE_ONLY_SPECS: list[DestOnlySpec] = [
         "OWN_EARNINGS_10K_BY_EDU",
         ("EDU_HAS_DEGREE",),
     ),
+    DestOnlySpec("destchoice_unemp", "UNEMP_RATE"),
+    DestOnlySpec("destchoice_house_val_100k", "MED_HOUSE_VAL_100k")
 ]
 
 # the ones not defined by a spec are computed ad-hoc in modeling_util.py

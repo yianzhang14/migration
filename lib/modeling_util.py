@@ -14,6 +14,7 @@ from .model_spec import (
     SharedSpec,
 )
 
+NUM_PUMAS = 2336
 
 def build_long_data(
     df_train: pd.DataFrame,
@@ -64,7 +65,8 @@ def build_long_data(
     # fixed (coefficient == 1, not estimated) log-population offset -- origin population on the
     # stay row, destination population on the move rows.
     pop = block["log_pop_offset"]
-    pop[:, 0] = np.log(col("Total Population.Total Population.SE_A00001_001.ORIG"))
+    # staying does not have a size term, there is not multiple ways to stay
+    pop[:, 0] = 0
     for i in range(1, num_alts):
         pop[:, i] = np.log(col(f"ALT{i}_TOT_POP"))
 
@@ -155,6 +157,10 @@ def build_long_data(
     )
     long_df.insert(0, "alt", alt)
     long_df.insert(0, "person_id", np.repeat(person_id, num_alts))
+
+    long_df["sampling_correction"] = np.log(NUM_PUMAS / num_alternatives)
+    # NOTE: this assumes that staying is alternative 0
+    long_df["sampling_correction"] = np.where(long_df["alt"] == 0, 0, long_df["sampling_correction"])
 
     # sanity checks
     num_persons = df_train["person_id"].nunique()
