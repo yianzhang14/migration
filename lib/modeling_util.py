@@ -1,7 +1,10 @@
 from collections.abc import Callable
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import yaml
+from larch.model.jaxmodel import Model
 
 from .model_spec import (
     MOVE_ONLY_SPECS,
@@ -15,6 +18,16 @@ from .model_spec import (
 )
 
 NUM_PUMAS = 2336
+
+
+def extract_weights(spec_path: Path) -> dict[str, float]:
+    """Load a `*_spec.yaml` and return its fitted parameter values as a dict of param_name to
+    value."""
+    with open(spec_path) as f:
+        content = yaml.safe_load(f)
+    m = Model.from_dict(content)
+    return m.pf["value"].to_dict()
+
 
 def build_long_data(
     df_train: pd.DataFrame,
@@ -157,11 +170,17 @@ def build_long_data(
     )
     long_df.insert(0, "alt", alt)
     long_df.insert(0, "person_id", np.repeat(person_id, num_alts).astype(np.int32))
-    long_df.insert(0, "PWGTP", np.repeat(col("PWGTP") / col("PWGTP").mean(), num_alts).astype(dtype))
+    long_df.insert(
+        0,
+        "PWGTP",
+        np.repeat(col("PWGTP") / col("PWGTP").mean(), num_alts).astype(dtype),
+    )
 
     long_df["sampling_correction"] = np.log(NUM_PUMAS / num_alternatives)
     # NOTE: this assumes that staying is alternative 0
-    long_df["sampling_correction"] = np.where(long_df["alt"] == 0, 0, long_df["sampling_correction"]).astype(dtype)
+    long_df["sampling_correction"] = np.where(
+        long_df["alt"] == 0, 0, long_df["sampling_correction"]
+    ).astype(dtype)
 
     # sanity checks
     num_persons = df_train["person_id"].nunique()
