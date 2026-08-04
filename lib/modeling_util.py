@@ -151,16 +151,17 @@ def build_long_data(
     # insert choice model details: choice is 1 if the alternative was chosen
     # alt says which alterantive a line represents
     # person id tells which person a line's alternative pertains to
-    alt = np.tile(np.arange(num_alts), n)
+    alt = np.tile(np.arange(num_alts), n).astype(np.int32)
     long_df.insert(
-        0, "choice", (alt == np.repeat(col("ALT_CHOICE"), num_alts)).astype(int)
+        0, "choice", (alt == np.repeat(col("ALT_CHOICE"), num_alts)).astype(np.int32)
     )
     long_df.insert(0, "alt", alt)
-    long_df.insert(0, "person_id", np.repeat(person_id, num_alts))
+    long_df.insert(0, "person_id", np.repeat(person_id, num_alts).astype(np.int32))
+    long_df.insert(0, "PWGTP", np.repeat(col("PWGTP") / col("PWGTP").mean(), num_alts).astype(dtype))
 
     long_df["sampling_correction"] = np.log(NUM_PUMAS / num_alternatives)
     # NOTE: this assumes that staying is alternative 0
-    long_df["sampling_correction"] = np.where(long_df["alt"] == 0, 0, long_df["sampling_correction"])
+    long_df["sampling_correction"] = np.where(long_df["alt"] == 0, 0, long_df["sampling_correction"]).astype(dtype)
 
     # sanity checks
     num_persons = df_train["person_id"].nunique()

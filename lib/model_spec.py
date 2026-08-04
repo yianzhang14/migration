@@ -11,6 +11,7 @@ BASE_INDIVIDUAL_COLS = {
     "POBP",
     "CHOSEN",
     "STAY",
+    "PWGTP"
 }
 BASE_ALT_SUFFIXES = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"}
 
@@ -108,7 +109,7 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
     ),
     StayOnlySpec("stay_med_rent_k", "Median gross rent in thousands of dollars.ORIG"),
     StayOnlySpec("stay_vacancy_rate", "House vacancy proportion.ORIG"),
-    StayOnlySpec("stay_med_house_val_100k", "Median house cost in hundreds of thousands of dollars.ORIG"),
+    StayOnlySpec("stay_alt_commute", "Proportion alternative commute.ORIG"), 
 ]
 
 STAY_ONLY_TERMS = [spec.name for spec in STAY_ONLY_SPECS] + ["stay_T34", "stay_metro"]
@@ -214,7 +215,10 @@ SHARED_SPECS: list[SharedSpec] = [
         ("WHITE",),
     ),
     SharedSpec("jan_avg_temp_c", "JAN_AVG_TEMP_C.ORIG", "JAN_AVG_TEMP_C"),
-    SharedSpec("rainfall_m", "AVG_TOT_PPT_M.ORIG", "AVG_TOT_PPT_M")
+    SharedSpec("rainfall_m", "AVG_TOT_PPT_M.ORIG", "AVG_TOT_PPT_M"),
+    SharedSpec("proportion_ent_jobs", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP"),
+    SharedSpec("proportion_ent_jobs_18_34", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP", ("AGE_18_34",)),
+    SharedSpec("proportion_ent_jobs_35_64", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP", ("AGE_35_64",)),
 ]
 
 
@@ -235,7 +239,7 @@ MOVE_ONLY_SPECS: list[DestOnlySpec] = [
         ("EDU_HAS_DEGREE",),
     ),
     DestOnlySpec("destchoice_unemp", "UNEMP_RATE"),
-    DestOnlySpec("destchoice_house_val_100k", "MED_HOUSE_VAL_100k")
+    DestOnlySpec("destchoice_alt_commute", "ALT_COMMUTE_PROP"),
 ]
 
 # the ones not defined by a spec are computed ad-hoc in modeling_util.py
