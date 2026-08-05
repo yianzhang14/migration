@@ -170,11 +170,9 @@ def build_long_data(
     )
     long_df.insert(0, "alt", alt)
     long_df.insert(0, "person_id", np.repeat(person_id, num_alts).astype(np.int32))
-    long_df.insert(
-        0,
-        "PWGTP",
-        np.repeat(col("PWGTP") / col("PWGTP").mean(), num_alts).astype(dtype),
-    )
+    # NOTE: this needs to be np.float64 since the logic for crack=True in construct from idca
+    # relies on a float64-specific tolerance for determining float equality
+    long_df.insert(0, "PWGTP", np.repeat(col("PWGTP") / col("PWGTP").mean(), num_alts).astype(np.float64))
 
     long_df["sampling_correction"] = np.log(NUM_PUMAS / num_alternatives)
     # NOTE: this assumes that staying is alternative 0
