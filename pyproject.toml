@@ -22,7 +22,7 @@ pandas = ">=2.2.2,<3"
 tqdm = ">=4.66.5,<5"
 seaborn = ">=0.13.2,<0.14"
 matplotlib = ">=3.9.2,<4"
-pyarrow = ">=17.0.0,<18"
+pyarrow = ">=25.0.0,<26"
 openpyxl = ">=3.1.5,<4"
 bs4 = ">=4.12.3,<5"
 requests = ">=2.32.3,<3"
@@ -38,6 +38,7 @@ larch = ">=6.0.46,<7"
 rasterio = ">=1.5.0,<2"
 rasterstats = ">=0.21.0,<0.22"
 statsmodels = ">=0.14.6,<0.15"
+ipumspy = ">=0.8.2,<0.9"
 
 # [tool.pixi.target.linux-64.pypi-dependencies]
 # jax = { version = ">=0.11.0, <0.12", extras = ["cuda12"] }
