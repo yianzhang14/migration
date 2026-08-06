@@ -5,7 +5,7 @@ description = "Add a short description here"
 authors = [{ name = "Ian Zhang", email = "yianzhang14@gmail.com" }]
 dependencies = [
     # "torch-choice>=1.0.6,<2",
-    "biogeme>=3.3.2,<4",
+    # "biogeme>=3.3.2,<4",
     "openrouteservice>=2.3.3,<3",
 ]
 
@@ -37,6 +37,7 @@ tomlkit = "<0.15.1"
 larch = ">=6.0.46,<7"
 rasterio = ">=1.5.0,<2"
 rasterstats = ">=0.21.0,<0.22"
+statsmodels = ">=0.14.6,<0.15"
 
 # [tool.pixi.target.linux-64.pypi-dependencies]
 # jax = { version = ">=0.11.0, <0.12", extras = ["cuda12"] }
