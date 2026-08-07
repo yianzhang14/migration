@@ -8,10 +8,10 @@ BASE_INDIVIDUAL_COLS = {
     "TYPE_NUM.ORIG",
     "ORIGIN_STATE",
     "NAME_NUM.ORIG",
-    "POBP",
+    "BPL_REF",
     "CHOSEN",
     "STAY",
-    "PWGTP"
+    "PERWT",
 }
 BASE_ALT_SUFFIXES = {"TOT_POP", "DIST", "CBSA", "STATE", "TYPE"}
 
@@ -90,12 +90,12 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
     StayOnlySpec("stay_married_more_than_year", "MARRIED_MORE_THAN_YEAR"),
     StayOnlySpec("stay_married_less_than_year", "RECENTLY_MARRIED"),
     StayOnlySpec("stay_recently_divorced_or_widowed", "RECENTLY_WIDOWED_OR_DIVORCED"),
-    StayOnlySpec("stay_2work_mar", "WORK2_MAR"),
-    StayOnlySpec("stay_single_parent", "SINGLE_PARENT"),
+    StayOnlySpec("stay_2work", "WORK2"),
+    StayOnlySpec("stay_single_parent", "SINGLE_UNIT_WITH_CHILD"),
     StayOnlySpec("stay_edu_at_least_bachelors", "EDU_BACHELORS_OR_HIGHER"),
     StayOnlySpec("stay_edu_high_no_bachelors", "EDU_HIGH_BUT_NOT_BACHELORS"),
     StayOnlySpec("stay_in_college", "IN_COLLEGE"),
-    StayOnlySpec("stay_foreign", "FOREIGN"),
+    StayOnlySpec("stay_foreign", "FOREIGN_BORN"),
     StayOnlySpec("stay_mil", "IN_MILITARY"),
     StayOnlySpec(
         "stay_med_earnings_10k_no_degree",
@@ -109,7 +109,7 @@ STAY_ONLY_SPECS: list[StayOnlySpec] = [
     ),
     StayOnlySpec("stay_med_rent_k", "Median gross rent in thousands of dollars.ORIG"),
     StayOnlySpec("stay_vacancy_rate", "House vacancy proportion.ORIG"),
-    StayOnlySpec("stay_alt_commute", "Proportion alternative commute.ORIG"), 
+    StayOnlySpec("stay_alt_commute", "Proportion alternative commute.ORIG"),
 ]
 
 STAY_ONLY_TERMS = [spec.name for spec in STAY_ONLY_SPECS] + ["stay_T34", "stay_metro"]
@@ -150,7 +150,7 @@ SHARED_SPECS: list[SharedSpec] = [
         "proportion_foreign_if_foreign",
         "Proportion foreign born.ORIG",
         "FOREIGN_BORN_PROP",
-        ("FOREIGN",),
+        ("FOREIGN_BORN",),
     ),
     SharedSpec("median_travel_time", "Median travel time.ORIG", "MED_TRAVEL_TIME"),
     SharedSpec(
@@ -160,69 +160,145 @@ SHARED_SPECS: list[SharedSpec] = [
         ("IN_MILITARY",),
     ),
     # NOTE: this assumes that NAICS code stays constant between the origin and destination
+    # Split by member for the same reason as race: 65% of dual-earner couples work in
+    # different skill/credential groups, so an averaged indicator would attribute one
+    # partner's job share to the other's group.
     SharedSpec(
         "proportion_same_naics_govt",
-        "NAICS_GROUP_PROP_GOVT.ORIG",
-        "OWN_NAICS_GROUP_PROP",
-        ("NAICS_GOVT",),
+        "OWN_NAICS_GROUP_PROP_REF.ORIG",
+        "OWN_NAICS_GROUP_PROP_REF",
+        ("NAICS_GOVT_REF", "NAICS_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_naics_govt",
+        "OWN_NAICS_GROUP_PROP_SEC.ORIG",
+        "OWN_NAICS_GROUP_PROP_SEC",
+        ("NAICS_GOVT_SEC", "NAICS_W_SEC"),
     ),
     SharedSpec(
         "proportion_same_naics_goods_trade",
-        "NAICS_GROUP_PROP_GOODS_TRADE.ORIG",
-        "OWN_NAICS_GROUP_PROP",
-        ("NAICS_GOODS_TRADE",),
+        "OWN_NAICS_GROUP_PROP_REF.ORIG",
+        "OWN_NAICS_GROUP_PROP_REF",
+        ("NAICS_GOODS_TRADE_REF", "NAICS_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_naics_goods_trade",
+        "OWN_NAICS_GROUP_PROP_SEC.ORIG",
+        "OWN_NAICS_GROUP_PROP_SEC",
+        ("NAICS_GOODS_TRADE_SEC", "NAICS_W_SEC"),
     ),
     SharedSpec(
         "proportion_same_naics_high_ed",
-        "NAICS_GROUP_PROP_HIGH_ED.ORIG",
-        "OWN_NAICS_GROUP_PROP",
-        ("NAICS_HIGH_ED",),
+        "OWN_NAICS_GROUP_PROP_REF.ORIG",
+        "OWN_NAICS_GROUP_PROP_REF",
+        ("NAICS_HIGH_ED_REF", "NAICS_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_naics_high_ed",
+        "OWN_NAICS_GROUP_PROP_SEC.ORIG",
+        "OWN_NAICS_GROUP_PROP_SEC",
+        ("NAICS_HIGH_ED_SEC", "NAICS_W_SEC"),
     ),
     SharedSpec(
         "proportion_same_naics_agr_ext",
-        "NAICS_GROUP_PROP_AGR_EXT.ORIG",
-        "OWN_NAICS_GROUP_PROP",
-        ("NAICS_AGR_EXT",),
+        "OWN_NAICS_GROUP_PROP_REF.ORIG",
+        "OWN_NAICS_GROUP_PROP_REF",
+        ("NAICS_AGR_EXT_REF", "NAICS_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_naics_agr_ext",
+        "OWN_NAICS_GROUP_PROP_SEC.ORIG",
+        "OWN_NAICS_GROUP_PROP_SEC",
+        ("NAICS_AGR_EXT_SEC", "NAICS_W_SEC"),
+    ),
+    # Race terms are split by member: OWN_RACE_ETH_PROP_{REF,SEC} is that member's own
+    # category share at the location, so pairing it with that same member's indicator
+    # isolates their contribution. The two weighted specs share a `name` and are
+    # SUMMED by build_long_data, giving one coefficient whose regressor is
+    # (unit's fraction in the category) x (area's share of it).
+    SharedSpec(
+        "proportion_same_race_black",
+        "OWN_RACE_ETH_PROP_REF.ORIG",
+        "OWN_RACE_ETH_PROP_REF",
+        ("BLACK_REF", "RACE_W_REF"),
     ),
     SharedSpec(
         "proportion_same_race_black",
-        "Proportion of people Black.ORIG",
-        "OWN_RACE_ETH_PROP",
-        ("BLACK",),
+        "OWN_RACE_ETH_PROP_SEC.ORIG",
+        "OWN_RACE_ETH_PROP_SEC",
+        ("BLACK_SEC", "RACE_W_SEC"),
     ),
     SharedSpec(
         "proportion_same_race_aapi",
-        "Proportion of people AAPI.ORIG",
-        "OWN_RACE_ETH_PROP",
-        ("AAPI",),
+        "OWN_RACE_ETH_PROP_REF.ORIG",
+        "OWN_RACE_ETH_PROP_REF",
+        ("AAPI_REF", "RACE_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_race_aapi",
+        "OWN_RACE_ETH_PROP_SEC.ORIG",
+        "OWN_RACE_ETH_PROP_SEC",
+        ("AAPI_SEC", "RACE_W_SEC"),
     ),
     SharedSpec(
         "proportion_same_race_indian",
-        "Proportion of people Indian.ORIG",
-        "OWN_RACE_ETH_PROP",
-        ("INDIAN",),
+        "OWN_RACE_ETH_PROP_REF.ORIG",
+        "OWN_RACE_ETH_PROP_REF",
+        ("INDIAN_REF", "RACE_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_race_indian",
+        "OWN_RACE_ETH_PROP_SEC.ORIG",
+        "OWN_RACE_ETH_PROP_SEC",
+        ("INDIAN_SEC", "RACE_W_SEC"),
     ),
     SharedSpec(
         "proportion_also_latino",
-        "Proportion of people Latino.ORIG",
-        "OWN_RACE_ETH_PROP",
-        ("LATINO",),
+        "OWN_RACE_ETH_PROP_REF.ORIG",
+        "OWN_RACE_ETH_PROP_REF",
+        ("LATINO_REF", "RACE_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_also_latino",
+        "OWN_RACE_ETH_PROP_SEC.ORIG",
+        "OWN_RACE_ETH_PROP_SEC",
+        ("LATINO_SEC", "RACE_W_SEC"),
     ),
     SharedSpec(
         "proportion_same_race_white",
-        "Proportion of people White.ORIG",
-        "OWN_RACE_ETH_PROP",
-        ("WHITE",),
+        "OWN_RACE_ETH_PROP_REF.ORIG",
+        "OWN_RACE_ETH_PROP_REF",
+        ("WHITE_REF", "RACE_W_REF"),
+    ),
+    SharedSpec(
+        "proportion_same_race_white",
+        "OWN_RACE_ETH_PROP_SEC.ORIG",
+        "OWN_RACE_ETH_PROP_SEC",
+        ("WHITE_SEC", "RACE_W_SEC"),
     ),
     SharedSpec("jan_avg_temp_c", "JAN_AVG_TEMP_C.ORIG", "JAN_AVG_TEMP_C"),
     SharedSpec("rainfall_m", "AVG_TOT_PPT_M.ORIG", "AVG_TOT_PPT_M"),
-    SharedSpec("proportion_ent_jobs", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP"),
-    SharedSpec("proportion_ent_jobs_18_34", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP", ("AGE_18_34",)),
-    SharedSpec("proportion_ent_jobs_35_64", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP", ("AGE_35_64",)),
+    SharedSpec(
+        "proportion_ent_jobs", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP"
+    ),
+    SharedSpec(
+        "proportion_ent_jobs_18_34",
+        "Proportion of entertainment jobs.ORIG",
+        "ENT_JOB_PROP",
+        ("AGE_18_34",),
+    ),
+    SharedSpec(
+        "proportion_ent_jobs_35_64",
+        "Proportion of entertainment jobs.ORIG",
+        "ENT_JOB_PROP",
+        ("AGE_35_64",),
+    ),
 ]
 
 
-SHARED_TERMS = [spec.name for spec in SHARED_SPECS]
+# de-duplicated: race/NAICS categories each contribute two specs (one per member) that
+# share a name and are summed by build_long_data, so they remain ONE coefficient.
+SHARED_TERMS = list(dict.fromkeys(spec.name for spec in SHARED_SPECS))
 
 # purely destination choice terms that can be automatically handled
 MOVE_ONLY_SPECS: list[DestOnlySpec] = [

@@ -93,14 +93,19 @@ def build_long_data(
     block["stay_metro"][:, 0] = origin_type == 1
 
     # shared terms
+    # Accumulated (+=) rather than assigned, so several specs may share a `name` and add
+    # into one coefficient -- that is how the per-member race/NAICS terms combine. `data`
+    # is zero-initialised, so the first contribution lands on a clean 0.
+    # NB: a duplicated `name` therefore SUMS rather than overwrites; intentional here,
+    # but an accidental duplicate would be silent.
     for spec in SHARED_SPECS:
         scale = spec.scale(col)
         target = block[spec.name]
         values = col(spec.origin_col)
-        target[:, 0] = values if scale is None else values * scale
+        target[:, 0] += values if scale is None else values * scale
         for i in range(1, num_alts):
             values = col(f"ALT{i}_{spec.alt_suffix}")
-            target[:, i] = values if scale is None else values * scale
+            target[:, i] += values if scale is None else values * scale
 
     # destination-only terms (structurally zero at alt=0, like the hand-written move-only terms
     # below, but read generically from ALT{i}_<suffix> the same way SHARED_SPECS is)
@@ -114,7 +119,8 @@ def build_long_data(
     # move-only terms (structurally zero at alt=0, since staying isn't a move-type decision)
     origin_state = col("ORIGIN_STATE")
     origin_cbsa = col("NAME_NUM.ORIG")
-    birth_state = col("POBP")
+    # place of birth is BPL_REF (the reference person's) since the IPUMS switch
+    birth_state = col("BPL_REF")
     # `origin_type_t34 * alt_type_t34 + origin_type_metro * alt_type_metro + ...` is an equality
     # test over the three coded types spelled out as a sum of products; NaN/unknown codes fall
     # through both forms as 0.
@@ -172,7 +178,13 @@ def build_long_data(
     long_df.insert(0, "person_id", np.repeat(person_id, num_alts).astype(np.int32))
     # NOTE: this needs to be np.float64 since the logic for crack=True in construct from idca
     # relies on a float64-specific tolerance for determining float equality
-    long_df.insert(0, "PWGTP", np.repeat(col("PWGTP") / col("PWGTP").mean(), num_alts).astype(np.float64))
+    # weight is PERWT since the IPUMS switch; still exposed as "PWGTP" in long_df so the
+    # modeling notebooks keep working
+    long_df.insert(
+        0,
+        "PWGTP",
+        np.repeat(col("PERWT") / col("PERWT").mean(), num_alts).astype(np.float64),
+    )
 
     long_df["sampling_correction"] = np.log(NUM_PUMAS / num_alternatives)
     # NOTE: this assumes that staying is alternative 0
