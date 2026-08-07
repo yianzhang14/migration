@@ -4,7 +4,7 @@ from dataclasses import dataclass
 import numpy as np
 
 BASE_INDIVIDUAL_COLS = {
-    "Total Population.Total Population.SE_A00001_001.ORIG",
+    "TOT_POP.ORIG",
     "TYPE_NUM.ORIG",
     "ORIGIN_STATE",
     "NAME_NUM.ORIG",

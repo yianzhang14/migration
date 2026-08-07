@@ -79,9 +79,9 @@ def build_long_data(
     # stay row, destination population on the move rows.
     pop = block["log_pop_offset"]
     # staying does not have a size term, there is not multiple ways to stay
-    pop[:, 0] = 0
+    pop[:, 0] = np.log1p(col("TOT_POP.ORIG"))
     for i in range(1, num_alts):
-        pop[:, i] = np.log(col(f"ALT{i}_TOT_POP"))
+        pop[:, i] = np.log1p(col(f"ALT{i}_TOT_POP"))
 
     # stay-only terms (structurally zero at alt>=1)
     for spec in STAY_ONLY_SPECS:
