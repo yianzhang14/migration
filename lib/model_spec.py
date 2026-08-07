@@ -277,7 +277,7 @@ SHARED_SPECS: list[SharedSpec] = [
         ("WHITE_SEC", "RACE_W_SEC"),
     ),
     SharedSpec("jan_avg_temp_c", "JAN_AVG_TEMP_C.ORIG", "JAN_AVG_TEMP_C"),
-    SharedSpec("rainfall_m", "AVG_TOT_PPT_M.ORIG", "AVG_TOT_PPT_M"),
+    # SharedSpec("rainfall_m", "AVG_TOT_PPT_M.ORIG", "AVG_TOT_PPT_M"),
     SharedSpec(
         "proportion_ent_jobs", "Proportion of entertainment jobs.ORIG", "ENT_JOB_PROP"
     ),
