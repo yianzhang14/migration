@@ -53,19 +53,36 @@ NAICS_SECTOR_COLUMNS = {
     "PUB": "Number of jobs in NAICS sector 92 (Public Administration)",
 }
 
-# NAICS sectors grouped by skill/credential barrier to entry
+# NAICS sectors grouped by skill/credential barrier to entry. Shared by the
+# individual-level `NAICS_{group}` dummies and the area-level `NAICS_GROUP_PROP_{group}`
+# job shares, so the two stay in sync.
 NAICS_GROUPS = {
+    # primary/extractive: resource-tied to location
     "AGR_EXT": ["AGR", "EXT"],
+    # high-education professional: bachelor's+ degree typical, portable credentials
     "HIGH_ED": ["MED", "EDU", "PRF", "FIN", "INF", "MNG"],
+    # occupational-license-heavy services: state-specific licenses (real estate,
+    # personal care/repair, etc.), a classic migration friction
     "LICENSE": ["SRV", "REL"],
+    # goods-producing/trade: apprenticeship or on-the-job skill, not degree/license driven
     "GOODS_TRADE": ["MFG", "CON", "WHL", "TRN", "UTL"],
+    # low-skill consumer services: low-license, low-credential
     "LOW_SKILL_SVC": ["RET", "FOD", "ADM", "ENT"],
+    # public administration
     "GOVT": ["PUB"],
 }
 NAICS_GROUP_PROP_COLUMNS = [f"NAICS_GROUP_PROP_{group}" for group in NAICS_GROUPS]
 
-# ACS's NAICSP codes are prefixed by their 2-digit sector ("3M"/"4M" are the merged
-# "not specified" manufacturing/retail codes); "99" is other/unemployed.
+# ACS's NAICSP industry codes are structured so their first two characters already
+# identify the standard 2-digit NAICS sector (e.g. "5411" -> sector 54, Professional
+# Services), including the merged "not specified" codes "3M"/"4M" for Manufacturing and
+# Retail. "99" is other/unemployed and so has no entry.
+#
+# This replaces the old per-year naics_to_lodes_{year}.txt crosswalk, which hand-maintained
+# a label per detailed code and had at least one real bug (the 2017 file mislabeled all of
+# NAICS 53 Real Estate as FIN instead of REL).
+#
+# NOTE: NAICS sector 92 (Public Administration) includes military
 NAICS_SECTOR_PREFIXES = {
     "11": "AGR",
     "21": "EXT",
@@ -103,8 +120,27 @@ AGE_BRACKET_COLS = [
 ]
 AGE_BRACKET_FLAGS = ["AGE_UNDER_18", "AGE_18_34", "AGE_35_64", "AGE_OVER_65"]
 
-# keyed on IPUMS RACE (with Hispanic overriding race as code 99), *not* ACS RAC1P --
-# the two agree only on codes 1 and 2.
+"""`RACE_COLUMNS` is keyed on IPUMS RACE, with Hispanic overriding race:
+
+1 .White
+2 .Black/African American
+3 .American Indian or Alaska Native
+4 .Chinese
+5 .Japanese
+6 .Other Asian or Pacific Islander
+7 .Other race
+8 .Two major races
+9 .Three or more major races
+
+99 .Latino/Hispanic (HISPAN != 0, injected upstream)
+
+NOTE: these are IPUMS RACE codes, NOT ACS RAC1P -- the two agree only on 1 and 2. RAC1P
+spreads AIAN across 3/4/5 and puts Asian at 6, NHPI at 7, other race at 8, multiracial at
+9. IPUMS puts all AIAN at 3, Chinese/Japanese/other-Asian-or-PI at 4/5/6, other race at 7,
+and multiracial at 8/9. Keying this dict on RAC1P would send Chinese and Japanese units to
+the American Indian population share and "other race" units to AAPI.
+"""
+
 RACE_COLUMNS = {
     1: "Proportion of people White",
     2: "Proportion of people Black",
@@ -149,6 +185,10 @@ def add_naics_group_prop_columns(census_df: pd.DataFrame) -> pd.DataFrame:
     return census_df
 
 
+WEATHER_COLS = ["JAN_AVG_TEMP_C", "JULY_AVG_TEMP_C", "AVG_TOT_PPT_M"]
+CBSA_COLS = ["CBSA_NAME", "NAME_NUM", "TYPE", "TYPE_NUM"]
+
+
 def _read_indexed(path: Path, key: str, suffix: str = "") -> pd.DataFrame:
     df = pd.read_csv(path, dtype={key: str})
     df[key] = df[key].str.zfill(7)
@@ -171,15 +211,18 @@ def load_geo_tables(
     puma = _read_indexed(data_dir / f"acs/acs_puma_{year}.csv", "PUMA")
     migpuma = _read_indexed(data_dir / f"acs/acs_migpuma_{year}.csv", "MIGPUMA")
 
+    # joined onto the ACS extract in this order, after the CBSA columns below
     tables = {
         "PUMA": [
             _read_indexed(data_dir / f"lodes/wac_puma_{year}.csv", "PUMA"),
-            _read_indexed(data_dir / "weather/puma_weather.csv", "PUMA"),
+            _read_indexed(data_dir / "weather/puma_weather.csv", "PUMA")[WEATHER_COLS],
             _read_indexed(data_dir / f"cbp/puma_est_{year}.csv", "PUMA", "_NUM_EST"),
         ],
         "MIGPUMA": [
             _read_indexed(data_dir / f"lodes/wac_migpuma_{year}.csv", "MIGPUMA"),
-            _read_indexed(data_dir / "weather/migpuma_weather.csv", "MIGPUMA"),
+            _read_indexed(data_dir / "weather/migpuma_weather.csv", "MIGPUMA")[
+                WEATHER_COLS
+            ],
             _read_indexed(
                 data_dir / f"cbp/migpuma_est_{year}.csv", "MIGPUMA", "_NUM_EST"
             ),
@@ -200,16 +243,16 @@ def load_geo_tables(
         .astype(int)
     )
 
-    cbsa_cols = ["CBSA_NAME", "NAME_NUM", "TYPE", "TYPE_NUM"]
     out = []
     for base, key, cbsa in (
         (puma, "PUMA", puma_cbsa),
         (migpuma, "MIGPUMA", migpuma_cbsa),
     ):
-        data = base
-        for table in tables[key]:
+        data = base.join(tables[key][0], how="left").join(
+            cbsa[CBSA_COLS].rename_axis(key), how="left"
+        )
+        for table in tables[key][1:]:
             data = data.join(table, how="left")
-        data = data.join(cbsa[cbsa_cols].rename_axis(key), how="left")
         data["ENT_EST_PER_CAPITA"] = data["ENT_NUM_EST"] / data["TOT_POP"]
         data["FOD_EST_PER_CAPITA"] = data["FOD_NUM_EST"] / data["TOT_POP"]
         data["AMENITIES_EST_PER_1K_PEOPLE"] = (
