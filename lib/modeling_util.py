@@ -178,11 +178,9 @@ def build_long_data(
     long_df.insert(0, "person_id", np.repeat(person_id, num_alts).astype(np.int32))
     # NOTE: this needs to be np.float64 since the logic for crack=True in construct from idca
     # relies on a float64-specific tolerance for determining float equality
-    # weight is PERWT since the IPUMS switch; still exposed as "PWGTP" in long_df so the
-    # modeling notebooks keep working
     long_df.insert(
         0,
-        "PWGTP",
+        "PERWT",
         np.repeat(col("PERWT") / col("PERWT").mean(), num_alts).astype(np.float64),
     )
 
